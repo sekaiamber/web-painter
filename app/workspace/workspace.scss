@@ -1,16 +1,13 @@
-$toolbarWidth: 35px;
-$attributesBarWidth: 250px;
+$toolbarWidth: 150px;
+$attributesBarWidth: 350px;
 
 #workspace {
+  width: 100%;
+  overflow: scroll;
+
   #toolbar,
   #attributesBar {
-    height: 100%;
-    position: absolute;
-    top: 0;
-  }
-  #toolbar {
-    width: $toolbarWidth;
-    left: 0;
+    position: fixed;
   }
   #attributesBar {
     width: $attributesBarWidth;
@@ -18,6 +15,6 @@ $attributesBarWidth: 250px;
   }
   #canvas {
     height: 100%;
-    padding: 0 $attributesBarWidth 0 $toolbarWidth;
+    width: 100%;
   }
 }

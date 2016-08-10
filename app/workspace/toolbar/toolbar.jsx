@@ -1,3 +1,5 @@
+import Scaler from './scaler/scaler'
+
 let React = require('react');
 
 require('./toolbar.scss');
@@ -14,6 +16,7 @@ export default class Toolbar extends React.Component{
   render() {
     return (
       <div id="toolbar">
+        <Scaler />
       </div>
     );
   }
