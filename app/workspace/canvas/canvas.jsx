@@ -26,7 +26,9 @@ export default class Canvas extends React.Component{
   render() {
     let windowStyle = {
       width: this.state.width,
-      height: this.state.height
+      height: this.state.height,
+      zoom: this.state.zoom,
+      padding: `${Math.round(this.state.height / this.state.zoom / 2)}px ${Math.round(this.state.width / this.state.zoom / 2)}px`
     }
     return (
       <div id="canvas" style={windowStyle} >
