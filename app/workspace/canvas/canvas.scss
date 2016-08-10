@@ -1,7 +1,7 @@
 #canvas {
-  #window {
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
+  box-sizing: content-box;
+  #scaler {
+    position: absolute;
+    top: 0;
   }
 }
