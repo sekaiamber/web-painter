@@ -1,0 +1,23 @@
+$toolbarWidth: 35px;
+$attributesBarWidth: 250px;
+
+#workspace {
+  #toolbar,
+  #attributesBar {
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  #toolbar {
+    width: $toolbarWidth;
+    left: 0;
+  }
+  #attributesBar {
+    width: $attributesBarWidth;
+    right: 0;
+  }
+  #canvas {
+    height: 100%;
+    padding: 0 $attributesBarWidth 0 $toolbarWidth;
+  }
+}
