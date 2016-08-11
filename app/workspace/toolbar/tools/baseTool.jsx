@@ -1,11 +1,10 @@
 let React = require('react');
 
-// require('./baseTool.scss');
-
 export default class BaseTool extends React.Component{
   constructor(props) {
     super(props);
     this.tag = ''
+    this.icon = ''
     this.state = {}
   }
   componentDidMount() {
@@ -15,7 +14,7 @@ export default class BaseTool extends React.Component{
   render() {
     return (
       <div className={"tool " + this.tag}>
-        
+        <div className={"iconfont toolbar " + this.tag }></div>
       </div>
     );
   }
