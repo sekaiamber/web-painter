@@ -1,12 +1,11 @@
-import Scaler from './scaler/scaler'
-
 let React = require('react');
 
-require('./toolbar.scss');
+// require('./baseTool.scss');
 
-export default class Toolbar extends React.Component{
+export default class BaseTool extends React.Component{
   constructor(props) {
     super(props);
+    this.tag = ''
     this.state = {}
   }
   componentDidMount() {
@@ -15,9 +14,8 @@ export default class Toolbar extends React.Component{
   }
   render() {
     return (
-      <div id="toolbar">
-        <div className="tools"></div>
-        <Scaler />
+      <div className={"tool " + this.tag}>
+        
       </div>
     );
   }

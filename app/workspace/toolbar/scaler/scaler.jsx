@@ -1,7 +1,7 @@
 import { Input } from 'antd';
 let React = require('react');
 
-// require('./canvas.scss');
+require('./scaler.scss');
 
 export default class Scaler extends React.Component{
   constructor(props) {
@@ -15,6 +15,12 @@ export default class Scaler extends React.Component{
     this.handleBlur = this.handleBlur.bind(this);
   }
   componentDidMount() {
+    exEventEmitter.on('zoomChange', (zoom) => {
+      this.setState({
+        zoom: zoom,
+        text: (zoom * 100).toString()
+      });
+    });
   }
   componentWillUnmount(){
   }
