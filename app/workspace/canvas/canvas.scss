@@ -1,7 +1,8 @@
 #canvas {
   box-sizing: content-box;
-  #scaler {
+  .screen-border {
     position: absolute;
-    top: 0;
+    border: solid 1px #000;
+    pointer-events: none;
   }
 }
