@@ -7,7 +7,22 @@
   left: 0px;
   box-shadow: 0 0 16px #bfbfbf;
   z-index: 999;
-
+  .tool {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 3px;
+    .iconfont {
+      font-size: 19px;
+      line-height: 29px;
+      cursor: pointer;
+      color: #888;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
 }
 
 @font-face {font-family: "toolbar-iconfont";
@@ -21,8 +36,8 @@
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
-  &.icon-screen:before { content: "\e600"; }
-  &.icon-select:before { content: "\e601"; }
-  &.icon-element:before { content: "\e602"; }
-  &.icon-text:before { content: "\e603"; }
+  &.screen:before { content: "\e600"; }
+  &.select:before { content: "\e601"; }
+  &.element:before { content: "\e602"; }
+  &.text:before { content: "\e603"; }
 }

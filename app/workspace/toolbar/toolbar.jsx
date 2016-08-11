@@ -1,4 +1,5 @@
 import Scaler from './scaler/scaler'
+import { SelectToop, ElementTool, TextTool, ScreenTool } from './tools/tools'
 
 let React = require('react');
 
@@ -16,7 +17,12 @@ export default class Toolbar extends React.Component{
   render() {
     return (
       <div id="toolbar">
-        <div className="tools"></div>
+        <div className="tools">
+          <SelectToop />
+          <ElementTool />
+          <TextTool />
+          <ScreenTool />
+        </div>
         <Scaler />
       </div>
     );
