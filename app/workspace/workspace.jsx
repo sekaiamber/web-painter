@@ -1,4 +1,3 @@
-import Toolbar from './toolbar/toolbar'
 import AttributesBar from './attributesBar/attributesBar'
 import Canvas from './canvas/canvas'
 
@@ -18,7 +17,6 @@ export default class Workspace extends React.Component{
   render() {
     return (
       <div id="workspace">
-        <Toolbar />
         <Canvas />
         <AttributesBar />
       </div>

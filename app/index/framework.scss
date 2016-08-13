@@ -1,5 +1,4 @@
-$topbarHeight: 35px;
-$footerHeight: 20px;
+$topbarHeight: 50px;
 
 #framework {
   height: 100%;
@@ -17,20 +16,12 @@ $footerHeight: 20px;
   #topbar {
     height: $topbarHeight;
     top: 0;
-    background: #fff;
     box-shadow: 0 0 16px #bfbfbf;
     z-index: 999;
   }
   #workspace {
-    height: calc(100% - #{$topbarHeight} - #{$footerHeight});
+    height: calc(100% - #{$topbarHeight});
     top: $topbarHeight;
     background: #ececec;
-  }
-  #footer {
-    height: $footerHeight;
-    bottom: 0;
-    background: #0078cf;
-    box-shadow: 0 0 16px #585f63;
-    z-index: 999;
   }
 }
