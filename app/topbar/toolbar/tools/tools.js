@@ -1,11 +1,9 @@
 import SelectToop from './selectTool/selectTool'
 import ElementTool from './elementTool/elementTool'
-import TextTool from './textTool/textTool'
-import ScreenTool from './screenTool/screenTool'
+import PaintTool from './paintTool/paintTool'
 
 export {
   SelectToop,
   ElementTool,
-  TextTool,
-  ScreenTool
+  PaintTool
 }

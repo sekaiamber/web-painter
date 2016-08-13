@@ -1,15 +1,11 @@
-$toolbarWidth: 150px;
 $attributesBarWidth: 350px;
 
 #workspace {
   width: 100%;
   overflow: scroll;
 
-  #toolbar,
   #attributesBar {
     position: fixed;
-  }
-  #attributesBar {
     width: $attributesBarWidth;
     right: 0;
   }

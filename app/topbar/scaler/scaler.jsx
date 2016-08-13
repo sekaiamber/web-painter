@@ -52,7 +52,9 @@ export default class Scaler extends React.Component{
   render() {
     return (
       <div id="scaler">
-        <Input size="small" value={this.state.text} onChange={this.handleValueChange} addonAfter="%" onBlur={this.handleBlur}/>
+        <span className="iconfont scaler topbar"></span>
+        <span className="scaler-input"><input type="text" value={this.state.text} onChange={this.handleValueChange} onBlur={this.handleBlur} /></span>
+        <span className="scaler-percent">%</span>
       </div>
     );
   }
