@@ -16,12 +16,10 @@ $topbarHeight: 50px;
   #topbar {
     height: $topbarHeight;
     top: 0;
-    box-shadow: 0 0 16px #bfbfbf;
     z-index: 999;
   }
   #workspace {
     height: calc(100% - #{$topbarHeight});
     top: $topbarHeight;
-    background: #ececec;
   }
 }
