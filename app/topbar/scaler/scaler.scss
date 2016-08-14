@@ -2,20 +2,21 @@
   display: inline-block;
   width: 105px;
   height: 35px;
-  .iconfont {
+  .iconfont,
+  .scaler-input,
+  .scaler-percent {
     display: inline-block;
     height: 35px;
+  }
+  .iconfont {
     font-size: 19px;
     line-height: 29px;
-    cursor: pointer;
     color: #676767;
     width: 35px;
     text-align: center;
     padding: 3px;
   }
   .scaler-input {
-    display: inline-block;
-    height: 35px;
     vertical-align: bottom;
     padding: 3px 0;
     input {
@@ -34,8 +35,6 @@
     }
   }
   .scaler-percent {
-    display: inline-block;
-    height: 35px;
     vertical-align: bottom;
     padding: 3px;
     font-size: 19px;

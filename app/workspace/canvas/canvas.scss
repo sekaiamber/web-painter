@@ -1,8 +1,12 @@
 #canvas {
-  box-sizing: content-box;
-  .screen-border {
-    position: absolute;
-    border: solid 1px #42a5e8;
-    pointer-events: none;
+  overflow: scroll;
+  .page-container {
+    box-sizing: content-box;
+    position: relative;
+    .screen-border {
+      position: absolute;
+      border: solid 1px #42a5e8;
+      pointer-events: none;
+    }
   }
 }

@@ -15,7 +15,8 @@ export default class Page extends React.Component{
     let style = {
       width: this.props.width,
       height: this.props.height,
-      background: this.props.background
+      background: this.props.background,
+      zoom: this.props.zoom
     }
     return (
       <div id="page" style={style}>
@@ -26,5 +27,6 @@ export default class Page extends React.Component{
 Page.defaultProps = {
   width: 1440,
   height: 900,
-  background: '#fff'
+  background: '#fff',
+  zoom: 1
 }
