@@ -11,12 +11,15 @@ export default class Toolbar extends React.Component{
       toolsActive_select: false,
       toolsActive_element: false,
       toolsActive_paint: false,
+      active: ''
     }
     this.tools = ['select', 'element', 'paint'];
     // bind
     this.changeTool = this.changeTool.bind(this);
   }
   componentDidMount() {
+    
+    this.changeTool('select');
   }
   componentWillUnmount(){
   }
@@ -26,7 +29,10 @@ export default class Toolbar extends React.Component{
       active['toolsActive_' + key] = false;
     });
     active['toolsActive_' + tag] = true;
-    this.setState(active);
+    active['active'] = tag;
+    this.setState(active, () => {
+      exEventEmitter.emit('modeChange', this.state.active);
+    });
   }
   render() {
     return (
