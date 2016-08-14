@@ -1,4 +1,5 @@
 import Page from './page/page'
+import Pieces from './pieces/pieces'
 
 let React = require('react');
 let $ = require('jquery');
@@ -51,8 +52,8 @@ export default class Canvas extends React.Component{
       paddingLeft: `${Math.round(this.state.pageWidth / 2)}px`,
     }
     let screenStyle = {
-      width: this.state.screenWidth,
-      height: this.state.screenHeight,
+      width: this.state.screenWidth * this.state.zoom,
+      height: this.state.screenHeight * this.state.zoom,
       top: windowStyle.paddingTop,
       left: windowStyle.paddingLeft
     }
@@ -61,6 +62,7 @@ export default class Canvas extends React.Component{
         <div className="page-container" style={windowStyle} >
           <div className="screen-border" style={screenStyle}></div>
           <Page width={this.state.pageWidth} height={this.state.pageHeight} zoom={this.state.zoom}/>
+          <Pieces width={this.state.pageWidth} height={this.state.pageHeight} zoom={this.state.zoom} top={screenStyle.top} left={screenStyle.left}/>
         </div>
       </div>
     );

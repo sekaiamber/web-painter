@@ -27,6 +27,6 @@ export default class Page extends React.Component{
 Page.defaultProps = {
   width: 1440,
   height: 900,
-  background: '#fff',
+  background: 'transparent',
   zoom: 1
 }
