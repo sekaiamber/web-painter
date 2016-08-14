@@ -1,0 +1,33 @@
+#pieces {
+  .piece {
+    width: 100%;
+    display: table;
+
+    &.header,
+    &.footer {
+      height: 15%;
+      max-height: 100px;
+    }
+    &.body {
+      height: calc(100% - 200px);
+      min-height: 70%;
+    }
+
+    .empty {
+      height: 100%;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      cursor: pointer;
+      &:after {
+        content: 'empty';
+      }
+      &:hover {
+        &:after {
+          content: 'click to add pattern';
+          color: #fff;
+        }
+      }
+    }
+  }
+}
