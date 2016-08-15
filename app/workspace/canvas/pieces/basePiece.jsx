@@ -10,20 +10,26 @@ export default class BasePiece extends React.Component{
       patterns: []
     }
     // bind
+    this.handleChangePatternBarState = this.handleChangePatternBarState.bind(this);
     this.addPattern = this.addPattern.bind(this);
   }
   componentDidMount() {
   }
   componentWillUnmount(){
   }
-  addPattern (index) {
-    exEventEmitter.emit('addPattern', this, index);
+  handleChangePatternBarState (index) {
+    exEventEmitter.emit('changePatternBarState', this, index);
+  }
+  addPattern(pattern, index) {
+    console.log(`[${this.tag} piece]: add ${pattern.tag} pattern into position ${index}`);
+    console.log(pageEditor);
   }
   render() {
+    let classes = "piece " + this.tag + (this.props.active ? " active" : "");
     return (
-      <div className={"piece " + this.tag}>
+      <div className={classes}>
         {this.state.patterns.length == 0 ?
-          <div className="empty" onClick={() => this.addPattern(0)}></div> :
+          <div className="empty" onClick={() => this.handleChangePatternBarState(0)}></div> :
           this.state.patterns.map((p, i) => 
             <div className="pattern"></div>
           )

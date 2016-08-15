@@ -8,6 +8,7 @@ export default class Page extends React.Component{
     this.state = {}
   }
   componentDidMount() {
+    pageEditor.initPageDom();
   }
   componentWillUnmount(){
   }
@@ -19,7 +20,7 @@ export default class Page extends React.Component{
       zoom: this.props.zoom
     }
     return (
-      <div id="page" style={style}>
+      <div id="page" style={style} ref={(c) => pageEditor.updatePageDom(c) }>
       </div>
     );
   }

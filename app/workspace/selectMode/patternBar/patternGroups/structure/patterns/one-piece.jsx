@@ -5,6 +5,7 @@ import Pattern from './../../pattern'
 export default class OnePiecePattern extends Pattern {
   constructor(props) {
     super(props);
+    this.tag = 'one-piece'
   }
   renderSample() {
     return (

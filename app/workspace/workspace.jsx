@@ -12,8 +12,9 @@ export default class Workspace extends React.Component{
     this.state = {
       mode: '',
       exMode: '',
-      currentPiece: null,
-      currentPieceIndex: 0
+      currentPiece: {tag: ''},
+      currentPieceIndex: -1,
+      currentPieceActive: false,
     }
   }
   componentDidMount() {
@@ -24,13 +25,23 @@ export default class Workspace extends React.Component{
         exMode: exmode
       });
     });
-    exEventEmitter.on('addPattern', (piece, index) => {
-      this.setState({
-        currentPiece: piece,
-        currentPieceIndex: index
-      }, () => {
-        exEventEmitter.emit('modeChange', 'select', 'pattern')
-      });
+    exEventEmitter.on('changePatternBarState', (piece, index) => {
+      if (piece.tag == this.state.currentPiece.tag && this.state.currentPieceActive) {
+        // 再次按下时关闭
+        this.setState({
+          currentPieceActive: false
+        }, () => {
+          exEventEmitter.emit('modeChange', 'select');
+        })
+      } else {
+        this.setState({
+          currentPiece: piece,
+          currentPieceIndex: index,
+          currentPieceActive: true,
+        }, () => {
+          exEventEmitter.emit('modeChange', 'select', 'pattern');
+        });
+      }
     });
   }
   componentWillUnmount(){

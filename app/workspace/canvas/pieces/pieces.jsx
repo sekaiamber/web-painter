@@ -9,10 +9,25 @@ export default class Pieces extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
+      header_active: false,
+      body_active: false,
+      footer_active: false
     }
     // bind
   }
   componentDidMount() {
+    exEventEmitter.on('changePatternBarState', (piece, index) => {
+      let state = {
+        header_active: false,
+        body_active: false,
+        footer_active: false
+      }
+      if (!this.state[piece.tag + '_active']) {
+        // 再次按下时关闭
+        state[piece.tag + '_active'] = true;
+      }
+      this.setState(state);
+    });
   }
   componentWillUnmount(){
   }
@@ -25,9 +40,9 @@ export default class Pieces extends React.Component{
     }
     return (
       <div id="pieces" style={styles}>
-        <HeaderPiece />
-        <BodyPiece />
-        <FooterPiece />
+        <HeaderPiece active={this.state.header_active}/>
+        <BodyPiece active={this.state.body_active}/>
+        <FooterPiece active={this.state.footer_active}/>
       </div>
     );
   }
