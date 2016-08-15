@@ -45,7 +45,7 @@ export default class PatternBar extends React.Component{
           <div className="samples-list">
             {this.state.currentGroup.patterns.map((p, i) => {
               let P = p;
-              return <P key={i} /> 
+              return <P key={i} piece={this.props.piece} index={this.props.index}/> 
             })}
           </div>
         </div>

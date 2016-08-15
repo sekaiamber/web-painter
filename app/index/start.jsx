@@ -2,10 +2,15 @@ import {render} from 'react-dom'
 import Framework from './framework'
 
 import ExEventEmitter from './../utils/events'
+import PageEditor from './../utils/pageEditor/pageEditor'
 
 // Event
 const exEventEmitter = new ExEventEmitter();
 window.exEventEmitter = exEventEmitter;
+
+// page editor
+const pageEditor = new PageEditor();
+window.pageEditor = pageEditor;
 
 // Components
 let React = require('react');
