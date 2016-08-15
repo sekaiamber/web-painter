@@ -12,6 +12,9 @@ window.exEventEmitter = exEventEmitter;
 const pageEditor = new PageEditor();
 window.pageEditor = pageEditor;
 
+// globle var
+window._zoom_ = 1;
+
 // Components
 let React = require('react');
 
