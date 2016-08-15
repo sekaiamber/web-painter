@@ -1,3 +1,39 @@
+// bar height 225px
+
+$groupNameHeight: 35px;
+$patternSamplesHeight: 190px;
+
 #patternBar {
   background: #313435;
+  color: #828485;
+  overflow: hidden;
+  .group-names,
+  .pattern-samples {
+    width: 100%;
+  }
+
+  .group-names {
+    height: $groupNameHeight;
+    .group-name {
+      display: inline-block;
+      cursor: pointer;
+      height: 100%;
+      line-height: $groupNameHeight;
+      margin: 0 10px;
+
+      &:hover {
+        color: #fff;
+      }
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+  .pattern-samples {
+    height: $patternSamplesHeight;
+    .samples-list {
+      height: $patternSamplesHeight - $groupNameHeight;
+      padding: 16px 0;
+    }
+  }
 }
