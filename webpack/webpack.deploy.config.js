@@ -42,6 +42,9 @@ var config = {
       moveToParents: true
     }),
   ],
+  node: {
+    fs: "empty"
+  },
   module: {
     loaders: [
       {
