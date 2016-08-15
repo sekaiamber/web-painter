@@ -3,10 +3,5 @@
   .page-container {
     box-sizing: content-box;
     position: relative;
-    .screen-border {
-      position: absolute;
-      border: solid 1px #676767;
-      pointer-events: none;
-    }
   }
 }
