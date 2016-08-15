@@ -8,6 +8,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
+  target: "node",
   entry: {
     vendors: ['react', 'react-router', 'react-dom', 'jquery', 'antd'],
   },
@@ -42,9 +43,9 @@ var config = {
       moveToParents: true
     }),
   ],
-  node: {
-    fs: "empty"
-  },
+  // node: {
+  //   fs: "empty"
+  // },
   module: {
     loaders: [
       {

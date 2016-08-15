@@ -12,6 +12,13 @@
 * 注意：所有目录在'/root/src'开始
 */
 
+var glob = require("glob");
+var path = require("path");
+var files = glob.sync(path.join(__dirname, '..', '/app') + '/**/*.@(js|jsx)');
+
+console.log('find ' + files.length + ' files:');
+console.log(files);
+
 var routes = [{
   name: 'index',
   entry: './index/start',
