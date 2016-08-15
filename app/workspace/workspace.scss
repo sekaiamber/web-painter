@@ -50,7 +50,7 @@ $patternBarHeight: 225px;
   }
   &.mode-select.exmode-pattern {
     #canvas {
-      height: calc(100% - #{patternBarHeight});
+      height: calc(100% - #{$patternBarHeight});
       width: calc(100% - #{$attributesBarWidth});
       top: $patternBarHeight;
       left: 0;

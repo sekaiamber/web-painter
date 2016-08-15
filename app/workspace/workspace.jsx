@@ -11,16 +11,27 @@ export default class Workspace extends React.Component{
     super(props);
     this.state = {
       mode: '',
-      exMode: ''
+      exMode: '',
+      currentPiece: null,
+      currentPieceIndex: 0
     }
   }
   componentDidMount() {
-    exEventEmitter.on('modeChange', (mode) => {
-      console.log(mode);
+    exEventEmitter.on('modeChange', (mode, exmode) => {
+      exmode = exmode || ''
       this.setState({
-        mode: mode
-      })
-    })
+        mode: mode,
+        exMode: exmode
+      });
+    });
+    exEventEmitter.on('addPattern', (piece, index) => {
+      this.setState({
+        currentPiece: piece,
+        currentPieceIndex: index
+      }, () => {
+        exEventEmitter.emit('modeChange', 'select', 'pattern')
+      });
+    });
   }
   componentWillUnmount(){
   }
@@ -30,7 +41,7 @@ export default class Workspace extends React.Component{
       <div id="workspace" className={classes}>
         <Canvas />
         <AttributesBar />
-        <PatternBar />
+        <PatternBar piece={this.state.currentPiece} index={this.state.currentPieceIndex}/>
       </div>
     );
   }
