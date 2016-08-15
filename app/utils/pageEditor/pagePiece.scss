@@ -3,12 +3,24 @@
 
     &.header,
     &.footer {
-      height: 15%;
-      max-height: 150px;
+      min-height: 150px;
     }
     &.body {
-      height: calc(100% - 300px);
-      min-height: 70%;
+      min-height: calc(100% - 300px);
+    }
+    
+    .pe-pattern {
+      position: relative;
+      // 空白元素
+      .pe-element.raw {
+        height: 350px;
+        background: #f3f3f3;
+        text-align: center;
+        &:after {
+          content: 'Empty';
+          line-height: 350px;
+        }
+      }
     }
   }
 }

@@ -1,11 +1,18 @@
 #pieces {
+  pointer-events: none;
   .piece {
     width: 100%;
     display: table;
+    pointer-events: none;
+    &.empty {
+      pointer-events: auto;
+    }
 
     &.header,
     &.body {
-      border-bottom: solid 1px #676767;
+      .empty {
+        border-bottom: solid 1px #676767;
+      }
     }
 
     &.active {
