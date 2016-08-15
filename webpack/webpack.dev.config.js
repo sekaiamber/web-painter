@@ -6,6 +6,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
+  target: "node",
   entry: {},
   output: {
     path: path.join(__dirname, '..', '/build'),
@@ -19,9 +20,9 @@ var config = {
     }),
     new ExtractTextPlugin("[name].css")
   ],
-  node: {
-    fs: "empty"
-  },
+  // node: {
+  //   fs: "empty"
+  // },
   module: {
     loaders: [
       {
@@ -45,6 +46,10 @@ var config = {
       {
         test: /\.(eot|woff|ttf|svg)$/,
         loader: 'url?limit=10000'
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw'
       }
     ],
     noParse: []
