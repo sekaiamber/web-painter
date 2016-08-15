@@ -1,0 +1,14 @@
+#page {
+  .pe-piece {
+
+    &.header,
+    &.footer {
+      height: 15%;
+      max-height: 150px;
+    }
+    &.body {
+      height: calc(100% - 300px);
+      min-height: 70%;
+    }
+  }
+}

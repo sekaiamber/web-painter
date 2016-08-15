@@ -4,16 +4,6 @@
     display: table;
 
     &.header,
-    &.footer {
-      height: 15%;
-      max-height: 100px;
-    }
-    &.body {
-      height: calc(100% - 200px);
-      min-height: 70%;
-    }
-
-    &.header,
     &.body {
       border-bottom: solid 1px #676767;
     }

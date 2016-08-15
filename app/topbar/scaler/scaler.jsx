@@ -19,6 +19,9 @@ export default class Scaler extends React.Component{
       this.setState({
         zoom: zoom,
         text: (zoom * 100).toString()
+      }, () => {
+        window._zoom_ = this.state.zoom;
+        exEventEmitter.emit('afterZoomChange', this.state.zoom);
       });
     });
   }
