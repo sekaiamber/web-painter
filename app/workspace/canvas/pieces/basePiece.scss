@@ -13,6 +13,11 @@
       min-height: 70%;
     }
 
+    &.header,
+    &.body {
+      border-bottom: solid 1px #676767;
+    }
+
     .empty {
       height: 100%;
       text-align: center;
