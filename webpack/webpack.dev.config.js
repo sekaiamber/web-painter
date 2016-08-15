@@ -19,6 +19,9 @@ var config = {
     }),
     new ExtractTextPlugin("[name].css")
   ],
+  node: {
+    fs: "empty"
+  },
   module: {
     loaders: [
       {

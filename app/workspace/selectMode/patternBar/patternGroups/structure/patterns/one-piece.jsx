@@ -20,5 +20,10 @@ export default class OnePiecePattern extends Pattern {
       }}></div>
     )
   }
+
+  // page editor function
+  getPlainHtmlText() {
+    
+  }
 }
 OnePiecePattern.patternTag = 'one-piece';
