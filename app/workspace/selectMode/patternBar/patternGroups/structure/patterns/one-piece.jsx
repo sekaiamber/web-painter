@@ -1,4 +1,6 @@
 let React = require('react');
+let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/structure/one-piece.html');
+require('./../../../../../../htmlTemplates/patterns/structure/one-piece.scss');
 
 import Pattern from './../../pattern'
 
@@ -23,7 +25,7 @@ export default class OnePiecePattern extends Pattern {
 
   // page editor function
   getPlainHtmlText() {
-    
+    return htmlTemplate;
   }
 }
 OnePiecePattern.patternTag = 'one-piece';
