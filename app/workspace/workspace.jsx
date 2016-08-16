@@ -26,6 +26,8 @@ export default class Workspace extends React.Component{
       });
     });
     exEventEmitter.on('changePatternBarState', (piece, index) => {
+      // 取消当前选择再打开面板
+      exEventEmitter.emit('cancelSelectd');
       if (piece.tag == this.state.currentPiece.tag && this.state.currentPieceActive) {
         // 再次按下时关闭
         this.setState({

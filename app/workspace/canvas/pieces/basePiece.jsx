@@ -1,3 +1,5 @@
+import PiecePattern from './piecePattern'
+
 let React = require('react');
 
 require('./basePiece.scss');
@@ -30,15 +32,18 @@ export default class BasePiece extends React.Component{
     let piece = pageEditor.getPiece(this.tag);
     piece.addPattern(pattern, index);
   }
-  updateHeight(height, patterns) {
-    if (typeof height == 'object') {
-      patterns = height;
-      height = null;
-    }
-    height = height || this.state.height;
+  selectPattern(index) {
+
+  }
+  updatePatterns(patterns) {
     patterns = patterns || this.state.patterns;
     this.setState({
-      patterns: patterns,
+      patterns: patterns
+    })
+  }
+  updateHeight(height) {
+    height = height || this.state.height;
+    this.setState({
       height: height
     })
   }
@@ -55,7 +60,7 @@ export default class BasePiece extends React.Component{
             let patternStyle = {
               height: p.height * window._zoom_
             }
-            return <div className="pattern" key={i} style={patternStyle}></div>
+            return <PiecePattern key={i} style={patternStyle} selected={p.selected}/>
           })
         }
       </div>

@@ -1,12 +1,13 @@
 #page {
   .pe-piece {
-
-    &.header,
-    &.footer {
-      min-height: 150px;
-    }
-    &.body {
-      min-height: calc(100% - 300px);
+    &.empty {
+      &.header,
+      &.footer {
+        min-height: 150px;
+      }
+      &.body {
+        min-height: calc(100% - 300px);
+      }
     }
     
     .pe-pattern {
