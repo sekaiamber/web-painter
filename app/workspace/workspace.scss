@@ -74,6 +74,20 @@ $patternBarHeight: 225px;
     #canvas {
       height: 100%;
       width: 100%;
+      top: 0;
+      left: 0;
+    }
+    #attributesBar {
+      height: 100%;
+      width: 0;
+      top: 0;
+      right: 0;
+    }
+    #patternBar {
+      height: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
     }
   }
 }
