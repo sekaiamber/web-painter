@@ -49,12 +49,12 @@ export default class PagePiece {
       let pattern = new PagePattern(patternReactComponent, this, index);
       if (index == patterns.length) {
         // 直接放到末尾
-        this.patterns.push(pattern);
+        patterns.push(pattern);
         this.$piece.append(pattern.$pattern);
       } else {
         // 插入到当前这个index前面
-        this.patterns[index].$pattern.before(pattern.$pattern);
-        this.patterns.splice(index, 0, pattern);
+        patterns[index].$pattern.before(pattern.$pattern);
+        patterns.splice(index, 0, pattern);
       }
     }
     this.updateRender()
@@ -62,8 +62,19 @@ export default class PagePiece {
     console.log(`[page editor][${this.component.tag} piece]: add ${patternReactComponent.tag} pattern at position ${index}`);
   }
 
+  deletePattern(index) {
+    exEventEmitter.emit('cancelSelectd');
+    let patterns = this.patterns;
+    if (index >= patterns.length) return;
+    let pattern = patterns[index];
+    pattern.$pattern.remove();
+    patterns.splice(index, 1);
+    this.updateRender();
+  }
+
   selectPattern(pagePatternIndex, pagePattern) {
     exEventEmitter.emit('cancelSelectd');
+    exEventEmitter.emit('modeChange', 'select');
     for (var i = 0; i < this.patterns.length; i++) {
       var pattern = this.patterns[i];
       pattern.selected = false;

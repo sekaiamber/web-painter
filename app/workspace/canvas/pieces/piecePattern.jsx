@@ -10,6 +10,7 @@ export default class PiecePattern extends React.Component{
       bottomAddLineShow: false,
     }
     // bind
+    this.handleDeletePattern = this.handleDeletePattern.bind(this);
   }
   componentDidMount() {
   }
@@ -22,6 +23,9 @@ export default class PiecePattern extends React.Component{
   }
   handleAddPattern(position) {
     this.props.onAddPattern(position);
+  }
+  handleDeletePattern() {
+    this.props.onDeletePattern();
   }
   render() {
     let topAddLineClasses = classnames("top add-line", { show: this.state.topAddLineShow });
@@ -42,7 +46,7 @@ export default class PiecePattern extends React.Component{
             onClick={() => {this.handleAddPattern('bottom')}}
           ></div>
           <div className={bottomAddLineClasses}></div>
-          <div className="delete-bt"></div>
+          <div className="delete-bt" onClick={this.handleDeletePattern}></div>
         </div>
       </div>
     );
@@ -51,5 +55,6 @@ export default class PiecePattern extends React.Component{
 PiecePattern.defaultProps = {
   selected: false,
   index: -1,
-  onAddPattern: () => {}
+  onAddPattern: () => {},
+  onDeletePattern: () => {}
 }
