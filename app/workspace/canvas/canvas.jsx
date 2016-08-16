@@ -19,6 +19,7 @@ export default class Canvas extends React.Component{
 
     // binding
     this.autofix = this.autofix.bind(this);
+    this.handleClickEmptySpace = this.handleClickEmptySpace.bind(this);
   }
   componentDidMount() {
     exEventEmitter.on('zoomChange', (zoom) => {
@@ -42,6 +43,12 @@ export default class Canvas extends React.Component{
     }
     exEventEmitter.emit('zoomChange', zoom);
   }
+  handleClickEmptySpace(e) {
+    // 如果点击到了空白地方就取消选择
+    if (e.target == e.currentTarget) {
+      exEventEmitter.emit('cancelSelectd');
+    }
+  }
   render() {
     let windowStyle = {
       width: this.state.screenWidth * this.state.zoom,
@@ -53,7 +60,7 @@ export default class Canvas extends React.Component{
     }
     return (
       <div id="canvas">
-        <div className="page-container" style={windowStyle} >
+        <div className="page-container" style={windowStyle} onClick={this.handleClickEmptySpace}>
           <Page width={this.state.pageWidth} height={this.state.pageHeight} zoom={this.state.zoom}/>
           <Pieces width={this.state.pageWidth} height={this.state.pageHeight} zoom={this.state.zoom} top={windowStyle.paddingTop} left={windowStyle.paddingLeft}/>
         </div>

@@ -3,6 +3,7 @@ import $ from 'jquery'
 export default class PagePattern {
   constructor(patternReactComponent, pagePiece, index) {
     this.$pattern = this.initDom(patternReactComponent);
+    this.tag = 'pattern';
     this.pagePiece = pagePiece;
     this.index = index;
     this.selected = false;

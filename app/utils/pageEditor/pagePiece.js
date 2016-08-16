@@ -5,6 +5,7 @@ require('./pagePiece.scss');
 
 export default class PagePiece {
   constructor(pieceReactComponent) {
+    this.tag = 'piece';
     this.component = pieceReactComponent;
     this.patterns = [];
     this.init();
@@ -83,6 +84,7 @@ export default class PagePiece {
       pagePattern.selected = true;
     }
     this.updateRender();
+    exEventEmitter.emit('selectSomething', pagePattern);
   }
 
   // update
