@@ -60,7 +60,11 @@ export default class BasePiece extends React.Component{
             let patternStyle = {
               height: p.height * window._zoom_
             }
-            return <PiecePattern key={i} style={patternStyle} selected={p.selected}/>
+            return (
+              <PiecePattern
+                key={i} style={patternStyle} selected={p.selected} index={i}
+                onAddPattern={(position) => this.handleChangePatternBarState(i + (position == 'top' ? 0 : 1))}
+              />)
           })
         }
       </div>
