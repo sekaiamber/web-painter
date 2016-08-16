@@ -36,7 +36,7 @@ export default class PagePiece {
 
   addPattern(patternReactComponent, index) {
     exEventEmitter.emit('cancelSelectd');
-    let patterns = $('.pe-pattern', this.$piece);
+    let patterns = this.patterns;
     if (patterns.length == 0) {
       // empty的情况
       if (index > 0) return;
@@ -45,7 +45,17 @@ export default class PagePiece {
       this.$piece.append(pattern.$pattern);
     } else {
       // 插入的情况
-      if (patterns.length - 1 < index) return;
+      if (patterns.length < index) return;
+      let pattern = new PagePattern(patternReactComponent, this, index);
+      if (index == patterns.length) {
+        // 直接放到末尾
+        this.patterns.push(pattern);
+        this.$piece.append(pattern.$pattern);
+      } else {
+        // 插入到当前这个index前面
+        this.patterns[index].$pattern.before(pattern.$pattern);
+        this.patterns.splice(index, 0, pattern);
+      }
     }
     this.updateRender()
     this.component.handleChangePatternBarState(index);

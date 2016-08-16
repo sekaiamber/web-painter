@@ -20,6 +20,9 @@ export default class PiecePattern extends React.Component{
     state[position + "AddLineShow"] = show;
     this.setState(state);
   }
+  handleAddPattern(position) {
+    this.props.onAddPattern(position);
+  }
   render() {
     let topAddLineClasses = classnames("top add-line", { show: this.state.topAddLineShow });
     let bottomAddLineClasses = classnames("bottom add-line", { show: this.state.bottomAddLineShow });
@@ -31,10 +34,12 @@ export default class PiecePattern extends React.Component{
           <div className="top add-bt"
             onMouseEnter={() => {this.handleAddMouseEnterAndLeave('top', true)}}
             onMouseLeave={() => {this.handleAddMouseEnterAndLeave('top', false)}}
+            onClick={() => {this.handleAddPattern('top')}}
           ></div>
           <div className="bottom add-bt"
             onMouseEnter={() => {this.handleAddMouseEnterAndLeave('bottom', true)}}
             onMouseLeave={() => {this.handleAddMouseEnterAndLeave('bottom', false)}}
+            onClick={() => {this.handleAddPattern('bottom')}}
           ></div>
           <div className={bottomAddLineClasses}></div>
           <div className="delete-bt"></div>
@@ -44,5 +49,7 @@ export default class PiecePattern extends React.Component{
   }
 }
 PiecePattern.defaultProps = {
-  selected: false
+  selected: false,
+  index: -1,
+  onAddPattern: () => {}
 }
