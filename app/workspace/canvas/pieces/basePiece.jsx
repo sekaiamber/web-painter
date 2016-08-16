@@ -32,6 +32,10 @@ export default class BasePiece extends React.Component{
     let piece = pageEditor.getPiece(this.tag);
     piece.addPattern(pattern, index);
   }
+  deletePattern(index) {
+    let piece = pageEditor.getPiece(this.tag);
+    piece.deletePattern(index);
+  }
   selectPattern(index) {
 
   }
@@ -64,6 +68,7 @@ export default class BasePiece extends React.Component{
               <PiecePattern
                 key={i} style={patternStyle} selected={p.selected} index={i}
                 onAddPattern={(position) => this.handleChangePatternBarState(i + (position == 'top' ? 0 : 1))}
+                onDeletePattern={() => this.deletePattern(i)}
               />)
           })
         }
