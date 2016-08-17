@@ -84,7 +84,7 @@ export default class PagePiece {
       pagePattern.selected = true;
     }
     this.updateRender();
-    exEventEmitter.emit('selectSomething', pagePattern);
+    exEventEmitter.emit('selectSomething', pagePattern, this);
   }
 
   // update
