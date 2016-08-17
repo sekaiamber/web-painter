@@ -1,3 +1,66 @@
 #attributesBar {
   background: #292c2d;
+  color: #bfc0c0;
+  overflow-y: auto;
+
+  // empty
+  &.empty {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+
+  &>.title {
+    padding: 10px 15px;
+    color: #fff;
+  }
+
+
+  // group
+  .attribute-group {
+    border-top: solid 1px #181a1b;
+    padding: 15px;
+
+    .group-name {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 14px;
+      &:before {
+        content: ".";
+        display: inline-block;
+        margin-right: 10px;
+        background: #fff;
+      }
+    }
+
+    .attribute {
+      height: 25px;
+
+      &>.name,
+      &>.value {
+        display: inline-block;
+        vertical-align: bottom;
+        height: 25px;
+      }
+      &>.name {
+        width: 60px;
+        line-height: 25px;
+        font-size: 12px;
+      }
+      &>.value {
+        width: 170px;
+      }
+    }
+  }
+
+
+  // ant-design
+  .ant-input {
+    background: #3e3e3e;
+    color: #fff;
+    border-color: #646464;
+    &:focus {
+      border-color: #42a5e8;
+    }
+  }
 }

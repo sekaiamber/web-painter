@@ -4,10 +4,16 @@ require('./../../../../../../htmlTemplates/patterns/structure/one-piece.scss');
 
 import Pattern from './../../pattern'
 
+import AppearanceAttributeGroup from './../../../../attributesBar/attributeGroups/appearance'
+
+let attributeGroups = [ AppearanceAttributeGroup ];
+
+
 export default class OnePiecePattern extends Pattern {
   constructor(props) {
     super(props);
     this.tag = 'one-piece'
+    this.attributeGroups = attributeGroups;
   }
   renderSample() {
     return (
