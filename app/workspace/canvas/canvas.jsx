@@ -52,7 +52,6 @@ export default class Canvas extends React.Component{
   render() {
     let windowStyle = {
       width: this.state.screenWidth * this.state.zoom,
-      height: this.state.screenHeight * this.state.zoom,
       paddingTop: `${Math.round(this.state.pageHeight / 2)}px`,
       paddingRight: `${Math.round(this.state.pageWidth / 2)}px`,
       paddingBottom: `${Math.round(this.state.pageHeight / 2)}px`,
@@ -61,8 +60,8 @@ export default class Canvas extends React.Component{
     return (
       <div id="canvas">
         <div className="page-container" style={windowStyle} onClick={this.handleClickEmptySpace}>
-          <Page width={this.state.pageWidth} height={this.state.pageHeight} zoom={this.state.zoom}/>
-          <Pieces width={this.state.pageWidth} height={this.state.pageHeight} zoom={this.state.zoom} top={windowStyle.paddingTop} left={windowStyle.paddingLeft}/>
+          <Page width={this.state.pageWidth} zoom={this.state.zoom}/>
+          <Pieces width={this.state.pageWidth} zoom={this.state.zoom} top={windowStyle.paddingTop} left={windowStyle.paddingLeft}/>
         </div>
       </div>
     );

@@ -34,7 +34,6 @@ export default class Pieces extends React.Component{
   render() {
     let styles = {
       width: this.props.width * this.props.zoom,
-      minHeight: this.props.height * this.props.zoom,
       top: this.props.top,
       left: this.props.left,
     }
@@ -49,7 +48,6 @@ export default class Pieces extends React.Component{
 }
 Pieces.defaultProps = {
   width: 1440,
-  height: 900,
   zoom: 1,
   top: 0,
   left: 0,

@@ -58,7 +58,7 @@ export default class AttributesBar extends React.Component{
         <div className="title">{this.state.target.tag}</div>
         <BasicInfoAttributeGroup {...this.state.data} onChange={this.setAttributeToTarget} />
         {this.state.target.attributeGroups.map((P, i) => {
-          return <P {...this.state.data} onChange={this.setAttributeToTarget} />
+          return <P {...this.state.data} onChange={this.setAttributeToTarget} key={i}/>
         })}
       </div>
     );
