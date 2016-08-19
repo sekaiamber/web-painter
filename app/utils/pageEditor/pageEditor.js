@@ -4,7 +4,14 @@ import PagePiece from './pagePiece'
 export default class PageEditor {
   constructor() {
     this.$page = null;
-    this.pieces = []
+    this.pieces = [];
+    this.initEvent();
+  }
+
+  // init
+
+  initEvent() {
+    exEventEmitter.on('elementComponentSelected', this.selectElementComponent.bind(this))
   }
 
   updatePageDom(page) {
@@ -18,10 +25,18 @@ export default class PageEditor {
     }
   }
 
+  // elementComponent control
+  selectElementComponent(elementComponent) {
+    this.currentSelectComponent = elementComponent;
+  }
+
+  // piece control
+
   addPiece(pieceReactComponent) {
-    let piece = new PagePiece(pieceReactComponent);
-    piece.updatePageDom(this.$page);
+    let piece = new PagePiece(pieceReactComponent, this);
+    this.$page.append(piece.$piece);
     this.pieces.push(piece);
+    piece.updateRender();
   }
 
   getPiece(tag) {

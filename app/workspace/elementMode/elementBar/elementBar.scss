@@ -1,0 +1,13 @@
+#elementBar {
+  background: rgba(45,45,45,.5);
+  // filter: blur(10px);
+  // backdrop-filter: blur(5px);
+
+  .container {
+    width: 720px;
+    margin: 0 auto;
+    .fav-elements {
+      height: 80px;
+    }
+  }
+}

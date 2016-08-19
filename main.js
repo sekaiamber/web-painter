@@ -15,7 +15,15 @@ const args = {
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    // Enables Chromium's experimental features
+    webPreferences: {
+      experimentalFeatures: true
+    }
+  })
+
 
   // get URL
   if (!process.argv[2]) {

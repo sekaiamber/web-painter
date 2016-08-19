@@ -1,0 +1,19 @@
+#elementBar {
+  .element {
+    display: inline-block;
+    margin: 0 5px;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    padding: 15px;
+    &.selected {
+      background: rgba(0,0,0,.5);
+    }
+
+    .iconfont-element {
+      height: 50px;
+      width: 50px;
+      background: url('./../../../../../assets/images/element-iconfont.png');
+    }
+  }
+}

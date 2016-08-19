@@ -11,14 +11,36 @@ export default class PagePattern {
     this.selected = false;
   }
 
+  // init
   initDom(patternReactComponent) {
     let $pattern = $(patternReactComponent.getPlainHtmlText()).addClass('pe-pattern');
-    // 编辑
-    $pattern.click(() => {
-      this.pagePiece.selectPattern(this.index, this);
-    })
+    $pattern = this.initClick($pattern);
+    $pattern = this.initHover($pattern);
+    $pattern = this.initMousemove($pattern);
     return $pattern;
   }
+
+  initClick($pattern) {
+    // select mode: select something
+    $pattern.click((e) => {
+      if (window._mode_ == 'select') {
+        this.pagePiece.selectPattern(this.index, this);
+      }
+    });
+    return $pattern;
+  }
+
+  initHover($pattern) {
+    
+    return $pattern;
+  }
+
+  initMousemove($pattern) {
+    
+    return $pattern;
+  }
+
+  // piece control
 
   getInfo () {
     return {

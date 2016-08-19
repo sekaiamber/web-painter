@@ -1,5 +1,6 @@
 import AttributesBar from './selectMode/attributesBar/attributesBar'
 import PatternBar from './selectMode/patternBar/patternBar'
+import ElementBar from './elementMode/elementBar/elementBar'
 import Canvas from './canvas/canvas'
 
 let React = require('react');
@@ -19,10 +20,13 @@ export default class Workspace extends React.Component{
   }
   componentDidMount() {
     exEventEmitter.on('modeChange', (mode, exmode) => {
+      exEventEmitter.emit('cancelSelectd');
       exmode = exmode || ''
       this.setState({
         mode: mode,
         exMode: exmode
+      }, () => {
+        window._mode_ = mode;
       });
     });
     exEventEmitter.on('changePatternBarState', (piece, index) => {
@@ -60,6 +64,7 @@ export default class Workspace extends React.Component{
         <Canvas />
         <AttributesBar />
         <PatternBar piece={this.state.currentPiece} index={this.state.currentPieceIndex}/>
+        <ElementBar />
       </div>
     );
   }

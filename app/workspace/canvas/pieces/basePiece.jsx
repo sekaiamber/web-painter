@@ -1,4 +1,5 @@
 import PiecePattern from './piecePattern'
+import ElementHoverer from './elementHoverer'
 
 let React = require('react');
 
@@ -72,6 +73,7 @@ export default class BasePiece extends React.Component{
               />)
           })
         }
+        <ElementHoverer tag={this.tag} />
       </div>
     );
   }
