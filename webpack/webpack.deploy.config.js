@@ -8,7 +8,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
-  target: "node",
+  target: "node-webkit",
   entry: {
     vendors: ['react', 'react-router', 'react-dom', 'jquery', 'antd'],
   },
@@ -68,6 +68,10 @@ var config = {
       {
         test: /\.(eot|woff|ttf|svg)$/,
         loader: 'url?limit=10000'
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw'
       }
     ]
   },
