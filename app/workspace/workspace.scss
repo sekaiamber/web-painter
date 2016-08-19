@@ -6,29 +6,27 @@ $patternBarHeight: 225px;
   background: #1d2021;
 
   // 防止意料之外的显示
-  #canvas,
-  #attributesBar {
+  #attributesBar,
+  #patternBar,
+  #elementBar {
     opacity: 0;
-  }
-
-  &.mode-select,
-  &.mode-element,
-  &.mode-paint {
-    #canvas,
-    #attributesBar {
-      opacity: 1;
-    }
   }
 
   // 工作区设置
   #canvas,
   #attributesBar,
-  #patternBar {
+  #patternBar,
+  #elementBar {
     position: absolute;
   }
 
   // 选择模式
   &.mode-select {
+    #attributesBar,
+    #patternBar {
+      opacity: 1
+    }
+
     #canvas {
       height: 100%;
       width: calc(100% - #{$attributesBarWidth});
@@ -45,6 +43,12 @@ $patternBarHeight: 225px;
       height: 0;
       width: calc(100% - #{$attributesBarWidth});
       top: 0;
+      left: 0;
+    }
+    #elementBar {
+      height: 100%;
+      width: 100%;
+      top: 100%;
       left: 0;
     }
   }
@@ -71,11 +75,19 @@ $patternBarHeight: 225px;
 
   // 元素模式
   &.mode-element {
+    #elementBar {
+      opacity: 1;
+    }
+
     #canvas {
       height: 100%;
       width: 100%;
       top: 0;
       left: 0;
+      cursor: crosshair;
+      #pieces {
+        // display: none;
+      }
     }
     #attributesBar {
       height: 100%;
@@ -87,6 +99,13 @@ $patternBarHeight: 225px;
       height: 0;
       width: 100%;
       top: 0;
+      left: 0;
+    }
+
+    #elementBar {
+      height: 100%;
+      width: 100%;
+      top: calc(100% - 80px);
       left: 0;
     }
   }

@@ -4,6 +4,7 @@
     width: 100%;
     display: table;
     pointer-events: none;
+    position: relative;
     &.empty {
       pointer-events: auto;
     }
@@ -42,5 +43,21 @@
         }
       }
     }
+  }
+}
+
+// 各状态
+
+#workspace.mode-select #pieces {
+  .piece>.element-hoverer {
+    display: none;
+  }
+}
+
+#workspace.mode-element #pieces {
+  border: none;
+
+  .piece>.empty {
+    display: none;
   }
 }
