@@ -1,5 +1,4 @@
 import BasicInfoAttributeGroup from './attributeGroups/basicInfo'
-import AppearanceAttributeGroup from './attributeGroups/appearance'
 let React = require('react');
 
 require('./attributesBar.scss');
@@ -8,8 +7,7 @@ export default class AttributesBar extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      target: null,
-      renderer: null,
+      handler: null,
       data: null,
     }
     // bind
@@ -18,15 +16,13 @@ export default class AttributesBar extends React.Component{
   componentDidMount() {
     exEventEmitter.on('cancelSelectd', () => {
       this.setState({
-        target: null,
-        renderer: null,
+        handler: null,
         data: null
       });
     });
-    exEventEmitter.on('selectSomething', (target, renderer) => {
+    exEventEmitter.on('selectSomething', (handler) => {
       this.setState({
-        target: target,
-        renderer: renderer,
+        handler: handler,
       }, () => {
         this.readAttributeFromTarget()
       });
@@ -38,13 +34,13 @@ export default class AttributesBar extends React.Component{
     this.setState({
       data: data
     }, () => {
-      this.state.target.setAttribute(key, this.state.data[key]);
-      this.state.renderer.updateRender();
+      this.state.handler.setAttribute(key, this.state.data[key]);
+      this.state.handler.updateRender();
     }, callback)
   }
   readAttributeFromTarget() {
-    if (!this.state.target) return;
-    let data = this.state.target.getAttributeObject();
+    if (!this.state.handler) return;
+    let data = this.state.handler.getAttributeObject();
     this.setState({
       data: data
     });
@@ -52,12 +48,12 @@ export default class AttributesBar extends React.Component{
   componentWillUnmount(){
   }
   render() {
-    if (!this.state.target) return (<div id="attributesBar" className="empty">Nothing Selected</div>)
+    if (!this.state.handler) return (<div id="attributesBar" className="empty">Nothing Selected</div>)
     return (
       <div id="attributesBar">
-        <div className="title">{this.state.target.tag}</div>
+        <div className="title">{this.state.handler.tag}</div>
         <BasicInfoAttributeGroup {...this.state.data} onChange={this.setAttributeToTarget} />
-        {this.state.target.attributeGroups.map((P, i) => {
+        {this.state.handler.attributeGroups.map((P, i) => {
           return <P {...this.state.data} onChange={this.setAttributeToTarget} key={i}/>
         })}
       </div>

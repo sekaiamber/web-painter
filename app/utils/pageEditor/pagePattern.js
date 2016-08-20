@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import attributeHelper from './pageAttribute'
 
 export default class PagePattern {
   constructor(patternReactComponent, pagePiece, index) {
@@ -24,7 +23,13 @@ export default class PagePattern {
     // select mode: select something
     $pattern.click((e) => {
       if (window._mode_ == 'select') {
-        this.pagePiece.selectPattern(this.index, this);
+        if (e.target == this.$pattern[0]) {
+          // select pattern
+          this.pagePiece.selectPattern(this.index, this);
+        } else {
+          // select element
+          this.pagePiece.selectElement(e);
+        }
       }
     });
     return $pattern;
@@ -49,31 +54,4 @@ export default class PagePattern {
     }
   }
 
-  // attrbute
-  getAttribute(key) {
-    return attributeHelper[key].get(this.$pattern);
-  }
-  getAttributeObject () {
-    let ret = {}
-    // basic
-    let keys = [
-      // basic
-      'id', 'class',
-      // appearance
-      'padding', 'margin', 'width', 'height',
-    ]
-    keys.map((key) => {
-      ret[key] = attributeHelper[key].get(this.$pattern);
-    });
-    return ret;
-  }
-
-  setAttribute(key, value) {
-    attributeHelper[key].set(this.$pattern, value);
-  }
-  setAttributeObject(obj) {
-    Object.keys(obj).map((key) => {
-      attributeHelper[key].set(this.$pattern, obj[key]);
-    })
-  }
 }
