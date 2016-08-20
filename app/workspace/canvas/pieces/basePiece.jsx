@@ -1,5 +1,6 @@
 import PiecePattern from './piecePattern'
 import ElementHoverer from './elementHoverer'
+import ElementSelectedBorder from './elementSelectedBorder'
 
 let React = require('react');
 
@@ -12,6 +13,13 @@ export default class BasePiece extends React.Component{
     this.state = {
       patterns: [],
       height: 0,
+      elementBorderStyle: {
+        top: 0,
+        left: 0,
+        width: 0,
+        height: 0,
+        opacity: 0,
+      }
     }
     // bind
     this.handleChangePatternBarState = this.handleChangePatternBarState.bind(this);
@@ -52,6 +60,12 @@ export default class BasePiece extends React.Component{
       height: height
     })
   }
+  updateElementSelectedBorder(style) {
+    style = style || this.state.elementBorderStyle;
+    this.setState({
+      elementBorderStyle: style
+    })
+  }
   render() {
     let classes = "piece " + this.tag + (this.props.active ? " active" : "") + (this.state.patterns.length == 0 ? " empty" : "");
     let pieceStyle = {
@@ -74,6 +88,7 @@ export default class BasePiece extends React.Component{
           })
         }
         <ElementHoverer tag={this.tag} />
+        <ElementSelectedBorder {...this.state.elementBorderStyle}/>
       </div>
     );
   }

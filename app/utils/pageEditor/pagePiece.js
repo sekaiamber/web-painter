@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import PagePattern from './pagePattern'
+import { PatternAttributeHandler, ElementAttributeHandler } from './attributeHandler'
 
 require('./pagePiece.scss');
 
@@ -69,10 +70,6 @@ export default class PagePiece {
       ) {
         let p1 = $piece.offset();
         let p2 = $target.offset();
-        let dp = {
-          top: p2.top - p1.top,
-          left: p2.left - p1.left
-        }
         if ($target.attr('wp-raw') == "") {
           if (currentHoverElement == e.target) return;
           currentHoverElement = e.target;
@@ -153,6 +150,13 @@ export default class PagePiece {
     console.log(`[page editor][${this.component.tag} piece]: add ${elementComponent.tag} element`);
   }
 
+  selectElement(e) {
+    exEventEmitter.emit('cancelSelectd');
+    exEventEmitter.emit('modeChange', 'select');
+    this.updateRender(e);
+    exEventEmitter.emit('selectSomething', new ElementAttributeHandler(e.target, this));
+  }
+
   // pattern control
 
   addPattern(patternReactComponent, index) {
@@ -196,22 +200,19 @@ export default class PagePiece {
   selectPattern(pagePatternIndex, pagePattern) {
     exEventEmitter.emit('cancelSelectd');
     exEventEmitter.emit('modeChange', 'select');
-    for (var i = 0; i < this.patterns.length; i++) {
-      var pattern = this.patterns[i];
-      pattern.selected = false;
-    };
     if (pagePatternIndex > -1 && pagePattern) {
       pagePattern.selected = true;
     }
     this.updateRender();
-    exEventEmitter.emit('selectSomething', pagePattern, this);
+    exEventEmitter.emit('selectSomething', new PatternAttributeHandler(pagePattern, this));
   }
 
   // update
-  updateRender() {
+  updateRender(e) {
     this.updatePatternInfo();
     this.updatePatterns();
     this.updateHeight();
+    this.updateElement(e);
   }
 
   updatePatternInfo() {
@@ -235,5 +236,28 @@ export default class PagePiece {
 
   updateHeight() {
     this.component.updateHeight(this.$piece.outerHeight());
+  }
+
+  updateElement(e) {
+    if (e) {
+      let $target = $(e.target);
+      let p1 = this.$piece.offset();
+      let p2 = $target.offset();
+      this.component.updateElementSelectedBorder({
+        left: parseInt((p2.left - p1.left) * window._zoom_),
+        top:  parseInt((p2.top - p1.top) * window._zoom_),
+        width: parseInt($target.outerWidth() * window._zoom_),
+        height: parseInt($target.outerHeight() * window._zoom_),
+        opacity: 1
+      });
+    } else {
+      this.component.updateElementSelectedBorder({
+        top: 0,
+        left: 0,
+        width: 0,
+        height: 0,
+        opacity: 0
+      });
+    }
   }
 }

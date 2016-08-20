@@ -54,3 +54,6 @@ export default class AppearanceAttributeGroup extends BaseAttributeGroup{
     );
   }
 }
+AppearanceAttributeGroup.attributeKeys = [
+  'padding', 'margin', 'width', 'height'
+]

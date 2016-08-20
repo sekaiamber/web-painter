@@ -4,9 +4,9 @@ require('./../../../../../../htmlTemplates/patterns/structure/one-piece.scss');
 
 import Pattern from './../../pattern'
 
-import AppearanceAttributeGroup from './../../../../attributesBar/attributeGroups/appearance'
+import groups from './../../../../attributesBar/attributeGroups/attributeGroups'
 
-let attributeGroups = [ AppearanceAttributeGroup ];
+let attributeGroups = [ groups.AppearanceAttributeGroup ];
 
 
 export default class OnePiecePattern extends Pattern {
