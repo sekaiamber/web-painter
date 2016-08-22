@@ -1,0 +1,25 @@
+.pe-piece {
+  &.empty {
+    &.header,
+    &.footer {
+      min-height: 150px;
+    }
+    &.body {
+      min-height: 500px;
+    }
+  }
+  
+  .pe-pattern {
+    position: relative;
+    // 空白元素
+    .pe-element.raw {
+      height: 350px;
+      background: #f3f3f3;
+      text-align: center;
+      &:after {
+        content: 'Empty';
+        line-height: 350px;
+      }
+    }
+  }
+}

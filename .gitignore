@@ -42,3 +42,6 @@ dist
 
 # node version
 .nvmrc
+
+# project
+bundle.css.wpexport
