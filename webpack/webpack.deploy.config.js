@@ -8,7 +8,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
-  target: "node-webkit",
+  target: "electron",
   entry: {
     vendors: ['react', 'react-router', 'react-dom', 'jquery', 'antd'],
   },
@@ -71,6 +71,10 @@ var config = {
       },
       {
         test: /\.html$/,
+        loader: 'raw'
+      },
+      {
+        test: /\.wpexport$/,
         loader: 'raw'
       }
     ]

@@ -2,11 +2,11 @@
   "name": "web-painter",
   "version": "0.0.1",
   "description": "This is a WYSIWYG web page editor built by Electron.",
-  "main": "main.js",
+  "main": "./electron/main.js",
   "scripts": {
-    "dev-app": "electron ./main.js DEV",
+    "dev-app": "electron ./electron/main.js DEV",
     "dev-file": "webpack-dev-server --progress --colors --display-error-details --inline --hot --content-base root/build --config webpack/webpack.dev.config.js",
-    "deploy-app": "electron ./main.js DEPLOY",
+    "deploy-app": "electron ./electron/main.js DEPLOY",
     "deploy-file": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js"
   },
   "repository": {

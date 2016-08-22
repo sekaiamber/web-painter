@@ -6,7 +6,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
-  target: "node",
+  target: "electron",
   entry: {},
   output: {
     path: path.join(__dirname, '..', '/build'),
@@ -49,6 +49,10 @@ var config = {
       },
       {
         test: /\.html$/,
+        loader: 'raw'
+      },
+      {
+        test: /\.wpexport$/,
         loader: 'raw'
       }
     ],

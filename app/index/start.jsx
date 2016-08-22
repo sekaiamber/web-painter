@@ -4,6 +4,9 @@ import Framework from './framework'
 import ExEventEmitter from './../utils/events'
 import PageEditor from './../utils/pageEditor/pageEditor'
 
+// ipc
+require('./../utils/ipc')
+
 // Event
 const exEventEmitter = new ExEventEmitter();
 window.exEventEmitter = exEventEmitter;

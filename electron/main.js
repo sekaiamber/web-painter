@@ -1,29 +1,17 @@
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let exGlobal = require('./global');
 
 const args = {
   'DEV': 'http://localhost:8888/',
-  'DEPLOY': `file://${__dirname}/dist/index.html`
+  'DEPLOY': `file://${__dirname}/../dist/index.html`
 }
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    // Enables Chromium's experimental features
-    webPreferences: {
-      experimentalFeatures: true
-    }
-  })
-
+  let mainWindow = exGlobal.getBrowserWindow('main');
 
   // get URL
   if (!process.argv[2]) {
@@ -69,3 +57,4 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+require('./menu/menu');
