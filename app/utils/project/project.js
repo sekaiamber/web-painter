@@ -54,6 +54,14 @@ export default class Project {
     return page;
   }
 
+  updatePageInfo(name, obj) {
+    delete obj.name;
+    let page = this.pages.find((p) => p.name == name);
+    Object.keys(obj).map((key) => {
+      page[key] = obj[key];
+    });
+  }
+
   selectPage(name) {
     let page = this.pages.find((p) => p.name == name);
     this.currentPage = page;

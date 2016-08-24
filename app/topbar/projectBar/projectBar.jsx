@@ -1,5 +1,7 @@
 import { Select, Input, Button } from 'antd'
 import NewPage from './newpage'
+import PageSetting from './pagesetting'
+
 const Option = Select.Option;
 
 let React = require('react');
@@ -12,12 +14,14 @@ export default class ProjectBar extends React.Component{
     this.state = {
       pages: [],
       currentPage: '',
-      activeNewPage: false
+      activeNewPage: false,
+      activePageSetting: false
     }
     // bind
     this.handleChangePage = this.handleChangePage.bind(this);
     this.handleAddPage = this.handleAddPage.bind(this);
-    this.handleCancelNewPage = this.handleCancelNewPage.bind(this);
+    this.handleSettingPage = this.handleSettingPage.bind(this);
+    this.handleCancelAll = this.handleCancelAll.bind(this);
     this.handleCreateNewPage = this.handleCreateNewPage.bind(this);
   }
   componentDidMount() {
@@ -37,17 +41,25 @@ export default class ProjectBar extends React.Component{
   }
   handleAddPage() {
     this.setState({
-      activeNewPage: true
+      activeNewPage: true,
+      activePageSetting: false,
     })
   }
-  handleCancelNewPage() {
+  handleSettingPage() {
     this.setState({
-      activeNewPage: false
+      activeNewPage: false,
+      activePageSetting: true,
+    })
+  }
+  handleCancelAll() {
+    this.setState({
+      activeNewPage: false,
+      activePageSetting: false,
     })
   }
   handleCreateNewPage(name) {
     exEventEmitter.emit('createProjectPage', name);
-    this.handleCancelNewPage();
+    this.handleCancelAll();
   }
   handleChangePage(name) {
     if (name == this.state.currentPage) return;
@@ -61,7 +73,7 @@ export default class ProjectBar extends React.Component{
         </div>
 
         <div className="tool">
-          <div className="iconfont toolbar topbar pagesetting"></div>
+          <div className="iconfont toolbar topbar pagesetting" onClick={this.handleSettingPage}></div>
         </div>
 
         <div className="pageSelect">
@@ -74,7 +86,8 @@ export default class ProjectBar extends React.Component{
             {this.state.pages.map((p, i) => <Option value={p} key={i}>{p}</Option>)}
           </Select>
         </div>
-        {this.state.activeNewPage ? <NewPage onCancel={this.handleCancelNewPage} onCreate={this.handleCreateNewPage} /> : undefined}
+        {this.state.activeNewPage ? <NewPage onCancel={this.handleCancelAll} onCreate={this.handleCreateNewPage} /> : undefined}
+        {this.state.activePageSetting ? <PageSetting onCancel={this.handleCancelAll} /> : undefined}
       </div>
     );
   }
