@@ -45,7 +45,7 @@ export default class Project {
   }
 
   addNewPage(obj) {
-    let page = new Page(obj.name);
+    let page = new Page(obj.name, this);
     Object.keys(obj).map((key) => {
       page[key] = obj[key];
     });

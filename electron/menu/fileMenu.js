@@ -3,9 +3,19 @@ const ipc = require('electron').ipcMain
 
 let exGlobal = require('./../global')
 // save
-function save(filename) {
-  if (filename) {
-    exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
+let projectPath = null;
+function save(item, focusedWindow) {
+  if (projectPath) {
+    exGlobal.getBrowserWindow('main').webContents.send('save-project', projectPath);
+  } else {
+    dialog.showSaveDialog({
+      title: 'Save to ...',
+    }, (filename) => {
+      if (filename) {
+        exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
+        projectPath = filename;
+      }
+    });
   }
 }
 
@@ -19,10 +29,6 @@ module.exports = {
   }, {
     label: 'Save...',
     accelerator: 'CmdOrCtrl+S',
-    click: function (item, focusedWindow) {
-      dialog.showSaveDialog({
-        title: 'Save to ...',
-      }, save);
-    }
+    click: save
   }]
 }

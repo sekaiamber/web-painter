@@ -6,16 +6,29 @@ const pageTemplate = require('./../../htmlTemplates/export/page.html');
 const bundleCss = require('./../../htmlTemplates/export/bundle.css.wpexport')
 
 // const antcss = require()
+function getPageHtml(page) {
+  let data = pageTemplate
+    .replace('@title', page.title)
+    .replace('@keywords', page.keywords)
+    .replace('@description', page.description)
+    .replace('@content', page.getHtmlText());
 
+
+  return {
+    filename: page.fileName + '.html',
+    data: data
+  }
+}
 
 function getFiles(filePath, sign) {
-  let files = [{
-    filename: 'index.html',
-    data: pageTemplate.replace('@content', $('#page').html())
-  }, {
+  // html page
+  let project = pageEditor.project;
+  let files = project.pages.map(getPageHtml);
+  // bundles
+  files.push({
     filename: 'bundle.css',
     data: bundleCss
-  }];
+  });
   for (var i = 0; i < files.length; i++) {
     files[i].path = filePath + sign + files[i].filename;
   }

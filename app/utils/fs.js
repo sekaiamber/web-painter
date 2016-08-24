@@ -14,7 +14,6 @@ export default {
     });
   },
   writeFiles: function (fileOpts, callback) {
-    console.log(fileOpts);
     let total = fileOpts.length;
     let index = 0;
     function wf(index) {
