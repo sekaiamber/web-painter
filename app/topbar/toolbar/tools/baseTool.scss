@@ -1,22 +1,3 @@
 #toolbar {
-  .tool {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    padding: 3px;
-    position: relative;
-    .iconfont {
-      font-size: 19px;
-      line-height: 29px;
-      cursor: pointer;
-      color: #676767;
-      &:hover {
-        // color: #333;
-      }
-      &.active {
-        color: #42a5e8;
-      }
-    }
-  }
+  
 }

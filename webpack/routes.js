@@ -27,6 +27,14 @@ var routes = [{
     filename: 'index.html'
   },
   rewrite: /\/index/
+}, {
+  name: 'addpage',
+  entry: './subwindows/addpage/index',
+  plugins: {
+    template: './../templates/index.html',
+    filename: 'addpage.html'
+  },
+  rewrite: /\/addpage/
 }]
 
 module.exports = routes;

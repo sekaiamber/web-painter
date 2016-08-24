@@ -35,6 +35,9 @@ Pattern.defaultProps = {
 export class PatternGroup {
   constructor(name, patterns) {
     this.name = name || '';
-    this.patterns = patterns || []
+    patterns = patterns || {}
+    this.patterns = Object.keys(patterns).map((key) => {
+      return patterns[key];
+    });
   }
 }

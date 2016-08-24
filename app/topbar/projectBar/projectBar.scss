@@ -1,0 +1,71 @@
+#topbar #projectBar {
+  display: inline-block;
+  height: 35px;
+  float: right;
+
+  .pageSelect {
+    display: inline-block;
+    height: 35px;
+    padding: 3px;
+    padding-top: 5px;
+    vertical-align: bottom;
+  }
+  .mask {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+
+    .newpage {
+      width: 320px;
+      margin: 0 auto;
+      background: #1d2021;
+      border: #646464 solid 1px;
+      padding: 15px;
+      color: #e5e5e5;
+
+      h3 {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .prop {
+        .prop-name, 
+        .prop-value {
+          display: inline-block;
+          height: 25px;
+          vertical-align: bottom;
+        }
+
+        .prop-name {
+          width: 25%;
+        }
+        .prop-value {
+          width: 75%;
+        }
+      }
+
+      .opt {
+        margin-top: 15px;
+        height: 35px;
+        .cancel {
+          float: left;
+        }
+        .create {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+#topbar {
+  .ant-select-dropdown {
+    border-radius: 0;
+    background: #3e3e3e;
+    color: #fff;
+    border-color: #646464;
+  }
+}
