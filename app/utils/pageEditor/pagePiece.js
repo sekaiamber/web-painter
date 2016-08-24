@@ -40,6 +40,16 @@ export default class PagePiece {
   initClick($piece) {
     // element mode: add element
     $piece.click((e) => {
+      if (window._mode_ == 'select') {
+        if ($(e.target).attr('wp-pattern')) {
+          // select pattern
+          let pagePatternIndex = parseInt($(e.target).attr('wp-pattern-index'));
+          this.selectPattern(pagePatternIndex);
+        } else {
+          // select element
+          this.selectElement(e);
+        }
+      }
       if (window._mode_ == 'element') {
         if (e.target == currentHoverElement) {
           this.addElement(e.target);
@@ -182,6 +192,10 @@ export default class PagePiece {
         patterns.splice(index, 0, pattern);
       }
     }
+    // 如果是body piece则将patterns加入到当前页面数据中
+    if (this.component.tag == 'body') {
+      this.pageEditor.project.setCurrentPagePatterns(this.patterns);
+    }
     this.updateRender()
     this.component.handleChangePatternBarState(index);
     console.log(`[page editor][${this.component.tag} piece]: add ${patternReactComponent.tag} pattern at position ${index}`);
@@ -194,17 +208,27 @@ export default class PagePiece {
     let pattern = patterns[index];
     pattern.$pattern.remove();
     patterns.splice(index, 1);
+    this.pageEditor.project.setCurrentPagePatterns(this.patterns);
     this.updateRender();
   }
 
-  selectPattern(pagePatternIndex, pagePattern) {
+  selectPattern(index) {
     exEventEmitter.emit('cancelSelectd');
     exEventEmitter.emit('modeChange', 'select');
-    if (pagePatternIndex > -1 && pagePattern) {
-      pagePattern.selected = true;
-    }
+    let pagePattern = this.patterns[index];
+    pagePattern.selected = true;
     this.updateRender();
     exEventEmitter.emit('selectSomething', new PatternAttributeHandler(pagePattern, this));
+  }
+
+  replacePatterns(patterns) {
+    this.patterns = patterns;
+    this.$piece.empty();
+    for (var i = 0; i < this.patterns.length; i++) {
+      this.$piece.append(this.patterns[i].$pattern);
+    }
+    this.updateRender();
+    console.log(`[page editor][${this.component.tag} piece]: update patterns`);
   }
 
   // update
@@ -218,7 +242,7 @@ export default class PagePiece {
   updatePatternInfo() {
     for (var i = 0; i < this.patterns.length; i++) {
       var pattern = this.patterns[i];
-      pattern.index = i;
+      pattern.updateIndex(i);
     }
   }
 

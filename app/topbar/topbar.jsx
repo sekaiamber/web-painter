@@ -1,6 +1,7 @@
 import Toolbar from './toolbar/toolbar'
 import DivideLine from './divideLine/divideLine'
 import Scaler from './scaler/scaler'
+import ProjectBar from './projectBar/projectBar'
 
 let React = require('react');
 
@@ -21,6 +22,7 @@ export default class Topbar extends React.Component{
         <Toolbar />
         <DivideLine />
         <Scaler />
+        <ProjectBar />
       </div>
     );
   }

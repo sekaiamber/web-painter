@@ -1,17 +1,31 @@
 import $ from 'jquery'
 import PagePiece from './pagePiece'
+import Project from './../project/project'
 
 export default class PageEditor {
   constructor() {
     this.$page = null;
     this.pieces = [];
-    this.initEvent();
+    this.init();
   }
 
   // init
+  init() {
+    this.initEvent();
+    this.initProject();
+  }
 
   initEvent() {
-    exEventEmitter.on('elementComponentSelected', this.selectElementComponent.bind(this))
+    exEventEmitter.on('elementComponentSelected', (elementComponent) => {
+      this.currentSelectComponent = elementComponent;
+    });
+    exEventEmitter.on('uiready', () => {
+      this.project.init();
+    });
+  }
+
+  initProject() {
+    this.project = new Project(this);
   }
 
   updatePageDom(page) {
@@ -23,11 +37,6 @@ export default class PageEditor {
       var piece = this.pieces[i];
       piece.updatePageDom(this.$page);
     }
-  }
-
-  // elementComponent control
-  selectElementComponent(elementComponent) {
-    this.currentSelectComponent = elementComponent;
   }
 
   // piece control

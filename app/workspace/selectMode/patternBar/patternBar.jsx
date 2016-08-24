@@ -7,8 +7,8 @@ require('./patternBar.scss');
 export default class PatternBar extends React.Component{
   constructor(props) {
     super(props);
-    let groups = PatternGroups.map((g) => {
-      return new g()
+    let groups = Object.keys(PatternGroups).map((key) => {
+      return new PatternGroups[key]()
     });
     this.state = {
       patternGroups: groups,
