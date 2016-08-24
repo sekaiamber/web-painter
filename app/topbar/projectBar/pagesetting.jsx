@@ -11,6 +11,7 @@ export default class PageSetting extends React.Component{
       fileName: '',
       keywords: '',
       description: '',
+      title: ''
     }
     // bind
     this.handleChange = this.handleChange.bind(this);
@@ -23,6 +24,7 @@ export default class PageSetting extends React.Component{
       fileName: page.fileName,
       keywords: page.keywords,
       description: page.description,
+      title: page.title
     })
   }
   componentWillUnmount(){
@@ -37,6 +39,7 @@ export default class PageSetting extends React.Component{
       fileName: this.state.fileName,
       keywords: this.state.keywords,
       description: this.state.description,
+      title: this.state.title
     })
     this.props.onCancel();
   }
@@ -55,6 +58,12 @@ export default class PageSetting extends React.Component{
             <div className="prop-name">File</div>
             <div className="prop-value">
               <Input size="small" value={this.state.fileName} onChange={(e) => this.handleChange('fileName', e.target.value)}/>
+            </div>
+          </div>
+          <div className="prop">
+            <div className="prop-name">Title</div>
+            <div className="prop-value">
+              <Input size="small" value={this.state.title} onChange={(e) => this.handleChange('title', e.target.value)}/>
             </div>
           </div>
           <div className="prop">

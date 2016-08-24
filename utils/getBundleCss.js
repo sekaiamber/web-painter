@@ -31,18 +31,15 @@ for (var i = 0; i < files.length; i++) {
   renderedFile += result;
 }
 // ant design
-console.log('rendering: ant design css');
-result = sass.renderSync({
-  file: path.join(__dirname, '..', '/node_modules') + '/antd/dist/antd.css',
-  outputStyle: 'compressed'
-});
-result = result.css.toString();
-result = '\n/* ant design */\n\n' + result;
-renderedFile += result;
+// console.log('rendering: ant design css');
+// result = sass.renderSync({
+//   file: path.join(__dirname, '..', '/node_modules') + '/antd/dist/antd.css',
+//   outputStyle: 'compressed'
+// });
+// result = result.css.toString();
+// result = '\n/* ant design */\n\n' + result;
+// renderedFile += result;
 
 fs.writeFileSync(path.join(__dirname, '..', '/app', '/htmlTemplates', '/export') + '/bundle.css.wpexport', renderedFile);
 
-console.log('done')
-// sass.render({
-//   file: scss_filename,
-// }, function(err, result) { /*...*/ });
+console.log('done');
