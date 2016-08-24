@@ -27,7 +27,7 @@ export default class NewPage extends React.Component{
   render() {
     return (
       <div className="mask">
-        <div className="newpage">
+        <div className="page">
           <h3>Create New Page</h3>
           <div className="prop">
             <div className="prop-name">Name</div>
@@ -37,7 +37,7 @@ export default class NewPage extends React.Component{
           </div>
           <div className="opt">
             <Button type="primary" className="cancel" onClick={this.props.onCancel}>Cancel</Button>
-            <Button type="primary" className="create" disabled={this.state.disabled} onClick={() => this.props.onCreate(this.state.name.trim())}>Create</Button>
+            <Button type="primary" className="ok" disabled={this.state.disabled} onClick={() => this.props.onCreate(this.state.name.trim())}>Create</Button>
           </div>
         </div>
       </div>
