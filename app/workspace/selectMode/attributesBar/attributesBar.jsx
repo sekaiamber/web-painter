@@ -27,6 +27,9 @@ export default class AttributesBar extends React.Component{
         this.readAttributeFromTarget()
       });
     });
+    exEventEmitter.on('updateAttributeBar', () => {
+      this.readAttributeFromTarget();
+    })
   }
   setAttributeToTarget(key, value, callback) {
     let data = this.state.data;

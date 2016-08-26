@@ -1,17 +1,6 @@
 let fileMenu = require('./fileMenu')
 
-let editMenu = {
-  label: 'Edit',
-  submenu: [{
-    label: 'Undo',
-    accelerator: 'CmdOrCtrl+Z',
-    role: 'undo'
-  }, {
-    label: 'Redo',
-    accelerator: 'Shift+CmdOrCtrl+Z',
-    role: 'redo'
-  }]
-}
+let editMenu = require('./editMenu')
 
 let viewMenu = {
   label: 'View',

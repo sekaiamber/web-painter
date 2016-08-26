@@ -22,6 +22,10 @@ export default class PageEditor {
     exEventEmitter.on('uiready', () => {
       this.project.init();
     });
+    exEventEmitter.on('updateBodyPieceRender', () => {
+      let piece = this.getPiece('body');
+      piece.updateRender();
+    })
   }
 
   initProject() {
