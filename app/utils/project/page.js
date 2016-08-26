@@ -11,6 +11,10 @@ export default class Page {
 
     // patterns
     this.patterns = [];
+
+    // history
+    this.history = [];
+    this.currentHistoryIndex = -1;
   }
 
   getHtmlText() {

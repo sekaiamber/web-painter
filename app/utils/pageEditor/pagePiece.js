@@ -138,25 +138,48 @@ export default class PagePiece {
   // element control
   addElement(target) {
     let elementComponent = this.pageEditor.currentSelectComponent;
+    let $target = $(target);
+    let $element = $(elementComponent.getPlainHtmlText());
     if (currentHoverType == 'replace') {
       // replace
-      let $target = $(target);
-      let $element = $(elementComponent.getPlainHtmlText());
       $target.after($element);
-      $target.remove();
-      exEventEmitter.emit('cancelHoverElement', this.component.tag);
+      $target.detach();
     } else if (currentHoverType == 'insert') {
       // insert
-      let $target = $(target);
-      let $element = $(elementComponent.getPlainHtmlText());
       if (currentHoverPosition == 'top') {
         $target.before($element);
       } else if (currentHoverPosition == 'bottom') {
         $target.after($element);
       }
-      exEventEmitter.emit('cancelHoverElement', this.component.tag);
     }
     this.updateRender();
+    // 历史记录
+    if (this.component.tag == 'body') {
+      if (currentHoverType == 'replace') {
+        exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
+          $element.first().before($target);
+          $element.detach();
+        }, () => {
+          $target.after($element);
+          $target.detach();
+        })
+      } else if (currentHoverType == 'insert') {
+        let redo;
+        if (currentHoverPosition == 'top') {
+          redo = () => {
+            $target.before($element);
+          }
+        } else if (currentHoverPosition == 'bottom') {
+          redo = () => {
+            $target.after($element);
+          }
+        }
+        exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
+          $element.detach();
+        }, redo)
+      }
+    }
+    exEventEmitter.emit('cancelHoverElement', this.component.tag);
     console.log(`[page editor][${this.component.tag} piece]: add ${elementComponent.tag} element`);
   }
 
@@ -171,17 +194,27 @@ export default class PagePiece {
 
   addPattern(patternReactComponent, index) {
     exEventEmitter.emit('cancelSelectd');
+    let pattern = new PagePattern(patternReactComponent, this, index);
+    this._addPattern(pattern, index);
+    // 历史记录
+    if (this.component.tag == 'body') {
+      exEventEmitter.emit('addHistory', 'add pattern', null, pattern, () => {
+        this._deletePattern(index);
+      }, () => {
+        this._addPattern(pattern, index);
+      })
+    }
+    this.component.handleChangePatternBarState(index);
+    console.log(`[page editor][${this.component.tag} piece]: add ${patternReactComponent.tag} pattern at position ${index}`);
+  }
+  _addPattern(pattern, index) {
     let patterns = this.patterns;
     if (patterns.length == 0) {
       // empty的情况
-      if (index > 0) return;
-      let pattern = new PagePattern(patternReactComponent, this, 0);
       this.patterns.push(pattern);
       this.$piece.append(pattern.$pattern);
     } else {
       // 插入的情况
-      if (patterns.length < index) return;
-      let pattern = new PagePattern(patternReactComponent, this, index);
       if (index == patterns.length) {
         // 直接放到末尾
         patterns.push(pattern);
@@ -194,22 +227,32 @@ export default class PagePiece {
     }
     // 如果是body piece则将patterns加入到当前页面数据中
     if (this.component.tag == 'body') {
-      this.pageEditor.project.setCurrentPagePatterns(this.patterns);
+      this.pageEditor.project.setCurrentPagePatterns(patterns);
     }
     this.updateRender()
-    this.component.handleChangePatternBarState(index);
-    console.log(`[page editor][${this.component.tag} piece]: add ${patternReactComponent.tag} pattern at position ${index}`);
   }
 
   deletePattern(index) {
     exEventEmitter.emit('cancelSelectd');
+    if (index >= this.patterns.length) return;
+    let pattern = this._deletePattern(index);
+    // 历史记录
+    if (this.component.tag == 'body') {
+      exEventEmitter.emit('addHistory', 'delete pattern', pattern, null, () => {
+        this._addPattern(pattern, index);
+      }, () => {
+        this._deletePattern(index);
+      })
+    }
+  }
+  _deletePattern(index) {
     let patterns = this.patterns;
-    if (index >= patterns.length) return;
     let pattern = patterns[index];
-    pattern.$pattern.remove();
+    pattern.$pattern.detach();
     patterns.splice(index, 1);
     this.pageEditor.project.setCurrentPagePatterns(this.patterns);
     this.updateRender();
+    return pattern;
   }
 
   selectPattern(index) {

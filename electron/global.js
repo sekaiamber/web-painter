@@ -20,6 +20,14 @@ var Globals = {
     });
     windowsList[name] = window;
     return window;
+  },
+  hasWindow: function (name) {
+    return !!windowsList[name];
+  },
+  destroyWindow: function (name) {
+    if (windowsList[name]) {
+      delete windowsList[name]
+    }
   }
 }
 
