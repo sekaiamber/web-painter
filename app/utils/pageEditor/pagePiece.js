@@ -154,28 +154,30 @@ export default class PagePiece {
     }
     this.updateRender();
     // 历史记录
-    if (currentHoverType == 'replace') {
-      exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
-        $element.first().before($target);
-        $element.detach();
-      }, () => {
-        $target.after($element);
-        $target.detach();
-      })
-    } else if (currentHoverType == 'insert') {
-      let redo;
-      if (currentHoverPosition == 'top') {
-        redo = () => {
-          $target.before($element);
-        }
-      } else if (currentHoverPosition == 'bottom') {
-        redo = () => {
+    if (this.component.tag == 'body') {
+      if (currentHoverType == 'replace') {
+        exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
+          $element.first().before($target);
+          $element.detach();
+        }, () => {
           $target.after($element);
+          $target.detach();
+        })
+      } else if (currentHoverType == 'insert') {
+        let redo;
+        if (currentHoverPosition == 'top') {
+          redo = () => {
+            $target.before($element);
+          }
+        } else if (currentHoverPosition == 'bottom') {
+          redo = () => {
+            $target.after($element);
+          }
         }
+        exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
+          $element.detach();
+        }, redo)
       }
-      exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
-        $element.detach();
-      }, redo)
     }
     exEventEmitter.emit('cancelHoverElement', this.component.tag);
     console.log(`[page editor][${this.component.tag} piece]: add ${elementComponent.tag} element`);
