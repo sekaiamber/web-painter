@@ -1,0 +1,28 @@
+.structure-six-pieces {
+  background: #fff;
+  padding: 100px;
+
+  .row {
+    float: left;
+    width: 16.6%;
+
+    &.r1 {
+      padding-right: 35px;
+    }
+    &.r2 {
+      padding: 0 28px 0 7px;
+    }
+    &.r3 {
+      padding: 0 21px 0 14px;
+    }
+    &.r4 {
+      padding: 0 14px 0 21px;
+    }
+    &.r5 {
+      padding: 0 7px 0 28px;
+    }
+    &.r6 {
+      padding-left: 35px;
+    }
+  }
+}
