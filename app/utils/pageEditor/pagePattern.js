@@ -1,18 +1,18 @@
 import $ from 'jquery'
 
 export default class PagePattern {
-  constructor(patternReactComponent, pagePiece, index) {
-    this.attributeGroups = patternReactComponent.attributeGroups;
+  constructor(patternReactComponentClass, pagePiece, index, $pattern) {
+    this.attributeGroups = patternReactComponentClass.attributeGroups;
     this.tag = 'pattern';
     this.pagePiece = pagePiece;
     this.index = index;
     this.selected = false;
-    this.$pattern = this.initDom(patternReactComponent);
+    this.$pattern = $pattern || this.initDom(patternReactComponentClass);
   }
 
   // init
-  initDom(patternReactComponent) {
-    let $pattern = $(patternReactComponent.getPlainHtmlText()).addClass('pe-pattern');
+  initDom(patternReactComponentClass) {
+    let $pattern = $(patternReactComponentClass.plainHtmlText).addClass('pe-pattern');
     $pattern.attr('wp-pattern-index', this.index);
     return $pattern;
   }

@@ -13,7 +13,6 @@ export default class OnePiecePattern extends Pattern {
   constructor(props) {
     super(props);
     this.tag = 'one-piece'
-    this.attributeGroups = attributeGroups;
   }
   renderSample() {
     return (
@@ -28,10 +27,7 @@ export default class OnePiecePattern extends Pattern {
       }}></div>
     )
   }
-
-  // page editor function
-  getPlainHtmlText() {
-    return htmlTemplate;
-  }
 }
 OnePiecePattern.patternTag = 'one-piece';
+OnePiecePattern.attributeGroups = attributeGroups;
+OnePiecePattern.plainHtmlText = htmlTemplate;

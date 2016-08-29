@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import {getPatternFrom$dom} from './utils'
+
 export default class Page {
   constructor(name, project) {
     this.name = name;
@@ -30,5 +33,31 @@ export default class Page {
     // footer
     ret += this.project.footerPiece.$piece[0].outerHTML;
     return ret;
+  }
+
+  // save project
+  getMetaInfo() {
+    let ret = {};
+    ret.name = this.name;
+    ret.fileName = this.fileName;
+    ret.title = this.title;
+    ret.keywords = this.keywords;
+    ret.description = this.description;
+
+    ret.patterns = this.patterns.map((p) => {
+      return p.$pattern[0].outerHTML;
+    });
+    return ret;
+  }
+
+  importFromMetaInfo(info) {
+    this.fileName = info.fileName;
+    this.title = info.title;
+    this.keywords = info.keywords;
+    this.description = info.description;
+
+    this.patterns = info.patterns.map((p, index) => {
+      return getPatternFrom$dom($(p), this.project.bodyPiece, index);
+    });
   }
 }

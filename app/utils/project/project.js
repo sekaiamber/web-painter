@@ -1,4 +1,7 @@
 import Page from './page'
+import $ from 'jquery';
+
+import {getPatternFrom$dom} from './utils'
 
 export default class Project {
   constructor(pageEditor) {
@@ -67,11 +70,44 @@ export default class Project {
     this.currentPage = page;
     this.bodyPiece.replacePatterns(this.currentPage.patterns);
     exEventEmitter.emit('projectPageInfoChange', this);
+    exEventEmitter.emit('cancelSelectd');
   }
 
   setCurrentPagePatterns(patterns) {
     this.currentPage.patterns = patterns;
   }
 
+  // save project
+  getMetaInfo() {
+    let ret = {};
+    ret.headerPiece = this.headerPiece.$piece[0].innerHTML;
+    ret.footerPiece = this.footerPiece.$piece[0].innerHTML;
 
+    ret.pages = this.pages.map((p) => {
+      return p.getMetaInfo();
+    });
+    
+    return ret;
+  }
+
+  importFromMetaInfo(info) {
+    // header piece
+    let headerPiecePatterns = $.makeArray($(info.headerPiece).map((index, p) => {
+      return getPatternFrom$dom($(p), this.headerPiece, index);
+    }));
+    this.headerPiece.replacePatterns(headerPiecePatterns);
+    // footer piece
+    let footerPiecePatterns = $.makeArray($(info.footerPiece).map((index, p) => {
+      return getPatternFrom$dom($(p), this.footerPiece, index);
+    }));
+    this.footerPiece.replacePatterns(footerPiecePatterns);
+    // pages
+    let pages = info.pages.map((p) => {
+      let page = new Page(p.name, this);
+      page.importFromMetaInfo(p);
+      return page;
+    });
+    this.pages = pages;
+    this.selectPage(pages[0].name);
+  }
 }

@@ -194,7 +194,7 @@ export default class PagePiece {
 
   addPattern(patternReactComponent, index) {
     exEventEmitter.emit('cancelSelectd');
-    let pattern = new PagePattern(patternReactComponent, this, index);
+    let pattern = new PagePattern(patternReactComponent.constructor, this, index);
     this._addPattern(pattern, index);
     // 历史记录
     if (this.component.tag == 'body') {

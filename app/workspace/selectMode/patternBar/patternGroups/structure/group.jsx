@@ -6,3 +6,4 @@ export default class StructurePatternGroup extends PatternGroup {
     super('structure', patterns);
   }
 }
+StructurePatternGroup.patterns = patterns;

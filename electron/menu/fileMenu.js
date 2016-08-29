@@ -2,9 +2,22 @@ const {dialog} = require('electron')
 const ipc = require('electron').ipcMain
 
 let exGlobal = require('./../global')
-// save
+// export project
+function exportProject(item, focusedWindow) {
+  dialog.showSaveDialog({
+    title: 'Export Project',
+  }, (filename) => {
+    if (filename) {
+      exGlobal.getBrowserWindow('main').webContents.send('export-project', filename);
+      projectPath = filename;
+    }
+  });
+}
+
+// save project
 let projectPath = null;
-function save(item, focusedWindow) {
+
+function saveProject(item, focusedWindow) {
   if (projectPath) {
     exGlobal.getBrowserWindow('main').webContents.send('save-project', projectPath);
   } else {
@@ -19,6 +32,34 @@ function save(item, focusedWindow) {
   }
 }
 
+function saveAsProject(item, focusedWindow) {
+  dialog.showSaveDialog({
+    title: 'Save As to ...',
+  }, (filename) => {
+    if (filename) {
+      exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
+      projectPath = filename;
+    }
+  });
+}
+
+// open project
+
+function openProject(item, focusedWindow) {
+  dialog.showOpenDialog({
+    title: 'Open Project',
+    properties: ['openFile'],
+    filters: [
+      {name: 'WP Project File Type', extensions: ['wp']}
+    ]
+  }, (filename) => {
+    if (filename) {
+      filename = filename[0];
+      projectPath = filename;
+      exGlobal.getBrowserWindow('main').webContents.send('open-project', filename);
+    }
+  });
+}
 
 
 module.exports = {
@@ -27,8 +68,27 @@ module.exports = {
     label: 'New...',
     accelerator: 'CmdOrCtrl+N'
   }, {
+    label: 'Open...',
+    accelerator: 'CmdOrCtrl+O',
+    click: openProject
+  }, {
+    type: 'separator'
+  }, {
     label: 'Save...',
     accelerator: 'CmdOrCtrl+S',
-    click: save
+    click: saveProject
+  }, {
+    label: 'Save As...',
+    accelerator: 'Shift+CmdOrCtrl+S',
+    click: saveAsProject
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Export',
+    submenu: [{
+      label: 'Export Project',
+      accelerator: 'CmdOrCtrl+E',
+      click: exportProject
+    }]
   }]
 }
