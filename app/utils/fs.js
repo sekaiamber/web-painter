@@ -16,6 +16,7 @@ export default {
   writeFiles: function (fileOpts, callback) {
     let total = fileOpts.length;
     let index = 0;
+    callback = callback || (() => {});
     function wf(index) {
       if (index >= total) return;
       fs.writeFile(
@@ -24,6 +25,23 @@ export default {
         fileOpts[index].options,
         (err) => {
           callback(index, err, () => {
+            wf(index + 1);
+          })
+        });
+    }
+    wf(index);
+  },
+  readFiles: function (fileOpts, callback) {
+    let total = fileOpts.length;
+    let index = 0;
+    callback = callback || (() => {});
+    function wf(index) {
+      if (index >= total) return;
+      fs.readFile(
+        fileOpts[index].path,
+        fileOpts[index].options,
+        (err, data) => {
+          callback(index, err, data, () => {
             wf(index + 1);
           })
         });
