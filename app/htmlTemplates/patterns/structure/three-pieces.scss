@@ -1,0 +1,19 @@
+.structure-three-pieces {
+  background: #fff;
+  padding: 100px;
+
+  .row {
+    float: left;
+    width: 33%;
+
+    &.left {
+      padding-right: 66px;
+    }
+    &.mid {
+      padding: 0 33px;
+    }
+    &.right {
+      padding-left: 66px;
+    }
+  }
+}

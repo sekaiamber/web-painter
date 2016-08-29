@@ -34,6 +34,9 @@ $patternSamplesHeight: 190px;
     .samples-list {
       height: $patternSamplesHeight - $groupNameHeight;
       padding: 16px 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
     }
   }
 }
