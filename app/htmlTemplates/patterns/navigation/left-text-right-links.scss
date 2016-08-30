@@ -1,0 +1,24 @@
+.navigation-left-text-right-links {
+  background: #fff;
+  height: 80px;
+  .nav {
+    height: 100%;
+    padding: 20px 40px;
+    line-height: 40px;
+    .title {
+      float: left;
+      font-size: 25px;
+    }
+    .links {
+      float: right;
+    }
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #666;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
