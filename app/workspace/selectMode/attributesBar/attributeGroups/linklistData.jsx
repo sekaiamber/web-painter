@@ -81,7 +81,7 @@ class LinkListModal extends React.Component{
       <Modal className="link-list-modal" visible={this.state.visible} onOk={this.handleOK} onCancel={this.handleCancel} title={this.props.title}>
         <div className="link-list-item">
           <div className="text" style={{display: 'inline-block'}}>Text</div>
-          <div className="linkself" style={{display: 'inline-block'}}>Page/URL</div>
+          <div className="linkself" style={{display: 'inline-block'}}>URL/Page</div>
           <div className="href" style={{display: 'inline-block'}}>Target</div>
           <div className="target" style={{display: 'inline-block'}}>New tab</div>
           <div className="delete" style={{display: 'inline-block'}}>Delete</div>
