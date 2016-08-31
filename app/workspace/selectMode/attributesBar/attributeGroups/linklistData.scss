@@ -1,0 +1,36 @@
+.link-list-modal {
+  .link-list-item {
+    height: 25px;
+    .text,
+    .linkself,
+    .href,
+    .target,
+    .delete,
+    .new {
+      text-align: center;
+    }
+    .text {
+      width: 15%;
+    }
+    .linkself {
+      width: 15%;
+    }
+    .href {
+      width: 45%;
+    }
+    .target {
+      width: 15%;
+    }
+    .delete,
+    .new {
+      width: 10%;
+    }
+    .ant-select {
+      width: 100%;
+    }
+
+    &.new {
+      margin-top: 20px;
+    }
+  }
+}

@@ -2,16 +2,17 @@ const ipc = require('electron').ipcRenderer
 import fshelper from './../fs'
 import $ from 'jquery';
 
+import cleanHtml from './export/cleanHtml'
+
 const pageTemplate = require('./../../htmlTemplates/export/page.html');
 const bundleCss = require('./../../htmlTemplates/export/bundle.css.wpexport')
 
-// const antcss = require()
 function getPageHtml(page) {
   let data = pageTemplate
     .replace('@title', page.title)
     .replace('@keywords', page.keywords)
     .replace('@description', page.description)
-    .replace('@content', page.getHtmlText());
+    .replace('@content', cleanHtml(page.getHtmlText()));
 
 
   return {

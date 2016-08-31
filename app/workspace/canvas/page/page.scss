@@ -2,4 +2,16 @@
   // box-shadow: 0 0 16px #bfbfbf;
   // 十分重要，关系到浮动元素的定位
   position: relative;
+
+  // 下面都是些标记
+  *[wp-no-select] {
+    pointer-events: none;
+
+    * {
+      pointer-events: auto;
+      &[wp-no-select] {
+        pointer-events: none;
+      }
+    }
+  }
 }
