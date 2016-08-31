@@ -1,4 +1,4 @@
-#framework {
+body#wp {
 
   .ant-input {
     background: #3e3e3e;
@@ -35,6 +35,20 @@
     border: none;
     &[disabled] {
       color: #747474;
+    }
+  }
+  .ant-modal-content {
+    color: #bfc0c0;
+    border: solid 1px #646464;
+    background: #3e3e3e;
+    border-radius: 0px;
+    .ant-modal-header {
+      color: #fff;
+      background: transparent;
+      border-color: #646464;
+    }
+    .ant-modal-footer {
+      border-color: #646464;
     }
   }
 }

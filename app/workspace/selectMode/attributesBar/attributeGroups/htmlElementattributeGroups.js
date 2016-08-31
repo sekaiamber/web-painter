@@ -1,6 +1,6 @@
 import groups from './attributeGroups'
 
-const groupmap = {
+const basicGroupmap = {
   p: [groups.TypeAttributeGroup],
   h1: [groups.TypeAttributeGroup],
   h2: [groups.TypeAttributeGroup],
@@ -10,10 +10,19 @@ const groupmap = {
   h6: [groups.TypeAttributeGroup],
 }
 
-export default function (nodeName) {
-  if (groupmap[nodeName]) {
-    return groupmap[nodeName];
+const specialGroupmap = {
+  linkList: [groups.LinkListDataAttributeGroup]
+}
+
+export default function (nodeName, specialGroupName) {
+  let ret;
+  if (basicGroupmap[nodeName]) {
+    ret = basicGroupmap[nodeName];
   } else {
-    return [];
+    ret = [];
   }
+  if (specialGroupmap[specialGroupName]) {
+    ret = specialGroupmap[specialGroupName].concat(ret);
+  }
+  return ret;
 }
