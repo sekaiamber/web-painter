@@ -18,20 +18,11 @@ function readZipFile(filename) {
 
   var info = zip.getEntry('info.json'); // an array of ZipEntry records 
   pageEditor.project.importFromMetaInfo(JSON.parse(new Buffer(info.getData()).toString()));
-  // zipEntries.forEach(function(zipEntry) {
-  //     console.log(zipEntry.toString());
-  // });
 }
 
 // call when save project
 
 ipc.on('open-project', function (event, filename) {
-  // fshelper.readFiles([{
-  //   path: filename
-  // }], (index, err, data, next) => {
-  //   if (err) throw err;
-  //   pageEditor.project.importFromMetaInfo(JSON.parse(data));
-  // });
   readZipFile(filename);
   console.log(`[open project]: open project from ${filename}`)
 })
