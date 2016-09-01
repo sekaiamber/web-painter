@@ -14,7 +14,7 @@ var config = {
   },
   output: {
     path: path.join(__dirname, '..', '/dist'),
-    filename: '[name].bundle.[hash].js',
+    filename: '[name].bundle.js',
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -29,10 +29,10 @@ var config = {
     }),
     new CommonsChunkPlugin({
       names: ['vendors'],
-      filename: '[name].[hash].js',
+      filename: '[name].js',
       minChunks: Infinity
     }),
-    new ExtractTextPlugin("[name].[hash].css", {
+    new ExtractTextPlugin("[name].css", {
       allChunks: true
     }),
     new webpack.optimize.DedupePlugin(),
@@ -94,7 +94,7 @@ for (var i = 0; i < routes.length; i++) {
     favicon: './../assets/images/sekai.jpg',
     chunks: [route.name, 'vendors'],
     inject: 'body',
-    hash: true
+    hash: false
   }));
 }
 
