@@ -69,7 +69,6 @@ class LinkListModal extends React.Component{
   }
   handleNew() {
     let data = this.state.data;
-    console.log(this.state.add);
     data.push(this.state.add);
     this.setState({
       data: data,
@@ -155,7 +154,7 @@ export default class LinkListDataAttributeGroup extends BaseAttributeGroup{
     this.handleDataChange = this.handleDataChange.bind(this);
   }
   componentDidMount() {
-    // console.log(this.props)
+    
   }
   componentWillUnmount(){
   }
