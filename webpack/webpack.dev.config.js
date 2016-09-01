@@ -73,11 +73,11 @@ var config = {
       index: 'index.html',
       rewrites: []
     },
-    // proxy: {
-    //   '/api/web/v1/*': {
-    //     target: 'https://dsjstage.bao.tv',
-    //     secure: false
-    //   },
+    proxy: {
+      '/assets/*': {
+        target: 'http://0.0.0.0:8889',
+        secure: false
+      },
     //   '/_dev_api_/*': {
     //     target: 'http://106.75.8.227',
     //     secure: false,
@@ -85,7 +85,7 @@ var config = {
     //       req.url = req.url.replace(/^\/_dev_api_/, '');
     //     }
     //   }
-    // }
+    }
   },
 };
 

@@ -31,6 +31,14 @@ $ node utils/getBundleCss.js
 
 ### 开发环境
 
+0. 启动静态文件代理
+
+```bash
+$ npm run dev-assets
+```
+
+这一步会将`assets`目录代理到`http://0.0.0.0:8889`以给下面的server使用
+
 1. 打开Webpack-dev-server，这可以让我们的app代码时实时更新，替换样式之类的再也不用重启app啦！
 
 ```bash
