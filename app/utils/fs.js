@@ -1,6 +1,9 @@
 const fs = require('fs');
+const path = require('path');
+const process = require('process');
 
 export default {
+  currentDir: process.cwd(),
   mkdirIfNotExist: function (path, mask, cb) {
     if (typeof mask == 'function') { // allow the `mask` parameter to be optional
         cb = mask;

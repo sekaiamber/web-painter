@@ -8,7 +8,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
-  target: "electron",
+  target: "electron-renderer",
   entry: {
     vendors: ['react', 'react-router', 'react-dom', 'jquery', 'antd'],
   },
