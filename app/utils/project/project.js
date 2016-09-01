@@ -2,6 +2,7 @@ import Page from './page'
 import $ from 'jquery';
 
 import {getPatternFrom$dom} from './utils'
+import ProjectAssetList from './asset'
 
 export default class Project {
   constructor(pageEditor) {
@@ -16,6 +17,9 @@ export default class Project {
     this.headerPiece = null;
     this.bodyPiece = null;
     this.footerPiece = null;
+
+    // asset
+    this.assets = new ProjectAssetList(this);
 
     this.initEvent();
   }
