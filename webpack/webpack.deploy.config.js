@@ -4,6 +4,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var routes = require('./routes');
 
 var config = {
@@ -42,6 +43,9 @@ var config = {
       minSizeReduce: 1.5,
       moveToParents: true
     }),
+    new CopyWebpackPlugin([
+      { from: '../assets', to: 'assets' },
+    ])
   ],
   // node: {
   //   fs: "empty"
