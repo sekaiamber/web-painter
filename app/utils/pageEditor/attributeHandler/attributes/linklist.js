@@ -1,6 +1,22 @@
 import $ from 'jquery'
 
 export default {
+  link: {
+    set($dom, value) {
+      $dom.text(value.text);
+      $dom.attr('wp-a-href', value.href);
+      $dom.attr('target', value.target);
+      $dom.attr('wp-a-self-page', value.linkself);
+    },
+    get($dom) {
+      return {
+        text: $dom.text(),
+        href: $dom.attr('wp-a-href') || '',
+        target: $dom.attr('target') || '',
+        linkself: $dom.attr('wp-a-self-page') == ""
+      }
+    }
+  },
   linkListData: {
     set($dom, value) {
       $dom.empty();

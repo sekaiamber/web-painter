@@ -1,13 +1,14 @@
 import groups from './attributeGroups'
 
 const basicGroupmap = {
-  p: [groups.TypeAttributeGroup],
-  h1: [groups.TypeAttributeGroup],
-  h2: [groups.TypeAttributeGroup],
-  h3: [groups.TypeAttributeGroup],
-  h4: [groups.TypeAttributeGroup],
-  h5: [groups.TypeAttributeGroup],
-  h6: [groups.TypeAttributeGroup],
+  p: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  h1: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  h2: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  h3: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  h4: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  h5: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  h6: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  a: [groups.TypeAttributeGroup, groups.LinkAttributeGroup]
 }
 
 const specialGroupmap = {
