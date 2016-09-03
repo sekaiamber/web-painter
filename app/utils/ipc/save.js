@@ -36,7 +36,14 @@ ipc.on('save-project', function (event, filename) {
     name: 'info.json',
     data: Buffer.from(JSON.stringify(pageEditor.project.getMetaInfo()))
   }];
-  files = files.concat(pageEditor.project.assets.getAssets());
+  let assets = pageEditor.project.assets.getAssetsBuffer()
+  assets = assets.map((asset) => {
+    return {
+      name: 'assets/' + asset.name,
+      data: asset.data
+    }
+  })
+  files = files.concat(assets);
 
   let zip = createZipfile(files);
   // let zip = createZipfile({

@@ -32,12 +32,22 @@ export default class AttributesBar extends React.Component{
     })
   }
   setAttributeToTarget(key, value, callback) {
+    let kvs;
+    if (typeof key == 'string') {
+      kvs = {};
+      kvs[key] = value;
+    } else {
+      kvs = key;
+      callback = value;
+    }
     let data = this.state.data;
-    data[key] = value;
+    Object.keys(kvs).map((k) => {
+      data[k] = kvs[k];
+    })
     this.setState({
       data: data
     }, () => {
-      this.state.handler.setAttribute(key, this.state.data[key]);
+      this.state.handler.setAttribute(kvs);
       this.state.handler.updateRender();
     }, callback)
   }

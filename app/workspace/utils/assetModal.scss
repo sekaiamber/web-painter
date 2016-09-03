@@ -1,0 +1,42 @@
+.ant-modal.asset-modal {
+  .ant-modal-body {
+    padding: 0;
+    .ant-tabs-tabpane {
+      color: #bfc0c0;
+      height: 300px;
+      overflow: auto;
+      padding: 0 15px 15px 15px;
+    }
+  }
+  .image-list {
+    .image-border {
+      height: 106px;
+      width: 120px;
+      border: solid 1px #181a1b;
+      padding: 2px;
+      display: inline-block;
+      margin: 1px;
+      text-align: center;
+      line-height: 100px;
+      background: url('./../../../assets/images/image-background.png');
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      &.add {
+        font-size: 36px;
+      }
+      &:hover {
+        border-color: #2db7f5;
+        color: #2db7f5;
+      }
+      img {
+        max-height: 100px;
+        max-width: 114px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}

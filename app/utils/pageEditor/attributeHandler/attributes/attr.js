@@ -1,6 +1,6 @@
 let attrs = {}
 
-const attrKeys = ['id', 'class'];
+const attrKeys = ['id', 'class', 'alt', 'href', 'src'];
 
 attrKeys.map((key) => {
   attrs[key] = {

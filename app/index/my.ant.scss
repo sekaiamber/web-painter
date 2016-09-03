@@ -44,11 +44,24 @@ body#wp {
     border-radius: 0px;
     .ant-modal-header {
       color: #fff;
-      background: transparent;
+      background: #646464;
       border-color: #646464;
+      border-radius: 0;
     }
     .ant-modal-footer {
       border-color: #646464;
+    }
+  }
+  .ant-tabs {
+    .ant-tabs-bar {
+      border-color: #646464;
+      .ant-tabs-nav {
+        .ant-tabs-tab.ant-tabs-tab-active {
+          .ant-tabs-tab-inner {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }

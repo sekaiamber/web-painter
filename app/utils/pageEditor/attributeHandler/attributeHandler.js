@@ -26,12 +26,13 @@ export default class BaseAttributeHandler {
   }
 
   setAttribute(key, value) {
-    attributeHelper[key].set(this.$dom, value);
-  }
-  setAttributeObject(obj) {
-    Object.keys(obj).map((key) => {
-      attributeHelper[key].set(this.$dom, obj[key]);
-    })
+    if (typeof key == 'object') {
+      Object.keys(key).map((k) => {
+        attributeHelper[k].set(this.$dom, key[k]);
+      })
+    } else {
+      attributeHelper[key].set(this.$dom, value);
+    }
   }
 
   // render
@@ -59,6 +60,7 @@ const elementTags = {
   h4: 'Head4',
   h5: 'Head5',
   h6: 'Head6',
+  img: 'Image'
 }
 
 export class ElementAttributeHandler extends BaseAttributeHandler {

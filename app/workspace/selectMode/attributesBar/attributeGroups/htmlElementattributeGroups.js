@@ -8,7 +8,8 @@ const basicGroupmap = {
   h4: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   h5: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   h6: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
-  a: [groups.TypeAttributeGroup, groups.LinkAttributeGroup]
+  a: [groups.TypeAttributeGroup, groups.LinkAttributeGroup],
+  img: [groups.ImageAttributeGroup]
 }
 
 const specialGroupmap = {

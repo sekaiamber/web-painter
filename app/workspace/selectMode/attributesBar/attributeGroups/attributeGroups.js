@@ -4,6 +4,7 @@ import TypeAttributeGroup from './type'
 import LinkListDataAttributeGroup from './linkListData'
 import LinkAttributeGroup from './link'
 import ContentAttributeGroup from './content'
+import ImageAttributeGroup from './image'
 
 export default {
   AppearanceAttributeGroup,
@@ -11,5 +12,6 @@ export default {
   TypeAttributeGroup,
   LinkListDataAttributeGroup,
   LinkAttributeGroup,
-  ContentAttributeGroup
+  ContentAttributeGroup,
+  ImageAttributeGroup
 }

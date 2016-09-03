@@ -25,5 +25,17 @@ module.exports = {
     label: 'Redo',
     accelerator: 'Shift+CmdOrCtrl+Z',
     click: redo
-  }]
+  }, {
+    label: 'Cut',
+    accelerator: 'CmdOrCtrl+X',
+    role: 'cut'
+  }, {
+    label: 'Copy',
+    accelerator: 'CmdOrCtrl+C',
+    role: 'copy'
+  }, {
+    label: 'Paste',
+    accelerator: 'CmdOrCtrl+V',
+    role: 'paste'
+  },]
 }

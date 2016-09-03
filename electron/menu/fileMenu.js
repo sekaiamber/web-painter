@@ -92,3 +92,21 @@ module.exports = {
     }]
   }]
 }
+
+// utils
+
+ipc.on('open-file-dialog-sync', function (event, title, filters) {
+  title = title || 'Open file';
+  filters = filters || [{name: 'All Files', extensions: ['*']}]
+  dialog.showOpenDialog({
+    title: title,
+    properties: ['openFile'],
+    filters: filters
+  }, function (files) {
+    if (files) {
+      event.returnValue = files;
+    } else {
+      event.returnValue = null;
+    }
+  })
+})
