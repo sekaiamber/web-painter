@@ -12,12 +12,25 @@ ipc.on('export-project', function (event, filename) {
   fshelper.mkdirIfNotExist(filename, (err) => {
     if (err) throw err;
     // save file
-    let project = new ExportProject(filename);
-    let files = project.getFiles();
-    fshelper.writeFiles(files, (index, err, next) => {
-      if (err) throw err;
-      console.log(`[export project]: save file ${index + 1} of ${files.length}`);
-      next();
-    })
+    let project;
+    exEventEmitter.emit('processShow', 0, () => {
+      project = new ExportProject(filename);
+      exEventEmitter.emit('processShow', 10, () => {
+        project.build();
+        let files = project.getFiles();
+        exEventEmitter.emit('processShow', 60, () => {
+          fshelper.writeFiles(files, (index, err, next) => {
+            if (err) throw err;
+            console.log(`[export project]: save file ${index + 1} of ${files.length}`);
+            next();
+            if (index == files.length - 1) {
+              exEventEmitter.emit('processShow', 100, () => {
+                exEventEmitter.emit('processHide');
+              });
+            }
+          })
+        });
+      });
+    });
   });
 })

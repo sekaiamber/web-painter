@@ -8,6 +8,7 @@ require('./my.ant.scss');
 
 import Topbar from './../topbar/topbar'
 import Workspace from './../workspace/workspace'
+import ProcessBar from './processBar'
 
 export default class Framework extends React.Component{
   constructor(props) {
@@ -25,6 +26,7 @@ export default class Framework extends React.Component{
       <div id="framework">
         <Topbar />
         <Workspace />
+        <ProcessBar />
       </div>
     );
   }

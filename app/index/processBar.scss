@@ -1,0 +1,23 @@
+#ProcessBar {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  .wp-process {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
