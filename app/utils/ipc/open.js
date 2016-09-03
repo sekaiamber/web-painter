@@ -8,6 +8,8 @@ const ProjectAsset = ProjectAssetList.ProjectAsset;
 // zip
 function readZipFile(filename) {
   var zip = new AdmZip(filename);
+  // open assets
+  pageEditor.project.assets.removeAllAssets();
   var assets = zip.getEntries(); // an array of ZipEntry records 
  
   assets.forEach(function(asset) {

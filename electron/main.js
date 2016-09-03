@@ -23,6 +23,10 @@ function createWindow () {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
+  
+  // clean cache
+  mainWindow.webContents.session.clearCache(function(){
+  });
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

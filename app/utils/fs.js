@@ -1,4 +1,5 @@
 const fs = require('fs');
+const filendir = require('filendir');
 const path = require('path');
 const process = require('process');
 
@@ -22,7 +23,7 @@ export default {
     callback = callback || (() => {});
     function wf(index) {
       if (index >= total) return;
-      fs.writeFile(
+      filendir.writeFile(
         fileOpts[index].path,
         fileOpts[index].data,
         fileOpts[index].options,

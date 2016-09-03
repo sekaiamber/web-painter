@@ -19,25 +19,48 @@ export default class ProjectAssetList {
 
   }
 
-  addAsset (name, data) {
-    this.push(new ProjectAsset(name, data));
+  addAsset (name, data, datatype) {
+    datatype = datatype || 'buffer'
+    let processdata;
+    switch (datatype) {
+      case 'buffer':
+        processdata = nativeImage.createFromBuffer(data)
+        break;
+      case 'path':
+        processdata = nativeImage.createFromPath(data)
+        break;
+      case 'url':
+        processdata = nativeImage.createFromDataURL(data)
+        break;
+    }
+    this.push(new ProjectAsset(
+      name,
+      processdata.toDataURL()
+    ));
+    exEventEmitter.emit('projectAssetsDidUpdate');
+  }
+
+  removeAllAssets () {
+    this.data = {}
   }
 
   push(asset) {
     this.data[asset.name] = asset;
   }
 
-  getAssets() {
+  getAssetsBuffer() {
     return Object.keys(this.data).map((k) => {
-      return this.data[k]
+      return {
+        name: k,
+        data: nativeImage.createFromDataURL(this.data[k].data).toPNG()
+      }
     })
   }
 
   readAsImage (name, $dom) {
     if (!this.data[name]) return;
     $dom = $dom || $('<img src=""/>');
-    let bf = this.data[name].data;
-    let image = nativeImage.createFromBuffer(bf).toDataURL();
+    let image = this.data[name].data;
     $dom.attr('src', image);
     return $dom;
   }

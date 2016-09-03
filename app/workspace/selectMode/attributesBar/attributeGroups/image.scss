@@ -1,0 +1,27 @@
+#attributesBar .attribute-group.image {
+  .attribute {
+    .value {
+      width: 80px;
+    }
+  }
+  .image-container {
+    position: absolute;
+    right: 15px;
+    top: 54px;
+    height: 72px;
+    width: 78px;
+    background: #3e3e3e;
+    border: 1px solid #646464;
+    border-radius: 4px;
+    padding: 5px 8px;
+    text-align: center;
+    background: url('./../../../../../assets/images/image-background.png');
+    line-height: 60px;
+    img {
+      cursor: pointer;
+      max-height: 60px;
+      max-width: 60px;
+      vertical-align: middle;
+    }
+  }
+}

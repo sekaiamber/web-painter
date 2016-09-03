@@ -1,3 +1,6 @@
+const electron = require('electron')
+const BrowserWindow = electron.BrowserWindow
+
 let fileMenu = require('./fileMenu')
 
 let editMenu = require('./editMenu')

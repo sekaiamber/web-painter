@@ -1,5 +1,5 @@
 import linkList from './elementExportHandler/linklist'
 
-export default {
+export default [
   linkList
-}
+]
