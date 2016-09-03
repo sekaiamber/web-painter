@@ -37,14 +37,13 @@ export default class ExportProject {
     };
     this.files = [];
 
-    this.init();
   }
 
-  init() {
-    this.initFiles()
+  build() {
+    this.buildFiles()
   }
 
-  initFiles() {
+  buildFiles() {
     this.project.pages.map(this.getPageHtml.bind(this));
     // bundles
     this.files.push({
