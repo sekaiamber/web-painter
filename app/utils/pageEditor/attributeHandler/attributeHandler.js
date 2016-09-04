@@ -64,12 +64,20 @@ const elementTags = {
 }
 
 export class ElementAttributeHandler extends BaseAttributeHandler {
-  constructor(target, renderer) {
+  constructor(event, renderer) {
+    let target = event.target;
+    let $target = $(target);
     super({
-      $dom: $(target),
-      attributeGroups: getElementAttributeGroups(target.nodeName.toLowerCase(), $(target).attr('wp-element')),
+      $dom: $target,
+      attributeGroups: getElementAttributeGroups(target.nodeName.toLowerCase(), $target.attr('wp-element')),
       renderer: renderer,
       tag: elementTags[target.nodeName.toLowerCase()] || target.nodeName.toLowerCase()
-    })
+    });
+
+    this.event = event;
+  }
+
+  updateRender() {
+    this.renderer.updateRender(this.event);
   }
 }
