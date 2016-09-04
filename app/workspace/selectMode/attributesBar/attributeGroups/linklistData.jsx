@@ -1,6 +1,7 @@
 import { Input, Button, Modal, Icon, Switch, Select } from 'antd';
 const Option = Select.Option;
 import BaseAttributeGroup from './baseAttributeGroup'
+const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
 import _ from 'lodash'
 let React = require('react');
 
@@ -148,8 +149,7 @@ class LinkListModal extends React.Component{
 export default class LinkListDataAttributeGroup extends BaseAttributeGroup{
   constructor(props) {
     super(props);
-    this.state = {
-    }
+
     // bind
     this.handleDataChange = this.handleDataChange.bind(this);
   }
@@ -163,8 +163,8 @@ export default class LinkListDataAttributeGroup extends BaseAttributeGroup{
   }
   render() {
     return (
-      <div className="attribute-group">
-        <div className="group-name">Data</div>
+      <div className={"attribute-group" + (this.state.slide ? " slide" : "")}>
+        <BaseAttributeGroupName name="Data" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute">
           <div className="name">Links</div>
           <div className="value"><Button type="primary" size="small" onClick={() => this.modal.open(this.props.linkListData) }>Edit</Button>

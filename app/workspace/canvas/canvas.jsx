@@ -41,6 +41,9 @@ export default class Canvas extends React.Component{
     if (zoom > 1) {
       zoom = 1;
     }
+    if (zoom < 0.5) {
+      zoom = 0.5;
+    }
     exEventEmitter.emit('zoomChange', zoom);
   }
   handleClickEmptySpace(e) {

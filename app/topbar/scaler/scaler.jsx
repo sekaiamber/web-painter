@@ -45,12 +45,10 @@ export default class Scaler extends React.Component{
     if (vn == parseInt(vn)) {
       vn = parseInt(vn);
     }
-    this.setState({
-      zoom: vn / 100,
-      text: vn.toString()
-    }, () => {
-      exEventEmitter.emit('zoomChange', this.state.zoom);
-    });
+    if (vn < 50) {
+      vn = 50;
+    }
+    exEventEmitter.emit('zoomChange', vn / 100);
   }
   render() {
     return (

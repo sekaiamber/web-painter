@@ -319,12 +319,8 @@ export default class PagePiece {
       });
     } else {
       this.component.updateElementSelectedBorder({
-        top: 0,
-        left: 0,
-        width: 0,
-        height: 0,
         opacity: 0
-      });
+      }, true);
     }
   }
 }

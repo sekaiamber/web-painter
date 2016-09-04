@@ -22,7 +22,7 @@ export default class ElementSelectedBorder extends React.Component{
 ElementSelectedBorder.defaultProps = {
   top: 0,
   left: 0,
-  width: 0,
-  height: 0,
+  width: '100%',
+  height: '100%',
   opacity: 0,
 }

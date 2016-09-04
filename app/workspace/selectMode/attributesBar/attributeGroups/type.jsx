@@ -1,5 +1,6 @@
 import { Input, Radio } from 'antd';
 import BaseAttributeGroup from './baseAttributeGroup'
+const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
 let React = require('react');
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
@@ -23,8 +24,8 @@ export default class TypeAttributeGroup extends BaseAttributeGroup{
   }
   render() {
     return (
-      <div className="attribute-group">
-        <div className="group-name">Type Setting</div>
+      <div className={"attribute-group" + (this.state.slide ? " slide" : "")}>
+        <BaseAttributeGroupName name="Type Setting" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute">
           <div className="name">Size</div>
           <div className="value">

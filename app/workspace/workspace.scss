@@ -18,6 +18,7 @@ $patternBarHeight: 225px;
   #patternBar,
   #elementBar {
     position: absolute;
+    transition: all .3s ease;
   }
 
   // 选择模式
@@ -85,9 +86,6 @@ $patternBarHeight: 225px;
       top: 0;
       left: 0;
       cursor: crosshair;
-      #pieces {
-        // display: none;
-      }
     }
     #attributesBar {
       height: 100%;
@@ -106,6 +104,36 @@ $patternBarHeight: 225px;
       height: 100%;
       width: 100%;
       top: calc(100% - 80px);
+      left: 0;
+    }
+  }
+
+  // 填充模式
+  &.mode-paint {
+    #canvas {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      cursor: crosshair;
+    }
+    #attributesBar {
+      height: 100%;
+      width: 0;
+      top: 0;
+      right: 0;
+    }
+    #patternBar {
+      height: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    #elementBar {
+      height: 100%;
+      width: 100%;
+      top: 100%;
       left: 0;
     }
   }

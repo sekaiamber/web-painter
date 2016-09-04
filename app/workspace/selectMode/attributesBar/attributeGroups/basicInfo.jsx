@@ -1,5 +1,6 @@
 import { Input } from 'antd';
 import BaseAttributeGroup from './baseAttributeGroup'
+const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
 let React = require('react');
 
 export default class BasicInfoAttributeGroup extends BaseAttributeGroup{

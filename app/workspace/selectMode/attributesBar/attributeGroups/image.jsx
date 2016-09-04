@@ -1,6 +1,7 @@
 import { Input, Button, Icon, Switch, Select } from 'antd';
 const Option = Select.Option;
 import BaseAttributeGroup from './baseAttributeGroup'
+const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
 import _ from 'lodash'
 import AssetModal from './../../../utils/assetModal'
 let React = require('react');
@@ -10,9 +11,9 @@ require('./image.scss')
 export default class ImageAttributeGroup extends BaseAttributeGroup{
   constructor(props) {
     super(props);
-    this.state = {
+    _.merge(this.state, {
       modalVisible: false
-    }
+    });
 
     // bind
     this.handleChoseImage = this.handleChoseImage.bind(this);
@@ -38,8 +39,8 @@ export default class ImageAttributeGroup extends BaseAttributeGroup{
   }
   render() {
     return (
-      <div className="attribute-group image">
-        <div className="group-name">Image</div>
+      <div className={"attribute-group" + (this.state.slide ? " slide" : "")}>
+        <BaseAttributeGroupName name="Image" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute">
           <div className="name">Width</div>
           <div className="value">

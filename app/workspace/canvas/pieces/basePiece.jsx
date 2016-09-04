@@ -62,8 +62,12 @@ export default class BasePiece extends React.Component{
   }
   updateElementSelectedBorder(style) {
     style = style || this.state.elementBorderStyle;
+    let origin = this.state.elementBorderStyle;
+    Object.keys(style).map((k) => {
+      origin[k] = style[k];
+    })
     this.setState({
-      elementBorderStyle: style
+      elementBorderStyle: origin
     })
   }
   render() {
