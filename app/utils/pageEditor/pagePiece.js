@@ -187,7 +187,7 @@ export default class PagePiece {
     exEventEmitter.emit('cancelSelectd');
     exEventEmitter.emit('modeChange', 'select');
     this.updateRender(e);
-    exEventEmitter.emit('selectSomething', new ElementAttributeHandler(e.target, this));
+    exEventEmitter.emit('selectSomething', new ElementAttributeHandler(e, this));
   }
 
   // pattern control
