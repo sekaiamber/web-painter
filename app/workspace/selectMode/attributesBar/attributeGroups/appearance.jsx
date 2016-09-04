@@ -1,5 +1,6 @@
 import { Input } from 'antd';
 import BaseAttributeGroup from './baseAttributeGroup'
+const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
 let React = require('react');
 
 export default class AppearanceAttributeGroup extends BaseAttributeGroup{
@@ -12,8 +13,8 @@ export default class AppearanceAttributeGroup extends BaseAttributeGroup{
   }
   render() {
     return (
-      <div className="attribute-group">
-        <div className="group-name">Appearance</div>
+      <div className={"attribute-group" + (this.state.slide ? " slide" : "")}>
+        <BaseAttributeGroupName name="Appearance" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute">
           <div className="name">Padding</div>
           <div className="value">

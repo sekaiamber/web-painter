@@ -2,3 +2,27 @@
   position: absolute;
   border: solid 1px #676767;
 }
+
+// 各状态
+
+#workspace.mode-select #pieces {
+  .piece>.element-hoverer {
+    display: none;
+  }
+}
+
+#workspace.mode-element #pieces {
+  border: none;
+
+  .piece>.empty {
+    display: none;
+  }
+}
+
+#workspace.mode-paint #pieces {
+  border: none;
+
+  .piece>.empty {
+    display: none;
+  }
+}

@@ -1,3 +1,5 @@
+import {Icon} from 'antd'
+
 let classnames = require('classnames');
 let React = require('react');
 require('./piecePattern.scss');
@@ -39,14 +41,14 @@ export default class PiecePattern extends React.Component{
             onMouseEnter={() => {this.handleAddMouseEnterAndLeave('top', true)}}
             onMouseLeave={() => {this.handleAddMouseEnterAndLeave('top', false)}}
             onClick={() => {this.handleAddPattern('top')}}
-          ></div>
+          ><Icon type="plus-circle-o" /></div>
           <div className="bottom add-bt"
             onMouseEnter={() => {this.handleAddMouseEnterAndLeave('bottom', true)}}
             onMouseLeave={() => {this.handleAddMouseEnterAndLeave('bottom', false)}}
             onClick={() => {this.handleAddPattern('bottom')}}
-          ></div>
+          ><Icon type="plus-circle-o" /></div>
           <div className={bottomAddLineClasses}></div>
-          <div className="delete-bt" onClick={this.handleDeletePattern}></div>
+          <div className="delete-bt" onClick={this.handleDeletePattern}><Icon type="cross-circle-o" /></div>
         </div>
       </div>
     );

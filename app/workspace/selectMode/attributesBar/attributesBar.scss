@@ -21,16 +21,51 @@
     border-top: solid 1px #181a1b;
     padding: 15px;
     position: relative;
+    overflow: hidden;
+    transition: all .3s ease;
+    max-height: 300px;
+    &.slide {
+      max-height: 53px;
+      .slide-bt {
+        transform: rotate(180deg);
+      }
+      .group-name:before {
+        max-height: 8px;
+      }
+    }
 
     .group-name {
       color: #fff;
       margin-bottom: 15px;
       font-size: 14px;
+      height: 22px;
+      line-height: 22px;
       &:before {
-        content: ".";
+        content: "|";
         display: inline-block;
         margin-right: 10px;
         background: #fff;
+        width: 4px;
+        max-height: 22px;
+        color: transparent;
+        vertical-align: middle;
+        transition: all .3s ease;
+      }
+      .slide-bt {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        line-height: 22px;
+        cursor: pointer;
+        transition: all .3s ease;
+        color: #bfc0c0;
+        &:hover {
+          background: #bfc0c0;
+          color: #292c2d;
+        }
       }
     }
 

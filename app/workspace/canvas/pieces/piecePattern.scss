@@ -2,7 +2,7 @@
   .piece {
     .pattern {
       position: relative;
-      overflow: hidden;
+      // overflow: hidden;
 
       .pattern-border {
         width: 100%;
@@ -41,22 +41,25 @@
         left: 50%;
         // transform: translate(-50%, 0px);
         cursor: pointer;
-        background: #e6e6e6;
+        background: rgba(230,230,230,.5);
         pointer-events: auto;
-        opacity: .5;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+        z-index: 100;
         &:hover {
           background: #42a5e8;
-          opacity: 1;
+          color: #fff;
         }
 
         &.top {
           // &:hover {
-            transform:  translate(-50%, 15px);
+            transform:  translate(-50%, -17px);
           // }
         }
         &.bottom {
           // &:hover {
-            transform:  translate(-50%, -15px);
+            transform:  translate(-50%, 17px);
           // }
         }
       }
@@ -73,15 +76,16 @@
       .delete-bt {
         height: 35px;
         width: 35px;
-        background: #e6e6e6;
-        top: 15px;
-        left: 15px;
         cursor: pointer;
+        background: rgba(230,230,230,.5);
         pointer-events: auto;
-        opacity: .5;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+        z-index: 100;
         &:hover {
           background: #42a5e8;
-          opacity: 1;
+          color: #fff;
         }
       }
     }

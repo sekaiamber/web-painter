@@ -1,5 +1,6 @@
 import { Input } from 'antd';
 import BaseAttributeGroup from './baseAttributeGroup'
+const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
 let React = require('react');
 
 export default class ContentAttributeGroup extends BaseAttributeGroup{
@@ -21,8 +22,8 @@ export default class ContentAttributeGroup extends BaseAttributeGroup{
   }
   render() {
     return (
-      <div className="attribute-group">
-        <div className="group-name">Content</div>
+      <div className={"attribute-group" + (this.state.slide ? " slide" : "")}>
+        <BaseAttributeGroupName name="Content" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute" style={{height: 'auto'}}>
           <Input type="textarea" rows={4}
             value={this.props.text}
