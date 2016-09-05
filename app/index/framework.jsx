@@ -16,8 +16,6 @@ export default class Framework extends React.Component{
     this.state = {}
   }
   componentDidMount() {
-    console.log('[web painter]: UI load finish');
-    exEventEmitter.emit('uiready');
   }
   componentWillUnmount() {
   }

@@ -22,11 +22,17 @@ export default class Canvas extends React.Component{
     this.handleClickEmptySpace = this.handleClickEmptySpace.bind(this);
   }
   componentDidMount() {
-    exEventEmitter.on('zoomChange', (zoom) => {
+    exEventEmitter.on('zoomChange', (zoom, init) => {
       this.setState({
         zoom: zoom
       })
     });
+    exEventEmitter.on('uiready', () => {
+      let $canvas = $(this.canvas);
+      let $pageContainer = $(this.pageContainer);
+      $canvas.scrollTop(($pageContainer.outerHeight() - $canvas.outerHeight()) / 2);
+      $canvas.scrollLeft(($pageContainer.outerWidth() - $canvas.outerWidth()) / 2);
+    })
     this.autofix();
   }
   componentWillUnmount(){
@@ -61,8 +67,8 @@ export default class Canvas extends React.Component{
       paddingLeft: `${Math.round(this.state.pageWidth / 2)}px`,
     }
     return (
-      <div id="canvas">
-        <div className="page-container" style={windowStyle} onClick={this.handleClickEmptySpace}>
+      <div id="canvas" ref={(c) => this.canvas = c }>
+        <div className="page-container" ref={(c) => this.pageContainer = c } style={windowStyle} onClick={this.handleClickEmptySpace}>
           <Page width={this.state.pageWidth} zoom={this.state.zoom}/>
           <Pieces width={this.state.pageWidth} zoom={this.state.zoom} top={windowStyle.paddingTop} left={windowStyle.paddingLeft}/>
         </div>
