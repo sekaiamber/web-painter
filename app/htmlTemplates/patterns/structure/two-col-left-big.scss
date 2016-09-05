@@ -1,0 +1,17 @@
+.structure-two-col-left-big {
+  background: #fff;
+  padding: 100px;
+
+  .col {
+    float: left;
+
+    &.left {
+      width: 65%;
+      padding-right: 30px;
+    }
+    &.right {
+      width: 35%;
+      padding-left: 30px;
+    }
+  }
+}
