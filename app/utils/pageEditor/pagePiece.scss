@@ -21,6 +21,14 @@
           content: 'Empty';
           line-height: 350px;
         }
+        
+        &.small {
+          height: 150px;
+
+          &:after {
+            line-height: 150px
+          }
+        }
       }
     }
   }
