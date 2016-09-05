@@ -8,6 +8,22 @@
   .hoverer {
     pointer-events: none;
     position: absolute;
+  }
+}
+
+// 各状态
+#workspace.mode-select .element-hoverer{
+  .hoverer {
+    border: #c8c8c8 dashed 1px;
+    background: rgba(200, 200, 200, .1);
+    .text {
+      display: none;
+    }
+  }
+}
+
+#workspace.mode-element .element-hoverer{
+  .hoverer {
     border: #42a5e8 solid 1px;
     background: rgba(66, 165, 232, .2);
     .text {
