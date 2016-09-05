@@ -6,9 +6,10 @@ require('./pagePiece.scss');
 
 // public vars
 
-let currentHoverElement = null;
-let currentHoverType = '';
-let currentHoverPosition = '';
+let currentElementHoverElement = null;
+let currentElementHoverType = '';
+let currentElementHoverPosition = '';
+let currentSelectHoverElement = null;
 
 
 export default class PagePiece {
@@ -19,6 +20,7 @@ export default class PagePiece {
     this.$page = page.$page;
     this.patterns = [];
     this.$piece = this.initDom(pieceReactComponent);
+
   }
 
   // init
@@ -51,7 +53,7 @@ export default class PagePiece {
         }
       }
       if (window._mode_ == 'element') {
-        if (e.target == currentHoverElement) {
+        if (e.target == currentElementHoverElement) {
           this.addElement(e.target);
         }
       }
@@ -62,7 +64,7 @@ export default class PagePiece {
 
   initHover($piece) {
     $piece.hover((e) => {
-      console.log('in');
+      
     }, (e) => {
       exEventEmitter.emit('cancelHoverElement', this.component.tag);
     });
@@ -70,21 +72,35 @@ export default class PagePiece {
   }
 
   initMousemove($piece) {
-    // element mode: hover something
     $piece.mousemove((e) => {
       let $target = $(e.target);
       if (
-        window._mode_ == 'element'
+        window._mode_ == 'select'        // select模式下hover非piece本身也非当前选中元素
+        && e.target != e.currentTarget
+      ) {
+        if (currentSelectHoverElement == e.target) return;
+        currentSelectHoverElement = e.target;
+        let p1 = $piece.offset();
+        let p2 = $target.offset();
+        exEventEmitter.emit('updateSelectModeHoverElement',
+          this.component.tag,
+          parseInt((p2.left - p1.left) * window._zoom_),
+          parseInt((p2.top - p1.top) * window._zoom_),
+          parseInt($target.outerWidth() * window._zoom_),
+          parseInt($target.outerHeight() * window._zoom_)
+        )
+      } else if (
+        window._mode_ == 'element'           // element模式下hover非pattern也非piece本身
         && e.target != e.currentTarget
         && !$target.hasClass('pe-pattern')
       ) {
         let p1 = $piece.offset();
         let p2 = $target.offset();
         if ($target.attr('wp-raw') == "") {
-          if (currentHoverElement == e.target) return;
-          currentHoverElement = e.target;
+          if (currentElementHoverElement == e.target) return;
+          currentElementHoverElement = e.target;
           // replace
-          exEventEmitter.emit('updateHoverElement',
+          exEventEmitter.emit('updateElementModeHoverElement',
             'replace',
             this.component.tag,
             parseInt((p2.left - p1.left) * window._zoom_),
@@ -96,9 +112,9 @@ export default class PagePiece {
           // insert
           let realHalfHeight = $target.outerHeight() * window._zoom_ / 2;
           let position = realHalfHeight > e.offsetY ? "top" : "bottom";
-          if (currentHoverElement == e.target && currentHoverPosition == position) return;
-          currentHoverElement = e.target;
-          exEventEmitter.emit('updateHoverElement',
+          if (currentElementHoverElement == e.target && currentElementHoverPosition == position) return;
+          currentElementHoverElement = e.target;
+          exEventEmitter.emit('updateElementModeHoverElement',
             'insert',
             this.component.tag,
             parseInt((p2.left - p1.left) * window._zoom_),
@@ -125,13 +141,13 @@ export default class PagePiece {
       this.updateRender();
     });
     exEventEmitter.on('cancelHoverElement', () => {
-      currentHoverElement = null;
-      currentHoverType = '';
-      currentHoverPosition = '';
+      currentElementHoverElement = null;
+      currentElementHoverType = '';
+      currentElementHoverPosition = '';
     });
-    exEventEmitter.on('updateHoverElement', (type, tag, left, top, width, height, position) => {
-      currentHoverType = type;
-      currentHoverPosition = position;
+    exEventEmitter.on('updateElementModeHoverElement', (type, tag, left, top, width, height, position) => {
+      currentElementHoverType = type;
+      currentElementHoverPosition = position;
     });
   }
 
@@ -140,22 +156,22 @@ export default class PagePiece {
     let elementComponent = this.pageEditor.currentSelectComponent;
     let $target = $(target);
     let $element = $(elementComponent.getPlainHtmlText());
-    if (currentHoverType == 'replace') {
+    if (currentElementHoverType == 'replace') {
       // replace
       $target.after($element);
       $target.detach();
-    } else if (currentHoverType == 'insert') {
+    } else if (currentElementHoverType == 'insert') {
       // insert
-      if (currentHoverPosition == 'top') {
+      if (currentElementHoverPosition == 'top') {
         $target.before($element);
-      } else if (currentHoverPosition == 'bottom') {
+      } else if (currentElementHoverPosition == 'bottom') {
         $target.after($element);
       }
     }
     this.updateRender();
     // 历史记录
     if (this.component.tag == 'body') {
-      if (currentHoverType == 'replace') {
+      if (currentElementHoverType == 'replace') {
         exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
           $element.first().before($target);
           $element.detach();
@@ -163,13 +179,13 @@ export default class PagePiece {
           $target.after($element);
           $target.detach();
         })
-      } else if (currentHoverType == 'insert') {
+      } else if (currentElementHoverType == 'insert') {
         let redo;
-        if (currentHoverPosition == 'top') {
+        if (currentElementHoverPosition == 'top') {
           redo = () => {
             $target.before($element);
           }
-        } else if (currentHoverPosition == 'bottom') {
+        } else if (currentElementHoverPosition == 'bottom') {
           redo = () => {
             $target.after($element);
           }
