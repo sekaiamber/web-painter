@@ -91,6 +91,16 @@
       }
     }
   }
+
+  // ant design
+  .ant-slider {
+    margin: 6px 0;
+    border-color: #292c2d;
+    background: #3e3e3e;
+    .ant-slider-track {
+      background-color: #646464; 
+    }
+  }
 }
 
 @font-face {font-family: "attribute-iconfont";

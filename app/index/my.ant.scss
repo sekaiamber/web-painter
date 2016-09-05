@@ -8,6 +8,13 @@ body#wp {
       border-color: #42a5e8;
     }
   }
+  .ant-input-wrapper {
+    .ant-input-group-addon {
+      background: #5d5d5d;
+      color: #bfc0c0;
+      border-color: #646464;
+    }
+  }
   .ant-radio-group {
     .ant-radio-button-wrapper {
       background: #3e3e3e;
@@ -62,6 +69,29 @@ body#wp {
           }
         }
       }
+    }
+  }
+  .ant-input-number {
+    border-color: #646464;
+    background: #3e3e3e;
+    .ant-input-number-input {
+      background: #3e3e3e;
+      color: #fff;
+    }
+    .ant-input-number-handler-wrap {
+      background: #3e3e3e;
+      border-color: #646464;
+      color: #fff;
+      a {
+        border-color: #646464;
+
+        &:hover {
+          background: #646464;
+        }
+      }
+    }
+    &.ant-input-number-focused {
+      border-color: #42a5e8;
     }
   }
 }
