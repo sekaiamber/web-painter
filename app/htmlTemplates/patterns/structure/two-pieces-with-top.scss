@@ -1,0 +1,19 @@
+.structure-two-pieces-with-top {
+  background: #fff;
+  padding: 100px;
+
+  .top {
+    margin-bottom: 60px;
+  }
+  .col {
+    float: left;
+    width: 50%;
+
+    &.left {
+      padding-right: 30px;
+    }
+    &.right {
+      padding-left: 30px;
+    }
+  }
+}

@@ -1,6 +1,10 @@
-.structure-three-pieces {
+.structure-three-pieces-with-top {
   background: #fff;
   padding: 100px;
+
+  .top {
+    margin-bottom: 60px;
+  }
 
   .col {
     float: left;

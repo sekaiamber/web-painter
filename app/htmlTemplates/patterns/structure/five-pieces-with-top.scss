@@ -1,0 +1,29 @@
+.structure-five-pieces-with-top {
+  background: #fff;
+  padding: 100px;
+
+  .top {
+    margin-bottom: 60px;
+  }
+
+  .col {
+    float: left;
+    width: 20%;
+
+    &.r1 {
+      padding-right: 40px;
+    }
+    &.r2 {
+      padding: 0 30px 0 10px;
+    }
+    &.r3 {
+      padding: 0 20px 0 20px;
+    }
+    &.r4 {
+      padding: 0 10px 0 30px;
+    }
+    &.r5 {
+      padding-left: 40px;
+    }
+  }
+}
