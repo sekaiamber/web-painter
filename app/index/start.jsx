@@ -4,6 +4,10 @@ import Framework from './framework'
 import ExEventEmitter from './../utils/events'
 import PageEditor from './../utils/pageEditor/pageEditor'
 
+import $ from 'jquery'
+
+// jquery
+window._jquery = $;
 
 // Event
 const exEventEmitter = new ExEventEmitter();
@@ -22,7 +26,11 @@ let React = require('react');
 require('./index.scss');
 require('antd/dist/antd.css');
 
-render(<Framework />, document.getElementById("container"));
+$(document).ready(() => {
+  render(<Framework />, document.getElementById("container"));
+  console.log('[web painter]: UI load finish');
+  exEventEmitter.emit('uiready');
+});
 
 // ipc
 require('./../utils/ipc')
