@@ -1,0 +1,22 @@
+[
+  {
+    "from": "assets/fonts/icons/et-line/fonts/et-line.eot",
+    "to": "assets/fonts/icons/et-line/fonts/et-line.eot"
+  },
+  {
+    "from": "assets/fonts/icons/et-line/fonts/et-line.svg",
+    "to": "assets/fonts/icons/et-line/fonts/et-line.svg"
+  },
+  {
+    "from": "assets/fonts/icons/et-line/fonts/et-line.ttf",
+    "to": "assets/fonts/icons/et-line/fonts/et-line.ttf"
+  },
+  {
+    "from": "assets/fonts/icons/et-line/fonts/et-line.woff",
+    "to": "assets/fonts/icons/et-line/fonts/et-line.woff"
+  },
+  {
+    "from": "assets/fonts/icons/et-line/styles/et-line.min.css",
+    "to": "assets/fonts/icons/et-line/styles/et-line.min.css"
+  }
+]

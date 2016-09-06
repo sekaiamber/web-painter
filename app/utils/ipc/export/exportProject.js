@@ -18,6 +18,8 @@ const cleanAttrs = [
   'wp-img-type', 'wp-img-target'
 ]
 
+let copyList = require('./exportCopyList.json');
+
 export default class ExportProject {
   constructor(projectPath) {
     this.projectPath = projectPath;
@@ -50,6 +52,14 @@ export default class ExportProject {
       filename: 'bundle.css',
       data: bundleCss
     });
+    this.files = this.files.concat(copyList.map((file) => {
+      file['copy'] = true;
+      return {
+        copy: true,
+        from: file.from,
+        filename: file.to
+      };
+    }))
   }
 
   getPageHtml(page) {

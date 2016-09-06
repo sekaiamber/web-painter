@@ -14,7 +14,8 @@ const basicGroupmap = {
 
 const specialGroupmap = {
   linkList: [groups.LinkListDataAttributeGroup],
-  twoColStructure: [groups.TwoColStructureAttributeGroup]
+  twoColStructure: [groups.TwoColStructureAttributeGroup],
+  icon: [groups.IconAttributeGroup]
 }
 
 export default function (nodeName, specialGroupName) {

@@ -1,10 +1,12 @@
-import HeadParagraghElement from './elements/headParagraph'
 import Head1Element from './elements/head1'
 import Head2Element from './elements/head2'
 import Head3Element from './elements/head3'
 import Head4Element from './elements/head4'
 import Head5Element from './elements/head5'
 import Head6Element from './elements/head6'
+import ParagraghElement from './elements/paragraph'
+import HeadParagraghElement from './elements/headParagraph'
+import IconHeadElement from './elements/iconhead'
 
 export default [
   Head1Element,
@@ -13,5 +15,7 @@ export default [
   Head4Element,
   Head5Element,
   Head6Element,
+  ParagraghElement,
   HeadParagraghElement,
+  IconHeadElement
 ]
