@@ -1,0 +1,32 @@
+.navigation-left-image-right-links {
+  background: #fff;
+  .nav {
+    position: relative;
+    min-height: 100px;
+    padding: 20px 40px;
+    .title {
+      float: left;
+      img {
+        height: 60px;
+        width: 60px;
+      }
+      * {
+        vertical-align: middle;
+      }
+      .links {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+      }
+    }
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #666;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}

@@ -39,7 +39,7 @@ export default class ImageAttributeGroup extends BaseAttributeGroup{
   }
   render() {
     return (
-      <div className={"attribute-group" + (this.state.slide ? " slide" : "")}>
+      <div className={"attribute-group image" + (this.state.slide ? " slide" : "")}>
         <BaseAttributeGroupName name="Image" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute">
           <div className="name">Width</div>
