@@ -1,12 +1,12 @@
 let React = require('react');
-let htmlTemplate = require('./../../../../../htmlTemplates/elements/head1.html');
+let htmlTemplate = require('./../../../../../htmlTemplates/elements/head4.html');
 
 import Element from './../element'
 
-export default class Head1Element extends Element{
+export default class Head4Element extends Element{
   constructor(props) {
     super(props);
-    this.tag = 'head1';
+    this.tag = 'head4';
     // bind
   }
   // page editor function
@@ -14,4 +14,4 @@ export default class Head1Element extends Element{
     return htmlTemplate;
   }
 }
-Head1Element.elementTag = 'head1';
+Head4Element.elementTag = 'head4';

@@ -11,20 +11,18 @@ export default class Element extends React.Component{
   }
   componentDidMount() {
     if (this.props.selected) {
-      exEventEmitter.emit('elementComponentSelected', this);
+      this.props.onSelect(this);
     }
   }
   componentWillUnmount() {
   }
   handleClick() {
-    this.props.onSelect();
-    exEventEmitter.emit('elementComponentSelected', this);
+    this.props.onSelect(this);
   }
   render() {
-    let classes = "element" + (this.props.selected ? " selected" : "");
+    let classes = "iconfont element " + this.tag + (this.props.selected ? " selected" : "");
     return (
       <div className={classes} onClick={this.handleClick}>
-        {this.renderSample()}
       </div>
     );
   }

@@ -6,13 +6,8 @@ import Element from './../element'
 export default class HeadParagraghElement extends Element{
   constructor(props) {
     super(props);
-    this.tag = 'head-paragragh';
+    this.tag = 'heading-paragraph';
     // bind
-  }
-  renderSample() {
-    return (
-      <div className={"iconfont-element " + this.tag}></div>
-    );
   }
 
   // page editor function
@@ -20,3 +15,4 @@ export default class HeadParagraghElement extends Element{
     return htmlTemplate;
   }
 }
+HeadParagraghElement.elementTag = 'heading-paragraph';

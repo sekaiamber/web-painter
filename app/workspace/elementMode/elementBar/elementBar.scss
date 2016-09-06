@@ -6,8 +6,68 @@
   .container {
     width: 720px;
     margin: 0 auto;
+    height: 100%;
     .fav-elements {
       height: 80px;
     }
+    .all-elements {
+      height: calc(100% - 90px);
+      overflow: auto;
+    }
+  }
+
+  // slide up
+  &.slide-up {
+    top: 0 !important;
+    .container {
+      padding-top: 10px;
+    }
+    &:hover {
+      .slide-up-bt {
+        transform: translateX(100%);
+      }
+    }
+    .slide-down-bt {
+      transform: translateX(0);
+    }
+    .fav-elements {
+      margin-bottom: 10px;
+    }
+  }
+
+  &:hover {
+    .slide-up-bt {
+      transform: translateX(0);
+    }
+  }
+  .slide-up-bt,
+  .slide-down-bt {
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    padding-top: 20px;
+    transition: all .3s ease;
+    .iconfont.element{
+      border: #e4e4e4 solid 1px;
+      border-radius: 20px;
+      height: 40px;
+      width: 40px;
+      padding-top: 5px;
+      margin: 0;
+      &:before {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+  .slide-up-bt {
+    right: 0;
+    transform: translateX(100%);
+  }
+  .slide-down-bt {
+    left: 0;
+    transform: translateX(-100%);
   }
 }

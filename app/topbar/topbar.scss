@@ -35,10 +35,10 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
   &.screen:before { content: "\e600"; }
-  &.select:before { content: "\e601"; }
-  &.element:before { content: "\e602"; }
+  &.select-mode:before { content: "\e601"; }
+  &.element-mode:before { content: "\e602"; }
   &.text:before { content: "\e603"; }
-  &.paint:before { content: "\e604"; }
+  &.paint-mode:before { content: "\e604"; }
   &.scaler:before { content: "\e605"; }
   &.addpage:before { content: "\e606"; }
   &.pagesetting:before { content: "\e607"; }
