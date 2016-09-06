@@ -1,0 +1,30 @@
+.navigation-center-image-links {
+  background: #fff;
+  .nav {
+    position: relative;
+    min-height: 100px;
+    padding: 20px 40px;
+    .company-logo{
+      text-align: center;
+      img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+    .company-links {
+      margin-top: 15px;
+      text-align: center;
+      .links {
+        display: inline-block;
+      }
+    }
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #666;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
