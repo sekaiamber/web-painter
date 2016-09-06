@@ -1,19 +1,139 @@
 #elementBar {
   .element {
     display: inline-block;
-    margin: 0 5px;
-    height: 80px;
-    width: 80px;
     cursor: pointer;
-    padding: 15px;
-    &.selected {
-      background: rgba(0,0,0,.5);
-    }
-
-    .iconfont-element {
-      height: 50px;
-      width: 50px;
-      background: url('./../../../../../assets/images/element-iconfont.png');
+    text-align: center;
+    overflow: hidden;
+    color: #e4e4e4;
+    &:before {
+      font-size: 65px;
+      line-height: 80px;
     }
   }
+  .fav-elements {
+    .element {
+      margin: 0 5px;
+      height: 80px;
+      width: 80px;
+      padding-top: 10px;
+      padding-left: 1px;
+      &.selected {
+        background: rgba(0,0,0,.5);
+      }
+    }
+  }
+  .all-elements {
+    .element {
+      margin: 0 5px;
+      height: 80px;
+      width: 80px;
+      padding-top: 10px;
+      padding-left: 1px;
+      border: rgba(255,255,255,.25) solid 2px;
+      &:before {
+        line-height: 76px;
+      }
+      &.selected {
+        background: rgba(255,255,255,.25);
+        background-clip: padding-box;
+      }
+    }
+  }
+}
+#elementBar.slide-up {
+  .element {
+    border-radius: 4px;
+  }
+}
+
+@font-face {font-family: "element-iconfont";
+  src: url('./../../../../../assets/fonts/element-iconfont.woff') format('woff');
+}
+
+.iconfont.element {
+  font-family:"element-iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  &.add:before{ content: "\e600" }
+  &.cross:before{ content: "\e601" }
+  &.divider:before{ content: "\e602" }
+  &.backquote-left:before{ content: "\e603" }
+
+  &.checkbox:before{ content: "\e604" }
+  &.button:before{ content: "\e605" }
+  &.backquote-right:before{ content: "\e606" }
+  &._:before{ content: "\e607" }
+
+  &._:before{ content: "\e608" }
+  &._:before{ content: "\e609" }
+  &.icon-framed:before{ content: "\e610" }
+  &.paragraph:before{ content: "\e611" }
+
+  &.head1:before{ content: "\e612" }
+  &.head2:before{ content: "\e613" }
+  &.head3:before{ content: "\e614" }
+  &.head4:before{ content: "\e615" }
+
+  &.head5:before{ content: "\e616" }
+  &.head6:before{ content: "\e617" }
+  &.label:before{ content: "\e618" }
+  &.radio:before{ content: "\e619" }
+
+  &.icon-heading-paragraph:before{ content: "\e620" }
+  &.heading-paragraph:before{ content: "\e621" }
+  &.icon-heading:before{ content: "\e622" }
+  &._:before{ content: "\e623" }
+
+  &._:before{ content: "\e624" }
+  &.round-image:before{ content: "\e625" }
+  &.image:before{ content: "\e626" }
+  &.video:before{ content: "\e627" }
+
+  &.text-link:before{ content: "\e628" }
+  &.plus:before{ content: "\e629" }
+  &.strikethrough:before{ content: "\e630" }
+  &.underscore:before{ content: "\e631" }
+
+  &.italics:before{ content: "\e632" }
+  &.bold:before{ content: "\e633" }
+  &.align-justify:before{ content: "\e634" }
+  &.align-right:before{ content: "\e635" }
+
+  &.align-center:before{ content: "\e636" }
+  &.align-left:before{ content: "\e637" }
+  &.delete:before{ content: "\e638" }
+  &.previous:before{ content: "\e639" }
+
+  &.next:before{ content: "\e640" }
+  &.html-widget:before{ content: "\e641" }
+  &.carousel:before{ content: "\e642" }
+  &.text-link-sm:before{ content: "\e643" }
+
+  &.strikethrough-sm:before{ content: "\e644" }
+  &.underscore-sm:before{ content: "\e645" }
+  &.italics-sm:before{ content: "\e646" }
+  &.bold-sm:before{ content: "\e647" }
+
+  &.align-right-sm:before{ content: "\e648" }
+  &.align-center-sm:before{ content: "\e649" }
+  &.align-left-sm:before{ content: "\e650" }
+  &.refresh:before{ content: "\e651" }
+
+  &.form:before{ content: "\e652" }
+  &._:before{ content: "\e653" }
+  &.col1row:before{ content: "\e654" }
+  &.col2row:before{ content: "\e655" }
+
+  &.col3row:before{ content: "\e656" }
+  &.col4row:before{ content: "\e657" }
+  &.list:before{ content: "\e658" }
+  &.panel:before{ content: "\e659" }
+
+  &.heading-panel:before{ content: "\e660" }
+  &.phone-device:before{ content: "\e661" }
+  &.tablet-device:before{ content: "\e662" }
+  &.laptop-device:before{ content: "\e663" }
 }

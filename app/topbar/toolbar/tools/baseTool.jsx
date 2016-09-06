@@ -29,7 +29,7 @@ export default class BaseTool extends React.Component{
   render() {
     return (
       <div className={"tool " + this.tag}>
-        <div className={"iconfont toolbar topbar " + this.tag + (this.props.active ? ' active' : '') } onClick={this.handleClick}></div>
+        <div className={"iconfont toolbar topbar " + this.tag + "-mode" + (this.props.active ? ' active' : '') } onClick={this.handleClick}></div>
       </div>
     );
   }
