@@ -62,7 +62,7 @@ export default class IconModal extends React.Component{
       <Modal className="icon-modal"
         visible={this.props.visible}
         onCancel={this.handleCancel}
-        title="Asset Manager" footer={undefined}
+        title="Icon Manager" footer={undefined}
       >
         <Tabs defaultActiveKey="1" onChange={() => {}}>
           <TabPane tab="ET Line" key="1">
