@@ -26,8 +26,8 @@ export default class ContentAttributeGroup extends BaseAttributeGroup{
         <BaseAttributeGroupName name="Content" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
         <div className="attribute" style={{height: 'auto'}}>
           <Input type="textarea" rows={4}
-            value={this.props.text}
-            onChange={(e) => this.props.onChange('text', e.target.value)}
+            value={this.props.textContent}
+            onChange={(e) => this.props.onChange('textContent', e.target.value)}
           />
         </div>
       </div>
@@ -35,5 +35,5 @@ export default class ContentAttributeGroup extends BaseAttributeGroup{
   }
 }
 ContentAttributeGroup.attributeKeys = [
-  'text'
+  'textContent'
 ]

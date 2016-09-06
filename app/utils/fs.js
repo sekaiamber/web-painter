@@ -23,15 +23,31 @@ export default {
     callback = callback || (() => {});
     function wf(index) {
       if (index >= total) return;
-      filendir.writeFile(
-        fileOpts[index].path,
-        fileOpts[index].data,
-        fileOpts[index].options,
-        (err) => {
-          callback(index, err, () => {
-            wf(index + 1);
-          })
-        });
+      if (fileOpts[index].copy) {
+        filendir.writeFile(
+          fileOpts[index].path,
+          '',
+          fileOpts[index].options,
+          (err) => {
+            let reads = fs.createReadStream(fileOpts[index].from);
+            reads.on('end', () => {
+              callback(index, null, () => {
+                wf(index + 1);
+              });
+            });
+            reads.pipe(fs.createWriteStream(fileOpts[index].path));
+          });
+      } else {
+        filendir.writeFile(
+          fileOpts[index].path,
+          fileOpts[index].data,
+          fileOpts[index].options,
+          (err) => {
+            callback(index, err, () => {
+              wf(index + 1);
+            })
+          });
+      }
     }
     wf(index);
   },

@@ -1,0 +1,302 @@
+[
+{ "keywords": "mobile,devices,tablet",
+  "tag": "et-icon-mobile"
+},
+{ "keywords": "laptop,computer",
+  "tag": "et-icon-laptop"
+},
+{ "keywords": "tv,monitor,screen,computer",
+  "tag": "et-icon-desktop"
+},
+{ "keywords": "tablet,ipad",
+  "tag": "et-icon-tablet"
+},
+{ "keywords": "mobile,iphone,smartphone",
+  "tag": "et-icon-phone"
+},
+{ "keywords": "document",
+  "tag": "et-icon-document"
+},
+{ "keywords": "duplicate,copy,documents",
+  "tag": "et-icon-documents"
+},
+{ "keywords": "search,documents",
+  "tag": "et-icon-search"
+},
+{ "keywords": "clipboard",
+  "tag": "et-icon-clipboard"
+},
+{ "keywords": "newspaper,news",
+  "tag": "et-icon-newspaper"
+},
+{ "keywords": "notebook,address",
+  "tag": "et-icon-notebook"
+},
+{ "keywords": "book,open",
+  "tag": "et-icon-book-open"
+},
+{ "keywords": "browser,webpage,site,layout",
+  "tag": "et-icon-browser"
+},
+{ "keywords": "calendar,date",
+  "tag": "et-icon-calendar"
+},
+{ "keywords": "presentation",
+  "tag": "et-icon-presentation"
+},
+{ "keywords": "picture,image",
+  "tag": "et-icon-picture"
+},
+{ "keywords": "pictures,photos",
+  "tag": "et-icon-pictures"
+},
+{ "keywords": "video",
+  "tag": "et-icon-video"
+},
+{ "keywords": "camera",
+  "tag": "et-icon-camera"
+},
+{ "keywords": "printer",
+  "tag": "et-icon-printer"
+},
+{ "keywords": "toolbox",
+  "tag": "et-icon-toolbox"
+},
+{ "keywords": "briefcase",
+  "tag": "et-icon-briefcase"
+},
+{ "keywords": "wallet,cash,money",
+  "tag": "et-icon-wallet"
+},
+{ "keywords": "gift,package",
+  "tag": "et-icon-gift"
+},
+{ "keywords": "graph,line,bar,chart",
+  "tag": "et-icon-bargraph"
+},
+{ "keywords": "grid,layout",
+  "tag": "et-icon-grid"
+},
+{ "keywords": "resize,expand",
+  "tag": "et-icon-expand"
+},
+{ "keywords": "focus",
+  "tag": "et-icon-focus"
+},
+{ "keywords": "edit",
+  "tag": "et-icon-edit"
+},
+{ "keywords": "adjusments",
+  "tag": "et-icon-adjustments"
+},
+{ "keywords": "ribbon",
+  "tag": "et-icon-ribbon"
+},
+{ "keywords": "hourglass",
+  "tag": "et-icon-hourglass"
+},
+{ "keywords": "lock",
+  "tag": "et-icon-lock"
+},
+{ "keywords": "megaphone",
+  "tag": "et-icon-megaphone"
+},
+{ "keywords": "shield",
+  "tag": "et-icon-shield"
+},
+{ "keywords": "trophy",
+  "tag": "et-icon-trophy"
+},
+{ "keywords": "flag",
+  "tag": "et-icon-flag"
+},
+{ "keywords": "map",
+  "tag": "et-icon-map"
+},
+{ "keywords": "puzzle",
+  "tag": "et-icon-puzzle"
+},
+{ "keywords": "basket",
+  "tag": "et-icon-basket"
+},
+{ "keywords": "envelope",
+  "tag": "et-icon-envelope"
+},
+{ "keywords": "streetsign",
+  "tag": "et-icon-streetsign"
+},
+{ "keywords": "telescope",
+  "tag": "et-icon-telescope"
+},
+{ "keywords": "gears",
+  "tag": "et-icon-gears"
+},
+{ "keywords": "key",
+  "tag": "et-icon-key"
+},
+{ "keywords": "paperclip",
+  "tag": "et-icon-paperclip"
+},
+{ "keywords": "attachment",
+  "tag": "et-icon-attachment"
+},
+{ "keywords": "pricetags",
+  "tag": "et-icon-pricetags"
+},
+{ "keywords": "lightbulb",
+  "tag": "et-icon-lightbulb"
+},
+{ "keywords": "layers",
+  "tag": "et-icon-layers"
+},
+{ "keywords": "pencil,draw,art,sketch",
+  "tag": "et-icon-pencil"
+},
+{ "keywords": "tools,ruler",
+  "tag": "et-icon-tools"
+},
+{ "keywords": "tools,settings",
+  "tag": "et-icon-tools-2"
+},
+{ "keywords": "scissors,cut,slice",
+  "tag": "et-icon-scissors"
+},
+{ "keywords": "paintbrush",
+  "tag": "et-icon-paintbrush"
+},
+{ "keywords": "magnifying, glass, search",
+  "tag": "et-icon-magnifying-glass"
+},
+{ "keywords": "compass,circle",
+  "tag": "et-icon-circle-compass"
+},
+{ "keywords": "linegraph,stats",
+  "tag": "et-icon-linegraph"
+},
+{ "keywords": "mic,microphone",
+  "tag": "et-icon-mic"
+},
+{ "keywords": "strategy,chess",
+  "tag": "et-icon-strategy"
+},
+{ "keywords": "beaker,lab",
+  "tag": "et-icon-beaker"
+},
+{ "keywords": "caution",
+  "tag": "et-icon-caution"
+},
+{ "keywords": "recycle",
+  "tag": "et-icon-recycle"
+},
+{ "keywords": "anchor",
+  "tag": "et-icon-anchor"
+},
+{ "keywords": "male,profile,user",
+  "tag": "et-icon-profile-male"
+},
+{ "keywords": "female,profile,user",
+  "tag": "et-icon-profile-female"
+},
+{ "keywords": "bike",
+  "tag": "et-icon-bike"
+},
+{ "keywords": "wine,bar,drink",
+  "tag": "et-icon-wine"
+},
+{ "keywords": "hot,air,balloon",
+  "tag": "et-icon-hotairballoon"
+},
+{ "keywords": "globe,earth",
+  "tag": "et-icon-globe"
+},
+{ "keywords": "genius,nuclear",
+  "tag": "et-icon-genius"
+},
+{ "keywords": "map,pin",
+  "tag": "et-icon-map-pin"
+},
+{ "keywords": "dial",
+  "tag": "et-icon-dial"
+},
+{ "keywords": "chat,message,bubble,talk",
+  "tag": "et-icon-chat"
+},
+{ "keywords": "heart,like",
+  "tag": "et-icon-heart"
+},
+{ "keywords": "cloud,sky,weather",
+  "tag": "et-icon-cloud"
+},
+{ "keywords": "cloud,upload",
+  "tag": "et-icon-upload"
+},
+{ "keywords": "cloud,download",
+  "tag": "et-icon-download"
+},
+{ "keywords": "target,arrow",
+  "tag": "et-icon-target"
+},
+{ "keywords": "hazardous,circle",
+  "tag": "et-icon-hazardous"
+},
+{ "keywords": "piechart,chart",
+  "tag": "et-icon-piechart"
+},
+{ "keywords": "speedometer",
+  "tag": "et-icon-speedometer"
+},
+{ "keywords": "global,earth",
+  "tag": "et-icon-global"
+},
+{ "keywords": "compass,directions",
+  "tag": "et-icon-compass"
+},
+{ "keywords": "lifesaver,support,life,help",
+  "tag": "et-icon-lifesaver"
+},
+{ "keywords": "clock,time,watch",
+  "tag": "et-icon-clock"
+},
+{ "keywords": "aperture,camera",
+  "tag": "et-icon-aperture"
+},
+{ "keywords": "quote, circle",
+  "tag": "et-icon-quote"
+},
+{ "keywords": "scope,target,circle",
+  "tag": "et-icon-scope"
+},
+{ "keywords": "alarm,clock",
+  "tag": "et-icon-alarmclock"
+},
+{ "keywords": "refresh",
+  "tag": "et-icon-refresh"
+},
+{ "keywords": "happy,face",
+  "tag": "et-icon-happy"
+},
+{ "keywords": "sad,face",
+  "tag": "et-icon-sad"
+},
+{ "keywords": "facebook, social,media,circle",
+  "tag": "et-icon-facebook"
+},
+{ "keywords": "twitter,social,media,circle",
+  "tag": "et-icon-twitter"
+},
+{ "keywords": "googleplus,social,media,circle",
+  "tag": "et-icon-googleplus"
+},
+{ "keywords": "rss,social,media,circle",
+  "tag": "et-icon-rss"
+},
+{ "keywords": "tumblr,social,media,circle",
+  "tag": "et-icon-tumblr"
+},
+{ "keywords": "linkedin, social,media,circle",
+  "tag": "et-icon-linkedin"
+},
+{ "keywords": "dribbble,social,media,circle",
+  "tag": "et-icon-dribbble"
+}
+]

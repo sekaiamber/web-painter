@@ -80,6 +80,10 @@ var config = {
       {
         test: /\.wpexport$/,
         loader: 'raw'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },

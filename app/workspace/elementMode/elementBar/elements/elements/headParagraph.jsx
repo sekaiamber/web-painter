@@ -1,5 +1,5 @@
 let React = require('react');
-let htmlTemplate = require('./../../../../../htmlTemplates/elements/headParagraph.html');
+let htmlTemplate = require('./../../../../../htmlTemplates/elements/heading-paragraph.html');
 
 import Element from './../element'
 

@@ -1,0 +1,27 @@
+@import "./../../../assets/fonts/icons/et-line/styles/et-line.min.css";
+
+.ant-modal.icon-modal {
+  .ant-modal-body {
+    padding: 0;
+    .ant-tabs-tabpane {
+      color: #bfc0c0;
+      height: 300px;
+      overflow: auto;
+      padding: 0 15px 15px 15px;
+    }
+  }
+  .icon-list {
+    &>div {
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 32px;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
