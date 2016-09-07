@@ -16,27 +16,7 @@ export default class LeftLinksRightTextImagePattern extends Pattern {
   }
   renderSample() {
     return (
-      <div className="left-links-right-text-image" style={{
-        background: '#474747',
-        height: '100%',
-        width: '100%'
-      }}>
-        <div className="nav pattern-element" style={{
-          borderStyle: 'solid',
-          borderWidth: 0,
-          borderBottomWidth: 1,
-          height: '25px',
-          background: '#313435',
-          padding: '10px'
-        }}>
-          <div className="pattern-element" style={{ float: 'right', height: 0, width: 4, borderWidth: '0 0 2px 0', borderStyle: 'solid', marginLeft: 5 }}></div>
-          <div className="pattern-element" style={{ float: 'right', height: 0, width: 25, borderWidth: '0 0 2px 0', borderStyle: 'solid' }}></div>
-          <div className="pattern-element" style={{ float: 'left', height: 0, width: 10, borderWidth: '0 0 1px 0', borderStyle: 'solid', marginRight: 5 }}></div>
-          <div className="pattern-element" style={{ float: 'left', height: 0, width: 10, borderWidth: '0 0 1px 0', borderStyle: 'solid', marginRight: 5 }}></div>
-          <div className="pattern-element" style={{ float: 'left', height: 0, width: 10, borderWidth: '0 0 1px 0', borderStyle: 'solid', marginRight: 5 }}></div>
-          <div className="pattern-element" style={{ float: 'left', height: 0, width: 10, borderWidth: '0 0 1px 0', borderStyle: 'solid', marginRight: 5 }}></div>
-        </div>
-      </div>
+      <img src="assets/images/left-links-right-text-image.png" srcSet="assets/images/left-links-right-text-image@2x.png 2x"/>
     )
   }
 }

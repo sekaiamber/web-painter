@@ -16,15 +16,7 @@ export default class OnePiecePattern extends Pattern {
   }
   renderSample() {
     return (
-      <div className="one-piece pattern-element" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(100% - 40px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        left: 20
-      }}></div>
+      <img src="assets/images/one-piece.png" srcSet="assets/images/one-piece@2x.png 2x"/>
     )
   }
 }

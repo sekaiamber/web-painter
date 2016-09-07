@@ -1,13 +1,14 @@
 #patternBar {
   .pattern {
     display: inline-block;
-    height: 120px;
-    width: 200px;
+    height: 114px;
+    width: 184px;
     border: #656869 solid 2px;
     border-radius: 3px;
     margin: 0 16px;
     cursor: pointer;
     position: relative;
+    background: #656869;
 
     .pattern-element {
       border-color: #656869;
@@ -15,6 +16,7 @@
     }
 
     &:hover {
+      background: #fff;
       border-color: #42a5e8;
 
       .pattern-element {

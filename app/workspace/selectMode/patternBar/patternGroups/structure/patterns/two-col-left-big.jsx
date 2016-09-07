@@ -15,26 +15,9 @@ export default class TwoColLeftBigPattern extends Pattern {
     this.tag = 'two-col-left-big'
   }
   renderSample() {
-    return [
-      <div className="two-col-left-big pattern-element" key="1" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(70% - 25px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        left: 20
-      }}></div>,
-      <div className="two-col-left-big pattern-element" key="2" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(30% - 25px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        right: 20
-      }}></div>
-    ]
+    return (
+      <img src="assets/images/two-col-left-big.png" srcSet="assets/images/two-col-left-big@2x.png 2x"/>
+    )
   }
 }
 TwoColLeftBigPattern.patternTag = 'two-col-left-big';
