@@ -18,5 +18,85 @@
   {
     "from": "assets/fonts/icons/et-line/styles/et-line.min.css",
     "to": "assets/fonts/icons/et-line/styles/et-line.min.css"
+  },
+  {
+    "from": "assets/fonts/icons/feather/fonts/feather.eot",
+    "to": "assets/fonts/icons/feather/fonts/feather.eot"
+  },
+  {
+    "from": "assets/fonts/icons/feather/fonts/feather.svg",
+    "to": "assets/fonts/icons/feather/fonts/feather.svg"
+  },
+  {
+    "from": "assets/fonts/icons/feather/fonts/feather.ttf",
+    "to": "assets/fonts/icons/feather/fonts/feather.ttf"
+  },
+  {
+    "from": "assets/fonts/icons/feather/fonts/feather.woff",
+    "to": "assets/fonts/icons/feather/fonts/feather.woff"
+  },
+  {
+    "from": "assets/fonts/icons/feather/styles/feather.min.css",
+    "to": "assets/fonts/icons/feather/styles/feather.min.css"
+  },
+  {
+    "from": "assets/fonts/icons/fontawesome/fonts/fontawesome.eot",
+    "to": "assets/fonts/icons/fontawesome/fonts/fontawesome.eot"
+  },
+  {
+    "from": "assets/fonts/icons/fontawesome/fonts/fontawesome.svg",
+    "to": "assets/fonts/icons/fontawesome/fonts/fontawesome.svg"
+  },
+  {
+    "from": "assets/fonts/icons/fontawesome/fonts/fontawesome.ttf",
+    "to": "assets/fonts/icons/fontawesome/fonts/fontawesome.ttf"
+  },
+  {
+    "from": "assets/fonts/icons/fontawesome/fonts/fontawesome.woff",
+    "to": "assets/fonts/icons/fontawesome/fonts/fontawesome.woff"
+  },
+  {
+    "from": "assets/fonts/icons/fontawesome/styles/fontawesome.min.css",
+    "to": "assets/fonts/icons/fontawesome/styles/fontawesome.min.css"
+  },
+  {
+    "from": "assets/fonts/icons/ionicons/fonts/ionicons.eot",
+    "to": "assets/fonts/icons/ionicons/fonts/ionicons.eot"
+  },
+  {
+    "from": "assets/fonts/icons/ionicons/fonts/ionicons.svg",
+    "to": "assets/fonts/icons/ionicons/fonts/ionicons.svg"
+  },
+  {
+    "from": "assets/fonts/icons/ionicons/fonts/ionicons.ttf",
+    "to": "assets/fonts/icons/ionicons/fonts/ionicons.ttf"
+  },
+  {
+    "from": "assets/fonts/icons/ionicons/fonts/ionicons.woff",
+    "to": "assets/fonts/icons/ionicons/fonts/ionicons.woff"
+  },
+  {
+    "from": "assets/fonts/icons/ionicons/styles/ionicons.min.css",
+    "to": "assets/fonts/icons/ionicons/styles/ionicons.min.css"
+  },
+  {
+    "from": "assets/fonts/icons/linecons/fonts/linecons.eot",
+    "to": "assets/fonts/icons/linecons/fonts/linecons.eot"
+  },
+  {
+    "from": "assets/fonts/icons/linecons/fonts/linecons.svg",
+    "to": "assets/fonts/icons/linecons/fonts/linecons.svg"
+  },
+  {
+    "from": "assets/fonts/icons/linecons/fonts/linecons.ttf",
+    "to": "assets/fonts/icons/linecons/fonts/linecons.ttf"
+  },
+  {
+    "from": "assets/fonts/icons/linecons/fonts/linecons.woff",
+    "to": "assets/fonts/icons/linecons/fonts/linecons.woff"
+  },
+  {
+    "from": "assets/fonts/icons/linecons/styles/linecons.min.css",
+    "to": "assets/fonts/icons/linecons/styles/linecons.min.css"
   }
 ]

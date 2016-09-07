@@ -1,0 +1,392 @@
+[
+{ "keywords": "eye,sight",
+  "tag": "feather-icon icon-eye"
+},
+{ "keywords": "stationary,paper,clip",
+  "tag": "feather-icon icon-paper-clip"
+},
+{ "keywords": "email,mail,letter",
+  "tag": "feather-icon icon-mail"
+},
+{ "keywords": "toggle,ui,switch",
+  "tag": "feather-icon icon-toggle"
+},
+{ "keywords": "layout,page,website",
+  "tag": "feather-icon icon-layout"
+},
+{ "keywords": "link",
+  "tag": "feather-icon icon-link"
+},
+{ "keywords": "bell",
+  "tag": "feather-icon icon-bell"
+},
+{ "keywords": "lock",
+  "tag": "feather-icon icon-lock"
+},
+{ "keywords": "unlock",
+  "tag": "feather-icon icon-unlock"
+},
+{ "keywords": "ribbon",
+  "tag": "feather-icon icon-ribbon"
+},
+{ "keywords": "image",
+  "tag": "feather-icon icon-image"
+},
+{ "keywords": "signal,wifi",
+  "tag": "feather-icon icon-signal"
+},
+{ "keywords": "target",
+  "tag": "feather-icon icon-target"
+},
+{ "keywords": "clipboard",
+  "tag": "feather-icon icon-clipboard"
+},
+{ "keywords": "clock,time",
+  "tag": "feather-icon icon-clock"
+},
+{ "keywords": "watch,time,clock",
+  "tag": "feather-icon icon-watch"
+},
+{ "keywords": "airp,play",
+  "tag": "feather-icon icon-air-play"
+},
+{ "keywords": "camera",
+  "tag": "feather-icon icon-camera"
+},
+{ "keywords": "video",
+  "tag": "feather-icon icon-video"
+},
+{ "keywords": "disc,cd",
+  "tag": "feather-icon icon-disc"
+},
+{ "keywords": "printer",
+  "tag": "feather-icon icon-printer"
+},
+{ "keywords": "monitor,screen,tv,computer",
+  "tag": "feather-icon icon-monitor"
+},
+{ "keywords": "server,database",
+  "tag": "feather-icon icon-server"
+},
+{ "keywords": "gear,cog,settings",
+  "tag": "feather-icon icon-cog"
+},
+{ "keywords": "heart,like",
+  "tag": "feather-icon icon-heart"
+},
+{ "keywords": "paragraph",
+  "tag": "feather-icon icon-paragraph"
+},
+{ "keywords": "align,justify",
+  "tag": "feather-icon icon-align-justify"
+},
+{ "keywords": "align,left",
+  "tag": "feather-icon icon-align-left"
+},
+{ "keywords": "align,center",
+  "tag": "feather-icon icon-align-center"
+},
+{ "keywords": "align,right",
+  "tag": "feather-icon icon-align-right"
+},
+{ "keywords": "book,library",
+  "tag": "feather-icon icon-book"
+},
+{ "keywords": "layers",
+  "tag": "feather-icon icon-layers"
+},
+{ "keywords": "stack,duplicate",
+  "tag": "feather-icon icon-stack"
+},
+{ "keywords": "stack,duplicate",
+  "tag": "feather-icon icon-stack-2"
+},
+{ "keywords": "paper",
+  "tag": "feather-icon icon-paper"
+},
+{ "keywords": "paper,stack",
+  "tag": "feather-icon icon-paper-stack"
+},
+{ "keywords": "search,magifying,glass",
+  "tag": "feather-icon icon-search"
+},
+{ "keywords": "zoom,in",
+  "tag": "feather-icon icon-zoom-in"
+},
+{ "keywords": "zoom, out",
+  "tag": "feather-icon icon-zoom-out"
+},
+{ "keywords": "reply, arrow",
+  "tag": "feather-icon icon-reply"
+},
+{ "keywords": "plus,add,circle",
+  "tag": "feather-icon icon-circle-plus"
+},
+{ "keywords": "minus,subtract,circle",
+  "tag": "feather-icon icon-circle-minus"
+},
+{ "keywords": "check,tick,circle",
+  "tag": "feather-icon icon-circle-check"
+},
+{ "keywords": "cross,circle",
+  "tag": "feather-icon icon-circle-cross"
+},
+{ "keywords": "plus,square",
+  "tag": "feather-icon icon-square-plus"
+},
+{ "keywords": "minus,subtract,square",
+  "tag": "feather-icon icon-square-minus"
+},
+{ "keywords": "check,tick,square",
+  "tag": "feather-icon icon-square-check"
+},
+{ "keywords": "cross,square",
+  "tag": "feather-icon icon-square-cross"
+},
+{ "keywords": "mic,microphone",
+  "tag": "feather-icon icon-microphone"
+},
+{ "keywords": "record, circle",
+  "tag": "feather-icon icon-record"
+},
+{ "keywords": "skip,back",
+  "tag": "feather-icon icon-skip-back"
+},
+{ "keywords": "rewind",
+  "tag": "feather-icon icon-rewind"
+},
+{ "keywords": "play",
+  "tag": "feather-icon icon-play"
+},
+{ "keywords": "pause",
+  "tag": "feather-icon icon-pause"
+},
+{ "keywords": "stop",
+  "tag": "feather-icon icon-stop"
+},
+{ "keywords": "fast, forward",
+  "tag": "feather-icon icon-fast-forward"
+},
+{ "keywords": "skip, forward",
+  "tag": "feather-icon icon-skip-forward"
+},
+{ "keywords": "shuffle",
+  "tag": "feather-icon icon-shuffle"
+},
+{ "keywords": "repeat",
+  "tag": "feather-icon icon-repeat"
+},
+{ "keywords": "folder",
+  "tag": "feather-icon icon-folder"
+},
+{ "keywords": "umbrella,weather",
+  "tag": "feather-icon icon-umbrella"
+},
+{ "keywords": "moon,sky",
+  "tag": "feather-icon icon-moon"
+},
+{ "keywords": "thermometer, weather",
+  "tag": "feather-icon icon-thermometer"
+},
+{ "keywords": "drop",
+  "tag": "feather-icon icon-drop"
+},
+{ "keywords": "sun, weather,sky",
+  "tag": "feather-icon icon-sun"
+},
+{ "keywords": "cloud, weather,sky",
+  "tag": "feather-icon icon-cloud"
+},
+{ "keywords": "cloud,upload",
+  "tag": "feather-icon icon-cloud-upload"
+},
+{ "keywords": "cloud,download",
+  "tag": "feather-icon icon-cloud-download"
+},
+{ "keywords": "upload",
+  "tag": "feather-icon icon-upload"
+},
+{ "keywords": "download",
+  "tag": "feather-icon icon-download"
+},
+{ "keywords": "location,arrow,pointer,cursor",
+  "tag": "feather-icon icon-location"
+},
+{ "keywords": "target,sight,location",
+  "tag": "feather-icon icon-location-2"
+},
+{ "keywords": "map,location,directions",
+  "tag": "feather-icon icon-map"
+},
+{ "keywords": "battery,power,energy",
+  "tag": "feather-icon icon-battery"
+},
+{ "keywords": "head,user,person",
+  "tag": "feather-icon icon-head"
+},
+{ "keywords": "briefcase,bag",
+  "tag": "feather-icon icon-briefcase"
+},
+{ "keywords": "chat,bubble,message,speech",
+  "tag": "feather-icon icon-speech-bubble"
+},
+{ "keywords": "anchor",
+  "tag": "feather-icon icon-anchor"
+},
+{ "keywords": "globe,earth,planet",
+  "tag": "feather-icon icon-globe"
+},
+{ "keywords": "box,cube",
+  "tag": "feather-icon icon-box"
+},
+{ "keywords": "reload",
+  "tag": "feather-icon icon-reload"
+},
+{ "keywords": "share",
+  "tag": "feather-icon icon-share"
+},
+{ "keywords": "marquee",
+  "tag": "feather-icon icon-marquee"
+},
+{ "keywords": "plus",
+  "tag": "feather-icon icon-marquee-plus"
+},
+{ "keywords": "minus",
+  "tag": "feather-icon icon-marquee-minus"
+},
+{ "keywords": "tag",
+  "tag": "feather-icon icon-tag"
+},
+{ "keywords": "power",
+  "tag": "feather-icon icon-power"
+},
+{ "keywords": "command,keyboard",
+  "tag": "feather-icon icon-command"
+},
+{ "keywords": "alt,keyboard",
+  "tag": "feather-icon icon-alt"
+},
+{ "keywords": "esc,keyboard",
+  "tag": "feather-icon icon-esc"
+},
+{ "keywords": "graph,chart",
+  "tag": "feather-icon icon-bar-graph"
+},
+{ "keywords": "graph,chart",
+  "tag": "feather-icon icon-bar-graph-2"
+},
+{ "keywords": "pie,chart,graph",
+  "tag": "feather-icon icon-pie-graph"
+},
+{ "keywords": "star,favourite",
+  "tag": "feather-icon icon-star"
+},
+{ "keywords": "arrow,left",
+  "tag": "feather-icon icon-arrow-left"
+},
+{ "keywords": "arrow,right",
+  "tag": "feather-icon icon-arrow-right"
+},
+{ "keywords": "arrow,up",
+  "tag": "feather-icon icon-arrow-up"
+},
+{ "keywords": "arrow,down",
+  "tag": "feather-icon icon-arrow-down"
+},
+{ "keywords": "volume",
+  "tag": "feather-icon icon-volume"
+},
+{ "keywords": "mute",
+  "tag": "feather-icon icon-mute"
+},
+{ "keywords": "content,right,layout",
+  "tag": "feather-icon icon-content-right"
+},
+{ "keywords": "content,left,layout",
+  "tag": "feather-icon icon-content-left"
+},
+{ "keywords": "grid,layout,boxes",
+  "tag": "feather-icon icon-grid"
+},
+{ "keywords": "grid,layout,boxes",
+  "tag": "feather-icon icon-grid-2"
+},
+{ "keywords": "columns,layout",
+  "tag": "feather-icon icon-columns"
+},
+{ "keywords": "loader,star",
+  "tag": "feather-icon icon-loader"
+},
+{ "keywords": "bag,shopping,store,shop",
+  "tag": "feather-icon icon-bag"
+},
+{ "keywords": "ban",
+  "tag": "feather-icon icon-ban"
+},
+{ "keywords": "flag",
+  "tag": "feather-icon icon-flag"
+},
+{ "keywords": "trash,can,rubbish",
+  "tag": "feather-icon icon-trash"
+},
+{ "keywords": "expand",
+  "tag": "feather-icon icon-expand"
+},
+{ "keywords": "contract",
+  "tag": "feather-icon icon-contract"
+},
+{ "keywords": "maximize",
+  "tag": "feather-icon icon-maximize"
+},
+{ "keywords": "minimize",
+  "tag": "feather-icon icon-minimize"
+},
+{ "keywords": "plus",
+  "tag": "feather-icon icon-plus"
+},
+{ "keywords": "minus",
+  "tag": "feather-icon icon-minus"
+},
+{ "keywords": "check",
+  "tag": "feather-icon icon-check"
+},
+{ "keywords": "cross",
+  "tag": "feather-icon icon-cross"
+},
+{ "keywords": "move",
+  "tag": "feather-icon icon-move"
+},
+{ "keywords": "delete",
+  "tag": "feather-icon icon-delete"
+},
+{ "keywords": "menu,hamburger",
+  "tag": "feather-icon icon-menu"
+},
+{ "keywords": "archive",
+  "tag": "feather-icon icon-archive"
+},
+{ "keywords": "inbox,email,messages",
+  "tag": "feather-icon icon-inbox"
+},
+{ "keywords": "outbox,email,messages",
+  "tag": "feather-icon icon-outbox"
+},
+{ "keywords": "file",
+  "tag": "feather-icon icon-file"
+},
+{ "keywords": "file,plus,add",
+  "tag": "feather-icon icon-file-add"
+},
+{ "keywords": "file,subtract,remove",
+  "tag": "feather-icon icon-file-subtract"
+},
+{ "keywords": "help,rescue",
+  "tag": "feather-icon icon-help"
+},
+{ "keywords": "open",
+  "tag": "feather-icon icon-open"
+},
+{ "keywords": "ellipsis,dots,menu",
+  "tag": "feather-icon icon-ellipsis"
+}
+]

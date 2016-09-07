@@ -9,6 +9,10 @@ require('./iconModal.scss');
 
 // icons
 const icon_etline = require('./icons/et-line.json');
+const icon_feathre = require('./icons/feather.json');
+const icon_fontawesome = require('./icons/fontawesome.json');
+const icon_ionicons = require('./icons/ionicons.json');
+const icon_linecons = require('./icons/linecons.json');
 
 class IconsContainer extends React.Component {
   constructor(props) {
@@ -41,7 +45,11 @@ export default class IconModal extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      etlines: icon_etline
+      etlines: icon_etline,
+      feather: icon_feathre,
+      fontawesome: icon_fontawesome,
+      ionicons: icon_ionicons,
+      linecons: icon_linecons
     }
 
     // bind
@@ -67,6 +75,18 @@ export default class IconModal extends React.Component{
         <Tabs defaultActiveKey="1" onChange={() => {}}>
           <TabPane tab="ET Line" key="1">
             <IconsContainer data={this.state.etlines} onChose={(tag) => this.handleChose('et-line', tag)} />
+          </TabPane>
+          <TabPane tab="Feathre" key="2">
+            <IconsContainer data={this.state.feather} onChose={(tag) => this.handleChose('feather', tag)} />
+          </TabPane>
+          <TabPane tab="Font Awesome" key="3">
+            <IconsContainer data={this.state.fontawesome} onChose={(tag) => this.handleChose('fontawesome', tag)} />
+          </TabPane>
+          <TabPane tab="Ion Icons" key="4">
+            <IconsContainer data={this.state.ionicons} onChose={(tag) => this.handleChose('ionicons', tag)} />
+          </TabPane>
+          <TabPane tab="Line Icons" key="5">
+            <IconsContainer data={this.state.linecons} onChose={(tag) => this.handleChose('linecons', tag)} />
           </TabPane>
         </Tabs>
       </Modal>
