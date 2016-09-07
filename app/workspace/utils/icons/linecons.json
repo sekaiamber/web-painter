@@ -1,0 +1,146 @@
+[
+{ "keywords": "like,heart,health",
+  "tag": "li_heart"
+},
+{ "keywords": "sky,cloud,weather",
+  "tag": "li_cloud"
+},
+{ "keywords": "star,sky,space,like,favourite",
+  "tag": "li_star"
+},
+{ "keywords": "tv,tele",
+  "tag": "li_tv"
+},
+{ "keywords": "music,speaker,sound",
+  "tag": "li_sound"
+},
+{ "keywords": "video,camera",
+  "tag": "li_video"
+},
+{ "keywords": "rubbish,trash",
+  "tag": "li_trash"
+},
+{ "keywords": "user,person",
+  "tag": "li_user"
+},
+{ "keywords": "key",
+  "tag": "li_key"
+},
+{ "keywords": "search,magnifying,glass",
+  "tag": "li_search"
+},
+{ "keywords": "settings,gear,cog",
+  "tag": "li_settings"
+},
+{ "keywords": "camera",
+  "tag": "li_camera"
+},
+{ "keywords": "tag",
+  "tag": "li_tag"
+},
+{ "keywords": "lock,secure",
+  "tag": "li_lock"
+},
+{ "keywords": "idea,light",
+  "tag": "li_bulb"
+},
+{ "keywords": "pen,pencil,art",
+  "tag": "li_pen"
+},
+{ "keywords": "diamond",
+  "tag": "li_diamond"
+},
+{ "keywords": "display,computer",
+  "tag": "li_display"
+},
+{ "keywords": "location,map,pin",
+  "tag": "li_location"
+},
+{ "keywords": "eye",
+  "tag": "li_eye"
+},
+{ "keywords": "bubble,talk,chat,speech",
+  "tag": "li_bubble"
+},
+{ "keywords": "stack,tray,inbox",
+  "tag": "li_stack"
+},
+{ "keywords": "cup,coffee,drink",
+  "tag": "li_cup"
+},
+{ "keywords": "phone,mobile,device",
+  "tag": "li_phone"
+},
+{ "keywords": "news,newspaper,magazine",
+  "tag": "li_news"
+},
+{ "keywords": "mail,email",
+  "tag": "li_mail"
+},
+{ "keywords": "like,hand,thumb",
+  "tag": "li_like"
+},
+{ "keywords": "photo,picture",
+  "tag": "li_photo"
+},
+{ "keywords": "note,document,file",
+  "tag": "li_note"
+},
+{ "keywords": "clock,watch,time",
+  "tag": "li_clock"
+},
+{ "keywords": "paper,plane,flight",
+  "tag": "li_paperplane"
+},
+{ "keywords": "params,controls,settings,sliders",
+  "tag": "li_params"
+},
+{ "keywords": "money,bank,note,cash",
+  "tag": "li_banknote"
+},
+{ "keywords": "data,hd,server",
+  "tag": "li_data"
+},
+{ "keywords": "music,note",
+  "tag": "li_music"
+},
+{ "keywords": "megaphone,announcement",
+  "tag": "li_megaphone"
+},
+{ "keywords": "study,cap,graduation,school,education,learn",
+  "tag": "li_study"
+},
+{ "keywords": "lab,science,checmical",
+  "tag": "li_lab"
+},
+{ "keywords": "food",
+  "tag": "li_food"
+},
+{ "keywords": "shirt,tee,t-shirt",
+  "tag": "li_t-shirt"
+},
+{ "keywords": "fire,flame",
+  "tag": "li_fire"
+},
+{ "keywords": "clip,paper,stationary,attachment",
+  "tag": "li_clip"
+},
+{ "keywords": "shop,store,market,place",
+  "tag": "li_shop"
+},
+{ "keywords": "calendar,date",
+  "tag": "li_calendar"
+},
+{ "keywords": "wallet,money,cash",
+  "tag": "li_vallet"
+},
+{ "keywords": "record,vinyl",
+  "tag": "li_vynil"
+},
+{ "keywords": "truck,vehicle,delivery,van",
+  "tag": "li_truck"
+},
+{ "keywords": "world,earth,internet",
+  "tag": "li_world"
+}
+]

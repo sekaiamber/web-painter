@@ -1,0 +1,1739 @@
+[
+{ "keywords": "adjust",
+  "tag": "fa fa-adjust"
+},
+{ "keywords": "anchor",
+  "tag": "fa fa-anchor"
+},
+{ "keywords": "archive",
+  "tag": "fa fa-archive"
+},
+{ "keywords": "chart",
+  "tag": "fa fa-area-chart"
+},
+{ "keywords": "arrows",
+  "tag": "fa fa-arrows"
+},
+{ "keywords": "arrows",
+  "tag": "fa fa-arrows-h"
+},
+{ "keywords": "arrows",
+  "tag": "fa fa-arrows-v"
+},
+{ "keywords": "asterisk",
+  "tag": "fa fa-asterisk"
+},
+{ "keywords": "at",
+  "tag": "fa fa-at"
+},
+{ "keywords": "automobile",
+  "tag": "fa fa-automobile"
+},
+{ "keywords": "ban",
+  "tag": "fa fa-ban"
+},
+{ "keywords": "bank",
+  "tag": "fa fa-bank"
+},
+{ "keywords": "bar chart",
+  "tag": "fa fa-bar-chart"
+},
+{ "keywords": "bar chart",
+  "tag": "fa fa-bar-chart-o"
+},
+{ "keywords": "barcode",
+  "tag": "fa fa-barcode"
+},
+{ "keywords": "bars",
+  "tag": "fa fa-bars"
+},
+{ "keywords": "beer",
+  "tag": "fa fa-beer"
+},
+{ "keywords": "bell",
+  "tag": "fa fa-bell"
+},
+{ "keywords": "bell",
+  "tag": "fa fa-bell-o"
+},
+{ "keywords": "bell",
+  "tag": "fa fa-bell-slash"
+},
+{ "keywords": "bell",
+  "tag": "fa fa-bell-slash-o"
+},
+{ "keywords": "bicycle",
+  "tag": "fa fa-bicycle"
+},
+{ "keywords": "binoculars",
+  "tag": "fa fa-binoculars"
+},
+{ "keywords": "birthday cake",
+  "tag": "fa fa-birthday-cake"
+},
+{ "keywords": "bolt",
+  "tag": "fa fa-bolt"
+},
+{ "keywords": "bomb",
+  "tag": "fa fa-bomb"
+},
+{ "keywords": "book",
+  "tag": "fa fa-book"
+},
+{ "keywords": "bookmark",
+  "tag": "fa fa-bookmark"
+},
+{ "keywords": "bookmark",
+  "tag": "fa fa-bookmark-o"
+},
+{ "keywords": "briefcase",
+  "tag": "fa fa-briefcase"
+},
+{ "keywords": "bug",
+  "tag": "fa fa-bug"
+},
+{ "keywords": "building",
+  "tag": "fa fa-building"
+},
+{ "keywords": "building",
+  "tag": "fa fa-building-o"
+},
+{ "keywords": "bullhorn",
+  "tag": "fa fa-bullhorn"
+},
+{ "keywords": "bullseye",
+  "tag": "fa fa-bullseye"
+},
+{ "keywords": "bus",
+  "tag": "fa fa-bus"
+},
+{ "keywords": "cab",
+  "tag": "fa fa-cab"
+},
+{ "keywords": "calculator",
+  "tag": "fa fa-calculator"
+},
+{ "keywords": "calendar",
+  "tag": "fa fa-calendar"
+},
+{ "keywords": "calendar",
+  "tag": "fa fa-calendar-o"
+},
+{ "keywords": "camera",
+  "tag": "fa fa-camera"
+},
+{ "keywords": "camera",
+  "tag": "fa fa-camera-retro"
+},
+{ "keywords": "car",
+  "tag": "fa fa-car"
+},
+{ "keywords": "arrow down",
+  "tag": "fa fa-caret-square-o-down"
+},
+{ "keywords": "arrow left",
+  "tag": "fa fa-caret-square-o-left"
+},
+{ "keywords": "arrow right",
+  "tag": "fa fa-caret-square-o-right"
+},
+{ "keywords": "arrow up",
+  "tag": "fa fa-caret-square-o-up"
+},
+{ "keywords": "cc",
+  "tag": "fa fa-cc"
+},
+{ "keywords": "certificate",
+  "tag": "fa fa-certificate"
+},
+{ "keywords": "check",
+  "tag": "fa fa-check"
+},
+{ "keywords": "check circle",
+  "tag": "fa fa-check-circle"
+},
+{ "keywords": "check circle",
+  "tag": "fa fa-check-circle-o"
+},
+{ "keywords": "check square",
+  "tag": "fa fa-check-square"
+},
+{ "keywords": "check square",
+  "tag": "fa fa-check-square-o"
+},
+{ "keywords": "child",
+  "tag": "fa fa-child"
+},
+{ "keywords": "circle",
+  "tag": "fa fa-circle"
+},
+{ "keywords": "circle",
+  "tag": "fa fa-circle-o"
+},
+{ "keywords": "circle notch",
+  "tag": "fa fa-circle-o-notch"
+},
+{ "keywords": "circle thin",
+  "tag": "fa fa-circle-thin"
+},
+{ "keywords": "clock",
+  "tag": "fa fa-clock-o"
+},
+{ "keywords": "close",
+  "tag": "fa fa-close"
+},
+{ "keywords": "cloud",
+  "tag": "fa fa-cloud"
+},
+{ "keywords": "cloud download",
+  "tag": "fa fa-cloud-download"
+},
+{ "keywords": "cloud upload",
+  "tag": "fa fa-cloud-upload"
+},
+{ "keywords": "code",
+  "tag": "fa fa-code"
+},
+{ "keywords": "code folk",
+  "tag": "fa fa-code-fork"
+},
+{ "keywords": "coffee",
+  "tag": "fa fa-coffee"
+},
+{ "keywords": "cog gear",
+  "tag": "fa fa-cog"
+},
+{ "keywords": "cogs gear",
+  "tag": "fa fa-cogs"
+},
+{ "keywords": "comment speech bubble",
+  "tag": "fa fa-comment"
+},
+{ "keywords": "comment speech bubble",
+  "tag": "fa fa-comment-o"
+},
+{ "keywords": "comments speech bubble",
+  "tag": "fa fa-comments"
+},
+{ "keywords": "comments speech bubble",
+  "tag": "fa fa-comments-o"
+},
+{ "keywords": "compass",
+  "tag": "fa fa-compass"
+},
+{ "keywords": "copyright",
+  "tag": "fa fa-copyright"
+},
+{ "keywords": "credit card",
+  "tag": "fa fa-credit-card"
+},
+{ "keywords": "crop",
+  "tag": "fa fa-crop"
+},
+{ "keywords": "crosshairs",
+  "tag": "fa fa-crosshairs"
+},
+{ "keywords": "cube",
+  "tag": "fa fa-cube"
+},
+{ "keywords": "cubes",
+  "tag": "fa fa-cubes"
+},
+{ "keywords": "cutlery",
+  "tag": "fa fa-cutlery"
+},
+{ "keywords": "dashboard",
+  "tag": "fa fa-dashboard"
+},
+{ "keywords": "database",
+  "tag": "fa fa-database"
+},
+{ "keywords": "desktop",
+  "tag": "fa fa-desktop"
+},
+{ "keywords": "dot circle",
+  "tag": "fa fa-dot-circle-o"
+},
+{ "keywords": "download",
+  "tag": "fa fa-download"
+},
+{ "keywords": "edit",
+  "tag": "fa fa-edit"
+},
+{ "keywords": "ellipsis",
+  "tag": "fa fa-ellipsis-h"
+},
+{ "keywords": "ellipsis",
+  "tag": "fa fa-ellipsis-v"
+},
+{ "keywords": "envelope",
+  "tag": "fa fa-envelope"
+},
+{ "keywords": "envelope",
+  "tag": "fa fa-envelope-o"
+},
+{ "keywords": "envelope",
+  "tag": "fa fa-envelope-square"
+},
+{ "keywords": "eraser",
+  "tag": "fa fa-eraser"
+},
+{ "keywords": "exchange",
+  "tag": "fa fa-exchange"
+},
+{ "keywords": "exclamation",
+  "tag": "fa fa-exclamation"
+},
+{ "keywords": "exclamation circle",
+  "tag": "fa fa-exclamation-circle"
+},
+{ "keywords": "exclamation triangle",
+  "tag": "fa fa-exclamation-triangle"
+},
+{ "keywords": "external link",
+  "tag": "fa fa-external-link"
+},
+{ "keywords": "external link",
+  "tag": "fa fa-external-link-square"
+},
+{ "keywords": "eye",
+  "tag": "fa fa-eye"
+},
+{ "keywords": "eye slash",
+  "tag": "fa fa-eye-slash"
+},
+{ "keywords": "eyedropper",
+  "tag": "fa fa-eyedropper"
+},
+{ "keywords": "fax",
+  "tag": "fa fa-fax"
+},
+{ "keywords": "female",
+  "tag": "fa fa-female"
+},
+{ "keywords": "fighter jet",
+  "tag": "fa fa-fighter-jet"
+},
+{ "keywords": "file archive",
+  "tag": "fa fa-file-archive-o"
+},
+{ "keywords": "file audio",
+  "tag": "fa fa-file-audio-o"
+},
+{ "keywords": "file code",
+  "tag": "fa fa-file-code-o"
+},
+{ "keywords": "file excel",
+  "tag": "fa fa-file-excel-o"
+},
+{ "keywords": "file image",
+  "tag": "fa fa-file-image-o"
+},
+{ "keywords": "file movie",
+  "tag": "fa fa-file-movie-o"
+},
+{ "keywords": "file pdf",
+  "tag": "fa fa-file-pdf-o"
+},
+{ "keywords": "file photo",
+  "tag": "fa fa-file-photo-o"
+},
+{ "keywords": "file picture",
+  "tag": "fa fa-file-picture-o"
+},
+{ "keywords": "file powerpoint",
+  "tag": "fa fa-file-powerpoint-o"
+},
+{ "keywords": "file sound",
+  "tag": "fa fa-file-sound-o"
+},
+{ "keywords": "file video",
+  "tag": "fa fa-file-video-o"
+},
+{ "keywords": "file word",
+  "tag": "fa fa-file-word-o"
+},
+{ "keywords": "file zip",
+  "tag": "fa fa-file-zip-o"
+},
+{ "keywords": "film",
+  "tag": "fa fa-film"
+},
+{ "keywords": "filter",
+  "tag": "fa fa-filter"
+},
+{ "keywords": "fire",
+  "tag": "fa fa-fire"
+},
+{ "keywords": "fire extinguisher",
+  "tag": "fa fa-fire-extinguisher"
+},
+{ "keywords": "flag",
+  "tag": "fa fa-flag"
+},
+{ "keywords": "flag checkered",
+  "tag": "fa fa-flag-checkered"
+},
+{ "keywords": "flag",
+  "tag": "fa fa-flag-o"
+},
+{ "keywords": "flash",
+  "tag": "fa fa-flash"
+},
+{ "keywords": "flask",
+  "tag": "fa fa-flask"
+},
+{ "keywords": "folder",
+  "tag": "fa fa-folder"
+},
+{ "keywords": "folder",
+  "tag": "fa fa-folder-o"
+},
+{ "keywords": "folder open",
+  "tag": "fa fa-folder-open"
+},
+{ "keywords": "folder open",
+  "tag": "fa fa-folder-open-o"
+},
+{ "keywords": "frown",
+  "tag": "fa fa-frown-o"
+},
+{ "keywords": "football",
+  "tag": "fa fa-futbol-o"
+},
+{ "keywords": "gamepad",
+  "tag": "fa fa-gamepad"
+},
+{ "keywords": "gavel",
+  "tag": "fa fa-gavel"
+},
+{ "keywords": "gear",
+  "tag": "fa fa-gear"
+},
+{ "keywords": "gears",
+  "tag": "fa fa-gears"
+},
+{ "keywords": "gift",
+  "tag": "fa fa-gift"
+},
+{ "keywords": "glass",
+  "tag": "fa fa-glass"
+},
+{ "keywords": "globe",
+  "tag": "fa fa-globe"
+},
+{ "keywords": "graduation cap",
+  "tag": "fa fa-graduation-cap"
+},
+{ "keywords": "group",
+  "tag": "fa fa-group"
+},
+{ "keywords": "hdd o",
+  "tag": "fa fa-hdd-o"
+},
+{ "keywords": "headphones",
+  "tag": "fa fa-headphones"
+},
+{ "keywords": "heart",
+  "tag": "fa fa-heart"
+},
+{ "keywords": "heart o",
+  "tag": "fa fa-heart-o"
+},
+{ "keywords": "history",
+  "tag": "fa fa-history"
+},
+{ "keywords": "home",
+  "tag": "fa fa-home"
+},
+{ "keywords": "image",
+  "tag": "fa fa-image"
+},
+{ "keywords": "inbox",
+  "tag": "fa fa-inbox"
+},
+{ "keywords": "info",
+  "tag": "fa fa-info"
+},
+{ "keywords": "info circle",
+  "tag": "fa fa-info-circle"
+},
+{ "keywords": "institution",
+  "tag": "fa fa-institution"
+},
+{ "keywords": "key",
+  "tag": "fa fa-key"
+},
+{ "keywords": "keyboard o",
+  "tag": "fa fa-keyboard-o"
+},
+{ "keywords": "language",
+  "tag": "fa fa-language"
+},
+{ "keywords": "laptop",
+  "tag": "fa fa-laptop"
+},
+{ "keywords": "leaf",
+  "tag": "fa fa-leaf"
+},
+{ "keywords": "legal",
+  "tag": "fa fa-legal"
+},
+{ "keywords": "lemon o",
+  "tag": "fa fa-lemon-o"
+},
+{ "keywords": "level down",
+  "tag": "fa fa-level-down"
+},
+{ "keywords": "level up",
+  "tag": "fa fa-level-up"
+},
+{ "keywords": "life bouy",
+  "tag": "fa fa-life-bouy"
+},
+{ "keywords": "life buoy",
+  "tag": "fa fa-life-buoy"
+},
+{ "keywords": "life ring",
+  "tag": "fa fa-life-ring"
+},
+{ "keywords": "life saver",
+  "tag": "fa fa-life-saver"
+},
+{ "keywords": "lightbulb o",
+  "tag": "fa fa-lightbulb-o"
+},
+{ "keywords": "line chart",
+  "tag": "fa fa-line-chart"
+},
+{ "keywords": "location arrow",
+  "tag": "fa fa-location-arrow"
+},
+{ "keywords": "lock",
+  "tag": "fa fa-lock"
+},
+{ "keywords": "magic",
+  "tag": "fa fa-magic"
+},
+{ "keywords": "magnet",
+  "tag": "fa fa-magnet"
+},
+{ "keywords": "mail forward",
+  "tag": "fa fa-mail-forward"
+},
+{ "keywords": "mail reply",
+  "tag": "fa fa-mail-reply"
+},
+{ "keywords": "mail reply all",
+  "tag": "fa fa-mail-reply-all"
+},
+{ "keywords": "male",
+  "tag": "fa fa-male"
+},
+{ "keywords": "map marker",
+  "tag": "fa fa-map-marker"
+},
+{ "keywords": "meh o",
+  "tag": "fa fa-meh-o"
+},
+{ "keywords": "microphone",
+  "tag": "fa fa-microphone"
+},
+{ "keywords": "microphone slash",
+  "tag": "fa fa-microphone-slash"
+},
+{ "keywords": "minus",
+  "tag": "fa fa-minus"
+},
+{ "keywords": "minus circle",
+  "tag": "fa fa-minus-circle"
+},
+{ "keywords": "minus square",
+  "tag": "fa fa-minus-square"
+},
+{ "keywords": "minus square o",
+  "tag": "fa fa-minus-square-o"
+},
+{ "keywords": "mobile",
+  "tag": "fa fa-mobile"
+},
+{ "keywords": "mobile phone",
+  "tag": "fa fa-mobile-phone"
+},
+{ "keywords": "money",
+  "tag": "fa fa-money"
+},
+{ "keywords": "moon o",
+  "tag": "fa fa-moon-o"
+},
+{ "keywords": "mortar board",
+  "tag": "fa fa-mortar-board"
+},
+{ "keywords": "music",
+  "tag": "fa fa-music"
+},
+{ "keywords": "navicon",
+  "tag": "fa fa-navicon"
+},
+{ "keywords": "newspaper o",
+  "tag": "fa fa-newspaper-o"
+},
+{ "keywords": "paint brush",
+  "tag": "fa fa-paint-brush"
+},
+{ "keywords": "paper plane",
+  "tag": "fa fa-paper-plane"
+},
+{ "keywords": "paper plane o",
+  "tag": "fa fa-paper-plane-o"
+},
+{ "keywords": "paw",
+  "tag": "fa fa-paw"
+},
+{ "keywords": "pencil",
+  "tag": "fa fa-pencil"
+},
+{ "keywords": "pencil square",
+  "tag": "fa fa-pencil-square"
+},
+{ "keywords": "pencil square o",
+  "tag": "fa fa-pencil-square-o"
+},
+{ "keywords": "phone",
+  "tag": "fa fa-phone"
+},
+{ "keywords": "phone square",
+  "tag": "fa fa-phone-square"
+},
+{ "keywords": "photo",
+  "tag": "fa fa-photo"
+},
+{ "keywords": "picture o",
+  "tag": "fa fa-picture-o"
+},
+{ "keywords": "pie chart",
+  "tag": "fa fa-pie-chart"
+},
+{ "keywords": "plane",
+  "tag": "fa fa-plane"
+},
+{ "keywords": "plug",
+  "tag": "fa fa-plug"
+},
+{ "keywords": "plus",
+  "tag": "fa fa-plus"
+},
+{ "keywords": "plus circle",
+  "tag": "fa fa-plus-circle"
+},
+{ "keywords": "plus square",
+  "tag": "fa fa-plus-square"
+},
+{ "keywords": "plus square o",
+  "tag": "fa fa-plus-square-o"
+},
+{ "keywords": "power off",
+  "tag": "fa fa-power-off"
+},
+{ "keywords": "print",
+  "tag": "fa fa-print"
+},
+{ "keywords": "puzzle piece",
+  "tag": "fa fa-puzzle-piece"
+},
+{ "keywords": "qrcode",
+  "tag": "fa fa-qrcode"
+},
+{ "keywords": "question",
+  "tag": "fa fa-question"
+},
+{ "keywords": "question circle",
+  "tag": "fa fa-question-circle"
+},
+{ "keywords": "quote left",
+  "tag": "fa fa-quote-left"
+},
+{ "keywords": "quote right",
+  "tag": "fa fa-quote-right"
+},
+{ "keywords": "random",
+  "tag": "fa fa-random"
+},
+{ "keywords": "recycle",
+  "tag": "fa fa-recycle"
+},
+{ "keywords": "refresh",
+  "tag": "fa fa-refresh"
+},
+{ "keywords": "remove",
+  "tag": "fa fa-remove"
+},
+{ "keywords": "reorder",
+  "tag": "fa fa-reorder"
+},
+{ "keywords": "reply",
+  "tag": "fa fa-reply"
+},
+{ "keywords": "reply all",
+  "tag": "fa fa-reply-all"
+},
+{ "keywords": "retweet",
+  "tag": "fa fa-retweet"
+},
+{ "keywords": "road",
+  "tag": "fa fa-road"
+},
+{ "keywords": "rocket",
+  "tag": "fa fa-rocket"
+},
+{ "keywords": "rss",
+  "tag": "fa fa-rss"
+},
+{ "keywords": "rss square",
+  "tag": "fa fa-rss-square"
+},
+{ "keywords": "search",
+  "tag": "fa fa-search"
+},
+{ "keywords": "search minus",
+  "tag": "fa fa-search-minus"
+},
+{ "keywords": "search plus",
+  "tag": "fa fa-search-plus"
+},
+{ "keywords": "send",
+  "tag": "fa fa-send"
+},
+{ "keywords": "send o",
+  "tag": "fa fa-send-o"
+},
+{ "keywords": "share",
+  "tag": "fa fa-share"
+},
+{ "keywords": "share alt",
+  "tag": "fa fa-share-alt"
+},
+{ "keywords": "share alt square",
+  "tag": "fa fa-share-alt-square"
+},
+{ "keywords": "share square",
+  "tag": "fa fa-share-square"
+},
+{ "keywords": "share square o",
+  "tag": "fa fa-share-square-o"
+},
+{ "keywords": "shield",
+  "tag": "fa fa-shield"
+},
+{ "keywords": "shopping cart",
+  "tag": "fa fa-shopping-cart"
+},
+{ "keywords": "sign in",
+  "tag": "fa fa-sign-in"
+},
+{ "keywords": "sign out",
+  "tag": "fa fa-sign-out"
+},
+{ "keywords": "signal",
+  "tag": "fa fa-signal"
+},
+{ "keywords": "sitemap",
+  "tag": "fa fa-sitemap"
+},
+{ "keywords": "sliders",
+  "tag": "fa fa-sliders"
+},
+{ "keywords": "smile o",
+  "tag": "fa fa-smile-o"
+},
+{ "keywords": "soccer ball o",
+  "tag": "fa fa-soccer-ball-o"
+},
+{ "keywords": "sort",
+  "tag": "fa fa-sort"
+},
+{ "keywords": "sort alpha asc",
+  "tag": "fa fa-sort-alpha-asc"
+},
+{ "keywords": "sort alpha desc",
+  "tag": "fa fa-sort-alpha-desc"
+},
+{ "keywords": "sort amount asc",
+  "tag": "fa fa-sort-amount-asc"
+},
+{ "keywords": "sort amount desc",
+  "tag": "fa fa-sort-amount-desc"
+},
+{ "keywords": "sort asc",
+  "tag": "fa fa-sort-asc"
+},
+{ "keywords": "sort desc",
+  "tag": "fa fa-sort-desc"
+},
+{ "keywords": "sort down",
+  "tag": "fa fa-sort-down"
+},
+{ "keywords": "sort numeric asc",
+  "tag": "fa fa-sort-numeric-asc"
+},
+{ "keywords": "sort numeric desc",
+  "tag": "fa fa-sort-numeric-desc"
+},
+{ "keywords": "sort up",
+  "tag": "fa fa-sort-up"
+},
+{ "keywords": "space shuttle",
+  "tag": "fa fa-space-shuttle"
+},
+{ "keywords": "spinner",
+  "tag": "fa fa-spinner"
+},
+{ "keywords": "spoon",
+  "tag": "fa fa-spoon"
+},
+{ "keywords": "square",
+  "tag": "fa fa-square"
+},
+{ "keywords": "square o",
+  "tag": "fa fa-square-o"
+},
+{ "keywords": "star",
+  "tag": "fa fa-star"
+},
+{ "keywords": "star half",
+  "tag": "fa fa-star-half"
+},
+{ "keywords": "star half empty",
+  "tag": "fa fa-star-half-empty"
+},
+{ "keywords": "star half full",
+  "tag": "fa fa-star-half-full"
+},
+{ "keywords": "star half o",
+  "tag": "fa fa-star-half-o"
+},
+{ "keywords": "star o",
+  "tag": "fa fa-star-o"
+},
+{ "keywords": "suitcase",
+  "tag": "fa fa-suitcase"
+},
+{ "keywords": "sun o",
+  "tag": "fa fa-sun-o"
+},
+{ "keywords": "support",
+  "tag": "fa fa-support"
+},
+{ "keywords": "tablet",
+  "tag": "fa fa-tablet"
+},
+{ "keywords": "tachometer",
+  "tag": "fa fa-tachometer"
+},
+{ "keywords": "tag",
+  "tag": "fa fa-tag"
+},
+{ "keywords": "tags",
+  "tag": "fa fa-tags"
+},
+{ "keywords": "tasks",
+  "tag": "fa fa-tasks"
+},
+{ "keywords": "taxi",
+  "tag": "fa fa-taxi"
+},
+{ "keywords": "terminal",
+  "tag": "fa fa-terminal"
+},
+{ "keywords": "thumb tack",
+  "tag": "fa fa-thumb-tack"
+},
+{ "keywords": "thumbs down",
+  "tag": "fa fa-thumbs-down"
+},
+{ "keywords": "thumbs o down",
+  "tag": "fa fa-thumbs-o-down"
+},
+{ "keywords": "thumbs o up",
+  "tag": "fa fa-thumbs-o-up"
+},
+{ "keywords": "thumbs up",
+  "tag": "fa fa-thumbs-up"
+},
+{ "keywords": "ticket",
+  "tag": "fa fa-ticket"
+},
+{ "keywords": "times",
+  "tag": "fa fa-times"
+},
+{ "keywords": "times circle",
+  "tag": "fa fa-times-circle"
+},
+{ "keywords": "times circle o",
+  "tag": "fa fa-times-circle-o"
+},
+{ "keywords": "tint",
+  "tag": "fa fa-tint"
+},
+{ "keywords": "toggle down",
+  "tag": "fa fa-toggle-down"
+},
+{ "keywords": "toggle left",
+  "tag": "fa fa-toggle-left"
+},
+{ "keywords": "toggle off",
+  "tag": "fa fa-toggle-off"
+},
+{ "keywords": "toggle on",
+  "tag": "fa fa-toggle-on"
+},
+{ "keywords": "toggle right",
+  "tag": "fa fa-toggle-right"
+},
+{ "keywords": "toggle up",
+  "tag": "fa fa-toggle-up"
+},
+{ "keywords": "trash",
+  "tag": "fa fa-trash"
+},
+{ "keywords": "trash o",
+  "tag": "fa fa-trash-o"
+},
+{ "keywords": "tree",
+  "tag": "fa fa-tree"
+},
+{ "keywords": "trophy",
+  "tag": "fa fa-trophy"
+},
+{ "keywords": "truck",
+  "tag": "fa fa-truck"
+},
+{ "keywords": "tty",
+  "tag": "fa fa-tty"
+},
+{ "keywords": "umbrella",
+  "tag": "fa fa-umbrella"
+},
+{ "keywords": "university",
+  "tag": "fa fa-university"
+},
+{ "keywords": "unlock",
+  "tag": "fa fa-unlock"
+},
+{ "keywords": "unlock alt",
+  "tag": "fa fa-unlock-alt"
+},
+{ "keywords": "unsorted",
+  "tag": "fa fa-unsorted"
+},
+{ "keywords": "upload",
+  "tag": "fa fa-upload"
+},
+{ "keywords": "user",
+  "tag": "fa fa-user"
+},
+{ "keywords": "users",
+  "tag": "fa fa-users"
+},
+{ "keywords": "video camera",
+  "tag": "fa fa-video-camera"
+},
+{ "keywords": "volume down",
+  "tag": "fa fa-volume-down"
+},
+{ "keywords": "volume off",
+  "tag": "fa fa-volume-off"
+},
+{ "keywords": "volume up",
+  "tag": "fa fa-volume-up"
+},
+{ "keywords": "warning",
+  "tag": "fa fa-warning"
+},
+{ "keywords": "wheelchair",
+  "tag": "fa fa-wheelchair"
+},
+{ "keywords": "wifi",
+  "tag": "fa fa-wifi"
+},
+{ "keywords": "wrench",
+  "tag": "fa fa-wrench"
+},
+{ "keywords": "cc amex",
+  "tag": "fa fa-cc-amex"
+},
+{ "keywords": "cc discover",
+  "tag": "fa fa-cc-discover"
+},
+{ "keywords": "cc mastercard",
+  "tag": "fa fa-cc-mastercard"
+},
+{ "keywords": "cc paypal",
+  "tag": "fa fa-cc-paypal"
+},
+{ "keywords": "cc stripe",
+  "tag": "fa fa-cc-stripe"
+},
+{ "keywords": "cc visa",
+  "tag": "fa fa-cc-visa"
+},
+{ "keywords": "credit card",
+  "tag": "fa fa-credit-card"
+},
+{ "keywords": "google wallet",
+  "tag": "fa fa-google-wallet"
+},
+{ "keywords": "paypal",
+  "tag": "fa fa-paypal"
+},
+{ "keywords": "bitcoin",
+  "tag": "fa fa-bitcoin"
+},
+{ "keywords": "btc",
+  "tag": "fa fa-btc"
+},
+{ "keywords": "cny",
+  "tag": "fa fa-cny"
+},
+{ "keywords": "dollar",
+  "tag": "fa fa-dollar"
+},
+{ "keywords": "eur",
+  "tag": "fa fa-eur"
+},
+{ "keywords": "euro",
+  "tag": "fa fa-euro"
+},
+{ "keywords": "gbp",
+  "tag": "fa fa-gbp"
+},
+{ "keywords": "ils",
+  "tag": "fa fa-ils"
+},
+{ "keywords": "inr",
+  "tag": "fa fa-inr"
+},
+{ "keywords": "jpy",
+  "tag": "fa fa-jpy"
+},
+{ "keywords": "krw",
+  "tag": "fa fa-krw"
+},
+{ "keywords": "money",
+  "tag": "fa fa-money"
+},
+{ "keywords": "rmb",
+  "tag": "fa fa-rmb"
+},
+{ "keywords": "rouble",
+  "tag": "fa fa-rouble"
+},
+{ "keywords": "rub",
+  "tag": "fa fa-rub"
+},
+{ "keywords": "ruble",
+  "tag": "fa fa-ruble"
+},
+{ "keywords": "rupee",
+  "tag": "fa fa-rupee"
+},
+{ "keywords": "shekel",
+  "tag": "fa fa-shekel"
+},
+{ "keywords": "sheqel",
+  "tag": "fa fa-sheqel"
+},
+{ "keywords": "try",
+  "tag": "fa fa-try"
+},
+{ "keywords": "turkish lira",
+  "tag": "fa fa-turkish-lira"
+},
+{ "keywords": "usd",
+  "tag": "fa fa-usd"
+},
+{ "keywords": "won",
+  "tag": "fa fa-won"
+},
+{ "keywords": "yen",
+  "tag": "fa fa-yen"
+},
+{ "keywords": "align center",
+  "tag": "fa fa-align-center"
+},
+{ "keywords": "align justify",
+  "tag": "fa fa-align-justify"
+},
+{ "keywords": "align left",
+  "tag": "fa fa-align-left"
+},
+{ "keywords": "align right",
+  "tag": "fa fa-align-right"
+},
+{ "keywords": "bold",
+  "tag": "fa fa-bold"
+},
+{ "keywords": "chain",
+  "tag": "fa fa-chain"
+},
+{ "keywords": "chain broken",
+  "tag": "fa fa-chain-broken"
+},
+{ "keywords": "clipboard",
+  "tag": "fa fa-clipboard"
+},
+{ "keywords": "columns",
+  "tag": "fa fa-columns"
+},
+{ "keywords": "copy",
+  "tag": "fa fa-copy"
+},
+{ "keywords": "cut",
+  "tag": "fa fa-cut"
+},
+{ "keywords": "dedent",
+  "tag": "fa fa-dedent"
+},
+{ "keywords": "eraser",
+  "tag": "fa fa-eraser"
+},
+{ "keywords": "file",
+  "tag": "fa fa-file"
+},
+{ "keywords": "file o",
+  "tag": "fa fa-file-o"
+},
+{ "keywords": "file text",
+  "tag": "fa fa-file-text"
+},
+{ "keywords": "file text o",
+  "tag": "fa fa-file-text-o"
+},
+{ "keywords": "files o",
+  "tag": "fa fa-files-o"
+},
+{ "keywords": "floppy o",
+  "tag": "fa fa-floppy-o"
+},
+{ "keywords": "font",
+  "tag": "fa fa-font"
+},
+{ "keywords": "header",
+  "tag": "fa fa-header"
+},
+{ "keywords": "indent",
+  "tag": "fa fa-indent"
+},
+{ "keywords": "italic",
+  "tag": "fa fa-italic"
+},
+{ "keywords": "link",
+  "tag": "fa fa-link"
+},
+{ "keywords": "list",
+  "tag": "fa fa-list"
+},
+{ "keywords": "list alt",
+  "tag": "fa fa-list-alt"
+},
+{ "keywords": "list ol",
+  "tag": "fa fa-list-ol"
+},
+{ "keywords": "list ul",
+  "tag": "fa fa-list-ul"
+},
+{ "keywords": "outdent",
+  "tag": "fa fa-outdent"
+},
+{ "keywords": "paperclip",
+  "tag": "fa fa-paperclip"
+},
+{ "keywords": "paragraph",
+  "tag": "fa fa-paragraph"
+},
+{ "keywords": "paste",
+  "tag": "fa fa-paste"
+},
+{ "keywords": "repeat",
+  "tag": "fa fa-repeat"
+},
+{ "keywords": "rotate left",
+  "tag": "fa fa-rotate-left"
+},
+{ "keywords": "rotate right",
+  "tag": "fa fa-rotate-right"
+},
+{ "keywords": "save",
+  "tag": "fa fa-save"
+},
+{ "keywords": "scissors",
+  "tag": "fa fa-scissors"
+},
+{ "keywords": "strikethrough",
+  "tag": "fa fa-strikethrough"
+},
+{ "keywords": "subscript",
+  "tag": "fa fa-subscript"
+},
+{ "keywords": "superscript",
+  "tag": "fa fa-superscript"
+},
+{ "keywords": "table",
+  "tag": "fa fa-table"
+},
+{ "keywords": "text height",
+  "tag": "fa fa-text-height"
+},
+{ "keywords": "text width",
+  "tag": "fa fa-text-width"
+},
+{ "keywords": "th",
+  "tag": "fa fa-th"
+},
+{ "keywords": "th large",
+  "tag": "fa fa-th-large"
+},
+{ "keywords": "th list",
+  "tag": "fa fa-th-list"
+},
+{ "keywords": "underline",
+  "tag": "fa fa-underline"
+},
+{ "keywords": "undo",
+  "tag": "fa fa-undo"
+},
+{ "keywords": "unlink",
+  "tag": "fa fa-unlink"
+},
+{ "keywords": "angle double down",
+  "tag": "fa fa-angle-double-down"
+},
+{ "keywords": "angle double left",
+  "tag": "fa fa-angle-double-left"
+},
+{ "keywords": "angle double right",
+  "tag": "fa fa-angle-double-right"
+},
+{ "keywords": "angle double up",
+  "tag": "fa fa-angle-double-up"
+},
+{ "keywords": "angle down",
+  "tag": "fa fa-angle-down"
+},
+{ "keywords": "angle left",
+  "tag": "fa fa-angle-left"
+},
+{ "keywords": "angle right",
+  "tag": "fa fa-angle-right"
+},
+{ "keywords": "angle up",
+  "tag": "fa fa-angle-up"
+},
+{ "keywords": "arrow circle down",
+  "tag": "fa fa-arrow-circle-down"
+},
+{ "keywords": "arrow circle left",
+  "tag": "fa fa-arrow-circle-left"
+},
+{ "keywords": "arrow circle o down",
+  "tag": "fa fa-arrow-circle-o-down"
+},
+{ "keywords": "arrow circle o left",
+  "tag": "fa fa-arrow-circle-o-left"
+},
+{ "keywords": "arrow circle o right",
+  "tag": "fa fa-arrow-circle-o-right"
+},
+{ "keywords": "arrow circle o up",
+  "tag": "fa fa-arrow-circle-o-up"
+},
+{ "keywords": "arrow circle right",
+  "tag": "fa fa-arrow-circle-right"
+},
+{ "keywords": "arrow circle up",
+  "tag": "fa fa-arrow-circle-up"
+},
+{ "keywords": "arrow down",
+  "tag": "fa fa-arrow-down"
+},
+{ "keywords": "arrow left",
+  "tag": "fa fa-arrow-left"
+},
+{ "keywords": "arrow right",
+  "tag": "fa fa-arrow-right"
+},
+{ "keywords": "arrow up",
+  "tag": "fa fa-arrow-up"
+},
+{ "keywords": "arrows",
+  "tag": "fa fa-arrows"
+},
+{ "keywords": "arrows alt",
+  "tag": "fa fa-arrows-alt"
+},
+{ "keywords": "arrows h",
+  "tag": "fa fa-arrows-h"
+},
+{ "keywords": "arrows v",
+  "tag": "fa fa-arrows-v"
+},
+{ "keywords": "caret down",
+  "tag": "fa fa-caret-down"
+},
+{ "keywords": "caret left",
+  "tag": "fa fa-caret-left"
+},
+{ "keywords": "caret right",
+  "tag": "fa fa-caret-right"
+},
+{ "keywords": "caret square o down",
+  "tag": "fa fa-caret-square-o-down"
+},
+{ "keywords": "caret square o left",
+  "tag": "fa fa-caret-square-o-left"
+},
+{ "keywords": "caret square o right",
+  "tag": "fa fa-caret-square-o-right"
+},
+{ "keywords": "caret square o up",
+  "tag": "fa fa-caret-square-o-up"
+},
+{ "keywords": "caret up",
+  "tag": "fa fa-caret-up"
+},
+{ "keywords": "chevron circle down",
+  "tag": "fa fa-chevron-circle-down"
+},
+{ "keywords": "chevron circle left",
+  "tag": "fa fa-chevron-circle-left"
+},
+{ "keywords": "chevron circle right",
+  "tag": "fa fa-chevron-circle-right"
+},
+{ "keywords": "chevron circle up",
+  "tag": "fa fa-chevron-circle-up"
+},
+{ "keywords": "chevron down",
+  "tag": "fa fa-chevron-down"
+},
+{ "keywords": "chevron left",
+  "tag": "fa fa-chevron-left"
+},
+{ "keywords": "chevron right",
+  "tag": "fa fa-chevron-right"
+},
+{ "keywords": "chevron up",
+  "tag": "fa fa-chevron-up"
+},
+{ "keywords": "hand o down",
+  "tag": "fa fa-hand-o-down"
+},
+{ "keywords": "hand o left",
+  "tag": "fa fa-hand-o-left"
+},
+{ "keywords": "hand o right",
+  "tag": "fa fa-hand-o-right"
+},
+{ "keywords": "hand o up",
+  "tag": "fa fa-hand-o-up"
+},
+{ "keywords": "long arrow down",
+  "tag": "fa fa-long-arrow-down"
+},
+{ "keywords": "long arrow left",
+  "tag": "fa fa-long-arrow-left"
+},
+{ "keywords": "long arrow right",
+  "tag": "fa fa-long-arrow-right"
+},
+{ "keywords": "long arrow up",
+  "tag": "fa fa-long-arrow-up"
+},
+{ "keywords": "toggle down",
+  "tag": "fa fa-toggle-down"
+},
+{ "keywords": "toggle left",
+  "tag": "fa fa-toggle-left"
+},
+{ "keywords": "toggle right",
+  "tag": "fa fa-toggle-right"
+},
+{ "keywords": "toggle up",
+  "tag": "fa fa-toggle-up"
+},
+{ "keywords": "arrows alt",
+  "tag": "fa fa-arrows-alt"
+},
+{ "keywords": "backward",
+  "tag": "fa fa-backward"
+},
+{ "keywords": "compress",
+  "tag": "fa fa-compress"
+},
+{ "keywords": "eject",
+  "tag": "fa fa-eject"
+},
+{ "keywords": "expand",
+  "tag": "fa fa-expand"
+},
+{ "keywords": "fast backward",
+  "tag": "fa fa-fast-backward"
+},
+{ "keywords": "fast forward",
+  "tag": "fa fa-fast-forward"
+},
+{ "keywords": "forward",
+  "tag": "fa fa-forward"
+},
+{ "keywords": "pause",
+  "tag": "fa fa-pause"
+},
+{ "keywords": "play",
+  "tag": "fa fa-play"
+},
+{ "keywords": "play circle",
+  "tag": "fa fa-play-circle"
+},
+{ "keywords": "play circle o",
+  "tag": "fa fa-play-circle-o"
+},
+{ "keywords": "step backward",
+  "tag": "fa fa-step-backward"
+},
+{ "keywords": "step forward",
+  "tag": "fa fa-step-forward"
+},
+{ "keywords": "stop",
+  "tag": "fa fa-stop"
+},
+{ "keywords": "youtube play",
+  "tag": "fa fa-youtube-play"
+},
+{ "keywords": "adn",
+  "tag": "fa fa-adn"
+},
+{ "keywords": "android",
+  "tag": "fa fa-android"
+},
+{ "keywords": "angellist",
+  "tag": "fa fa-angellist"
+},
+{ "keywords": "apple",
+  "tag": "fa fa-apple"
+},
+{ "keywords": "behance",
+  "tag": "fa fa-behance"
+},
+{ "keywords": "behance square",
+  "tag": "fa fa-behance-square"
+},
+{ "keywords": "bitbucket",
+  "tag": "fa fa-bitbucket"
+},
+{ "keywords": "bitbucket square",
+  "tag": "fa fa-bitbucket-square"
+},
+{ "keywords": "bitcoin",
+  "tag": "fa fa-bitcoin"
+},
+{ "keywords": "btc",
+  "tag": "fa fa-btc"
+},
+{ "keywords": "cc amex",
+  "tag": "fa fa-cc-amex"
+},
+{ "keywords": "cc discover",
+  "tag": "fa fa-cc-discover"
+},
+{ "keywords": "cc mastercard",
+  "tag": "fa fa-cc-mastercard"
+},
+{ "keywords": "cc paypal",
+  "tag": "fa fa-cc-paypal"
+},
+{ "keywords": "cc stripe",
+  "tag": "fa fa-cc-stripe"
+},
+{ "keywords": "cc visa",
+  "tag": "fa fa-cc-visa"
+},
+{ "keywords": "codepen",
+  "tag": "fa fa-codepen"
+},
+{ "keywords": "css3",
+  "tag": "fa fa-css3"
+},
+{ "keywords": "social media delicious",
+  "tag": "fa fa-delicious"
+},
+{ "keywords": "social media deviantart",
+  "tag": "fa fa-deviantart"
+},
+{ "keywords": "social media digg",
+  "tag": "fa fa-digg"
+},
+{ "keywords": "social media dribbble",
+  "tag": "fa fa-dribbble"
+},
+{ "keywords": "social media dropbox",
+  "tag": "fa fa-dropbox"
+},
+{ "keywords": "social media drupal",
+  "tag": "fa fa-drupal"
+},
+{ "keywords": "empire",
+  "tag": "fa fa-empire"
+},
+{ "keywords": "social media facebook",
+  "tag": "fa fa-facebook"
+},
+{ "keywords": "social media facebook square",
+  "tag": "fa fa-facebook-square"
+},
+{ "keywords": "social media flickr",
+  "tag": "fa fa-flickr"
+},
+{ "keywords": "foursquare",
+  "tag": "fa fa-foursquare"
+},
+{ "keywords": "ge",
+  "tag": "fa fa-ge"
+},
+{ "keywords": "social media git",
+  "tag": "fa fa-git"
+},
+{ "keywords": "social media git square",
+  "tag": "fa fa-git-square"
+},
+{ "keywords": "github",
+  "tag": "fa fa-github"
+},
+{ "keywords": "github alt",
+  "tag": "fa fa-github-alt"
+},
+{ "keywords": "github square",
+  "tag": "fa fa-github-square"
+},
+{ "keywords": "gittip",
+  "tag": "fa fa-gittip"
+},
+{ "keywords": "social media google",
+  "tag": "fa fa-google"
+},
+{ "keywords": "social mediagoogle plus",
+  "tag": "fa fa-google-plus"
+},
+{ "keywords": "social media google plus square",
+  "tag": "fa fa-google-plus-square"
+},
+{ "keywords": "google wallet",
+  "tag": "fa fa-google-wallet"
+},
+{ "keywords": "hacker news",
+  "tag": "fa fa-hacker-news"
+},
+{ "keywords": "html5",
+  "tag": "fa fa-html5"
+},
+{ "keywords": "instagram",
+  "tag": "fa fa-instagram"
+},
+{ "keywords": "ioxhost",
+  "tag": "fa fa-ioxhost"
+},
+{ "keywords": "social media joomla",
+  "tag": "fa fa-joomla"
+},
+{ "keywords": "jsfiddle",
+  "tag": "fa fa-jsfiddle"
+},
+{ "keywords": "lastfm",
+  "tag": "fa fa-lastfm"
+},
+{ "keywords": "lastfm square",
+  "tag": "fa fa-lastfm-square"
+},
+{ "keywords": "linkedin",
+  "tag": "fa fa-linkedin"
+},
+{ "keywords": "linkedin square",
+  "tag": "fa fa-linkedin-square"
+},
+{ "keywords": "linux",
+  "tag": "fa fa-linux"
+},
+{ "keywords": "maxcdn",
+  "tag": "fa fa-maxcdn"
+},
+{ "keywords": "meanpath",
+  "tag": "fa fa-meanpath"
+},
+{ "keywords": "openid",
+  "tag": "fa fa-openid"
+},
+{ "keywords": "pagelines",
+  "tag": "fa fa-pagelines"
+},
+{ "keywords": "paypal",
+  "tag": "fa fa-paypal"
+},
+{ "keywords": "pied piper",
+  "tag": "fa fa-pied-piper"
+},
+{ "keywords": "pied piper alt",
+  "tag": "fa fa-pied-piper-alt"
+},
+{ "keywords": "pinterest",
+  "tag": "fa fa-pinterest"
+},
+{ "keywords": "pinterest square",
+  "tag": "fa fa-pinterest-square"
+},
+{ "keywords": "qq",
+  "tag": "fa fa-qq"
+},
+{ "keywords": "ra",
+  "tag": "fa fa-ra"
+},
+{ "keywords": "rebel",
+  "tag": "fa fa-rebel"
+},
+{ "keywords": "reddit",
+  "tag": "fa fa-reddit"
+},
+{ "keywords": "reddit square",
+  "tag": "fa fa-reddit-square"
+},
+{ "keywords": "renren",
+  "tag": "fa fa-renren"
+},
+{ "keywords": "share alt",
+  "tag": "fa fa-share-alt"
+},
+{ "keywords": "share alt square",
+  "tag": "fa fa-share-alt-square"
+},
+{ "keywords": "skype",
+  "tag": "fa fa-skype"
+},
+{ "keywords": "slack",
+  "tag": "fa fa-slack"
+},
+{ "keywords": "slideshare",
+  "tag": "fa fa-slideshare"
+},
+{ "keywords": "soundcloud",
+  "tag": "fa fa-soundcloud"
+},
+{ "keywords": "spotify",
+  "tag": "fa fa-spotify"
+},
+{ "keywords": "social mediastack exchange",
+  "tag": "fa fa-stack-exchange"
+},
+{ "keywords": "social media stack overflow",
+  "tag": "fa fa-stack-overflow"
+},
+{ "keywords": "social media steam",
+  "tag": "fa fa-steam"
+},
+{ "keywords": "social media steam square",
+  "tag": "fa fa-steam-square"
+},
+{ "keywords": "social media stumbleupon",
+  "tag": "fa fa-stumbleupon"
+},
+{ "keywords": "social media stumbleupon circle",
+  "tag": "fa fa-stumbleupon-circle"
+},
+{ "keywords": "social media tencent weibo",
+  "tag": "fa fa-tencent-weibo"
+},
+{ "keywords": "social media trello",
+  "tag": "fa fa-trello"
+},
+{ "keywords": "social media tumblr",
+  "tag": "fa fa-tumblr"
+},
+{ "keywords": "social media tumblr square",
+  "tag": "fa fa-tumblr-square"
+},
+{ "keywords": "social media twitch",
+  "tag": "fa fa-twitch"
+},
+{ "keywords": "social media twitter",
+  "tag": "fa fa-twitter"
+},
+{ "keywords": "social media twitter square",
+  "tag": "fa fa-twitter-square"
+},
+{ "keywords": "social media vimeo square",
+  "tag": "fa fa-vimeo-square"
+},
+{ "keywords": "social media vine",
+  "tag": "fa fa-vine"
+},
+{ "keywords": "social media vk",
+  "tag": "fa fa-vk"
+},
+{ "keywords": "social media wechat",
+  "tag": "fa fa-wechat"
+},
+{ "keywords": "social mediaweibo",
+  "tag": "fa fa-weibo"
+},
+{ "keywords": "social media weixin",
+  "tag": "fa fa-weixin"
+},
+{ "keywords": "windows",
+  "tag": "fa fa-windows"
+},
+{ "keywords": " social mediawordpress",
+  "tag": "fa fa-wordpress"
+},
+{ "keywords": "social media xing",
+  "tag": "fa fa-xing"
+},
+{ "keywords": "social media xing square",
+  "tag": "fa fa-xing-square"
+},
+{ "keywords": "social media yahoo",
+  "tag": "fa fa-yahoo"
+},
+{ "keywords": "social media yelp",
+  "tag": "fa fa-yelp"
+},
+{ "keywords": "social media youtube",
+  "tag": "fa fa-youtube"
+},
+{ "keywords": "social media youtube play",
+  "tag": "fa fa-youtube-play"
+},
+{ "keywords": "social media youtube square",
+  "tag": "fa fa-youtube-square"
+},
+{ "keywords": "ambulance",
+  "tag": "fa fa-ambulance"
+},
+{ "keywords": "h square",
+  "tag": "fa fa-h-square"
+},
+{ "keywords": "hospital o",
+  "tag": "fa fa-hospital-o"
+},
+{ "keywords": "medkit",
+  "tag": "fa fa-medkit"
+},
+{ "keywords": "plus square",
+  "tag": "fa fa-plus-square"
+},
+{ "keywords": "stethoscope",
+  "tag": "fa fa-stethoscope"
+},
+{ "keywords": "user md",
+  "tag": "fa fa-user-md"
+},
+{ "keywords": "wheelchair",
+  "tag": "fa fa-wheelchair"
+}
+]
