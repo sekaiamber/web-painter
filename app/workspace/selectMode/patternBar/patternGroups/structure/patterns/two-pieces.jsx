@@ -15,26 +15,9 @@ export default class TwoPiecesPattern extends Pattern {
     this.tag = 'two-pieces'
   }
   renderSample() {
-    return [
-      <div className="two-pieces pattern-element" key="1" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(50% - 30px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        left: 20
-      }}></div>,
-      <div className="two-pieces pattern-element" key="2" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(50% - 30px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        right: 20
-      }}></div>
-    ]
+    return (
+      <img src="assets/images/two-pieces.png" srcSet="assets/images/two-pieces@2x.png 2x"/>
+    )
   }
 }
 TwoPiecesPattern.patternTag = 'two-pieces';

@@ -15,35 +15,9 @@ export default class ThreePiecesPattern extends Pattern {
     this.tag = 'three-pieces'
   }
   renderSample() {
-    return [
-      <div className="three-pieces pattern-element" key="1" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(33% - 27px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        left: 20
-      }}></div>,
-      <div className="three-pieces pattern-element" key="2" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(33% - 27px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        left: 'calc(33% + 13px)'
-      }}></div>,
-      <div className="three-pieces pattern-element" key="3" style={{
-        position: 'absolute',
-        borderWidth: 1,
-        borderStyle: 'solid',
-        width: 'calc(33% - 27px)',
-        height: 'calc(100% - 40px)',
-        top: 20,
-        right: 20
-      }}></div>
-    ]
+    return (
+      <img src="assets/images/three-pieces.png" srcSet="assets/images/three-pieces@2x.png 2x"/>
+    )
   }
 }
 ThreePiecesPattern.patternTag = 'three-pieces';
