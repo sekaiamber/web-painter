@@ -7,7 +7,14 @@ import PageEditor from './../utils/pageEditor/pageEditor'
 import $ from 'jquery'
 
 // jquery
-window._jquery = $;
+window.jQuery = $;
+
+// bootstrap
+require('bootstrap');
+require('bootstrap/dist/css/bootstrap.min.css');
+
+// jquery plugin
+require('./../../assets/scripts/carousel')
 
 // Event
 const exEventEmitter = new ExEventEmitter();

@@ -11,7 +11,7 @@ var config = {
   context: path.join(__dirname, '..', '/app'),
   target: "electron-renderer",
   entry: {
-    vendors: ['react', 'react-router', 'react-dom', 'jquery', 'antd'],
+    vendors: ['react', 'react-router', 'react-dom', 'jquery', 'antd', 'bootstrap'],
   },
   output: {
     path: path.join(__dirname, '..', '/dist'),
@@ -69,10 +69,10 @@ var config = {
         test: /\.(jpe?g|png|gif)$/i,
         loader: 'url?limit=5000!img?progressive=true'
       },
-      {
-        test: /\.(eot|woff|ttf|svg)$/,
-        loader: 'url?limit=10000'
-      },
+      { test: /\.(woff|woff2)$/,  loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.ttf$/,    loader: "file-loader" },
+      { test: /\.eot$/,    loader: "file-loader" },
+      { test: /\.svg$/,    loader: "file-loader" },
       {
         test: /\.html$/,
         loader: 'raw'

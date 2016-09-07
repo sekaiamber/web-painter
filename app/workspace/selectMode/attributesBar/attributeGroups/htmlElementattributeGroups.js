@@ -9,13 +9,16 @@ const basicGroupmap = {
   h5: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   h6: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   a: [groups.TypeAttributeGroup, groups.LinkAttributeGroup],
-  img: [groups.ImageAttributeGroup]
+  img: [groups.ImageAttributeGroup],
+  blockquote: [groups.TypeAttributeGroup, groups.BlockquoteAttributeGroup, groups.ContentAttributeGroup],
+  video: [groups.AppearanceAttributeGroup, groups.VideoAttributeGroup]
 }
 
 const specialGroupmap = {
   linkList: [groups.LinkListDataAttributeGroup],
   twoColStructure: [groups.TwoColStructureAttributeGroup],
-  icon: [groups.IconAttributeGroup]
+  icon: [groups.IconAttributeGroup],
+  carousel: [groups.CarouselAttributeGroup]
 }
 
 export default function (nodeName, specialGroupName) {

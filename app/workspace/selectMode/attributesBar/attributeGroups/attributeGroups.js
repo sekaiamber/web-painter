@@ -7,6 +7,9 @@ import ContentAttributeGroup from './content'
 import ImageAttributeGroup from './image'
 import TwoColStructureAttributeGroup from './twoColStructure'
 import IconAttributeGroup from './icon'
+import BlockquoteAttributeGroup from './blockquote'
+import VideoAttributeGroup from './video'
+import CarouselAttributeGroup from './carousel'
 
 export default {
   AppearanceAttributeGroup,
@@ -17,5 +20,8 @@ export default {
   ContentAttributeGroup,
   ImageAttributeGroup,
   TwoColStructureAttributeGroup,
-  IconAttributeGroup
+  IconAttributeGroup,
+  BlockquoteAttributeGroup,
+  VideoAttributeGroup,
+  CarouselAttributeGroup
 }

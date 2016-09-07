@@ -6,7 +6,14 @@ import Head5Element from './elements/head5'
 import Head6Element from './elements/head6'
 import ParagraghElement from './elements/paragraph'
 import HeadParagraghElement from './elements/headParagraph'
+import IconHeadParagraphElement from './elements/iconheadParagraph'
 import IconHeadElement from './elements/iconhead'
+import BlockquoteLeftElement from './elements/blockquoteLeft'
+import BlockquoteRightElement from './elements/blockquoteRight'
+import ImageElement from './elements/image'
+import RoundImageElement from './elements/roundImage'
+import VideoElement from './elements/video'
+import CarouselElement from './elements/carousel'
 
 export default [
   Head1Element,
@@ -17,5 +24,12 @@ export default [
   Head6Element,
   ParagraghElement,
   HeadParagraghElement,
-  IconHeadElement
+  IconHeadParagraphElement,
+  IconHeadElement,
+  BlockquoteLeftElement,
+  BlockquoteRightElement,
+  ImageElement,
+  RoundImageElement,
+  VideoElement,
+  CarouselElement
 ]

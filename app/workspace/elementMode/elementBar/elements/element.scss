@@ -60,11 +60,11 @@
   &.add:before{ content: "\e600" }
   &.cross:before{ content: "\e601" }
   &.divider:before{ content: "\e602" }
-  &.backquote-left:before{ content: "\e603" }
+  &.blockquote-left:before{ content: "\e603" }
 
   &.checkbox:before{ content: "\e604" }
   &.button:before{ content: "\e605" }
-  &.backquote-right:before{ content: "\e606" }
+  &.blockquote-right:before{ content: "\e606" }
   &._:before{ content: "\e607" }
 
   &._:before{ content: "\e608" }

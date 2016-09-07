@@ -5,6 +5,9 @@ import jqueryattrs from './attributes/jquery'
 import imageattrs from './attributes/image'
 import tcsattrs from './attributes/twoColStructure'
 import iconattrs from './attributes/icon'
+import blockquoteattrs from './attributes/blockquote'
+import videoattrs from './attributes/video'
+import carouselattrs from './attributes/carousel'
 import _ from 'lodash'
 
 let attrs = {};
@@ -16,6 +19,9 @@ _.merge(attrs, jqueryattrs);
 _.merge(attrs, imageattrs);
 _.merge(attrs, tcsattrs);
 _.merge(attrs, iconattrs);
+_.merge(attrs, blockquoteattrs);
+_.merge(attrs, videoattrs);
+_.merge(attrs, carouselattrs)
 
 
 export default attrs;

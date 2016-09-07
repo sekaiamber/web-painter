@@ -3,7 +3,7 @@
   // filter: blur(10px);
   // backdrop-filter: blur(5px);
 
-  .container {
+  .element-container {
     width: 720px;
     margin: 0 auto;
     height: 100%;
@@ -19,7 +19,7 @@
   // slide up
   &.slide-up {
     top: 0 !important;
-    .container {
+    .element-container {
       padding-top: 10px;
     }
     &:hover {
