@@ -1,4 +1,4 @@
-import { Input, Button, Icon, Switch, Select } from 'antd';
+import { Input, Button, Icon, Switch, Select, Slider } from 'antd';
 const Option = Select.Option;
 import BaseAttributeGroup from './baseAttributeGroup'
 const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
@@ -68,6 +68,15 @@ export default class ImageAttributeGroup extends BaseAttributeGroup{
             />
           </div>
         </div>
+        <div className="attribute">
+          <div className="name">Round</div>
+          <div className="value" style={{width: 170}}>
+            <Slider min={0} max={50} tipFormatter={(v) => `${v}%`}
+              value={this.props.imageRound}
+              onChange={(value) => this.props.onChange('imageRound', value)}
+            />
+          </div>
+        </div>
         <div className="image-container">
           <img src={this.props.src} onClick={() => this.setState({modalVisible: true})}/>
           <AssetModal
@@ -81,5 +90,5 @@ export default class ImageAttributeGroup extends BaseAttributeGroup{
   }
 }
 ImageAttributeGroup.attributeKeys = [
-  'width', 'height', 'alt', 'src', 'imageType', 'imageTarget'
+  'width', 'height', 'alt', 'src', 'imageType', 'imageTarget', 'imageRound'
 ]

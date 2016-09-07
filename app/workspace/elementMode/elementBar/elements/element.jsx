@@ -9,6 +9,7 @@ export default class Element extends React.Component{
     // bind
     this.handleClick = this.handleClick.bind(this);
   }
+  domDidAdd() {}
   componentDidMount() {
     if (this.props.selected) {
       this.props.onSelect(this);

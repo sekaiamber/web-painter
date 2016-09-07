@@ -168,6 +168,7 @@ export default class PagePiece {
         $target.after($element);
       }
     }
+    elementComponent.domDidAdd($element);
     this.updateRender();
     // 历史记录
     if (this.component.tag == 'body') {

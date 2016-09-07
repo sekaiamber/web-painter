@@ -1,0 +1,46 @@
+#attributesBar .attribute-group.carousel {
+  max-height: 9999px;
+
+  .image-container {
+    width: 100%;
+    background: #3e3e3e;
+    border: 1px solid #646464;
+    border-radius: 4px;
+    padding: 5px 8px;
+    text-align: center;
+    background: url('./../../../../../assets/images/image-background.png');
+    .aimage {
+      position: relative;
+      img {
+        cursor: pointer;
+        max-width: 100%;
+        margin: 15px 0;
+      }
+      .delete {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 15px;
+        cursor: pointer;
+        font-size: 30px;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .add-bt {
+      font-size: 31px;
+      border: #bfc0c0 solid 1px;
+      width: 36px;
+      display: inline-block;
+      height: 36px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 18px;
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+  }
+}

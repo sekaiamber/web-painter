@@ -73,6 +73,7 @@
     "react-color": "2.0.0",
     "react-dom": "0.14.7",
     "react-router": "2.0.0",
-    "adm-zip": "^0.4.7"
+    "adm-zip": "^0.4.7",
+    "bootstrap": "3.3.7"
   }
 }

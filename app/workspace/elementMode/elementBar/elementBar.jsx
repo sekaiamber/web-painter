@@ -40,7 +40,7 @@ export default class ElementBar extends React.Component{
   render() {
     return (
       <div id="elementBar" className={this.state.showall ? "slide-up" : ""}>
-        <div className="container">
+        <div className="element-container">
           <div className="fav-elements">
             {this.state.favElements.map((E, i) =>
               <E key={i}
