@@ -1,0 +1,36 @@
+#attributesBar .attribute-group.selector {
+  max-height: 9999px;
+  .option {
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    .delete {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      font-size: 20px;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &:before {
+      content: '·'
+    }
+  }
+  .add {
+    font-size: 31px;
+    border: #bfc0c0 solid 1px;
+    width: 36px;
+    display: inline-block;
+    height: 36px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 18px;
+    &:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
+}

@@ -43,13 +43,17 @@ export default class PagePiece {
     // element mode: add element
     $piece.click((e) => {
       if (window._mode_ == 'select') {
-        if ($(e.target).attr('wp-pattern')) {
+        let $target = $(e.target);
+        if ($target.attr('wp-pattern')) {
           // select pattern
-          let pagePatternIndex = parseInt($(e.target).attr('wp-pattern-index'));
+          let pagePatternIndex = parseInt($target.attr('wp-pattern-index'));
           this.selectPattern(pagePatternIndex);
         } else {
           // select element
           this.selectElement(e);
+        }
+        if ($target.attr('wp-no-bubble') != undefined) {
+          e.stopPropagation();
         }
       }
       if (window._mode_ == 'element') {
@@ -111,7 +115,7 @@ export default class PagePiece {
         } else {
           // insert
           let realHalfHeight = $target.outerHeight() * window._zoom_ / 2;
-          let position = realHalfHeight > e.offsetY ? "top" : "bottom";
+          let position = realHalfHeight + ($target[0].clientHeight == 0 ? $target[0].offsetTop : 0) > e.offsetY ? "top" : "bottom";
           if (currentElementHoverElement == e.target && currentElementHoverPosition == position) return;
           currentElementHoverElement = e.target;
           exEventEmitter.emit('updateElementModeHoverElement',

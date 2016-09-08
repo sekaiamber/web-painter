@@ -27,8 +27,8 @@
       margin: 0 5px;
       height: 80px;
       width: 80px;
-      padding-top: 10px;
-      padding-left: 1px;
+      padding-top: 12px;
+      padding-left: 2px;
       border: rgba(255,255,255,.25) solid 2px;
       &:before {
         line-height: 76px;
@@ -47,8 +47,11 @@
 }
 
 @font-face {font-family: "element-iconfont";
-  src: url('./../../../../../assets/fonts/element-iconfont.woff') format('woff');
+  src: url("./../../../../../assets/fonts/element-iconfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
+
 
 .iconfont.element {
   font-family:"element-iconfont" !important;
@@ -65,10 +68,10 @@
   &.checkbox:before{ content: "\e604" }
   &.button:before{ content: "\e605" }
   &.blockquote-right:before{ content: "\e606" }
-  &._:before{ content: "\e607" }
+  &.text-field:before{ content: "\e607" }
 
-  &._:before{ content: "\e608" }
-  &._:before{ content: "\e609" }
+  &.text-field-label:before{ content: "\e608" }
+  &.textarea:before{ content: "\e609" }
   &.icon-framed:before{ content: "\e610" }
   &.paragraph:before{ content: "\e611" }
 
@@ -79,20 +82,20 @@
 
   &.head5:before{ content: "\e616" }
   &.head6:before{ content: "\e617" }
-  &.label:before{ content: "\e618" }
+  &.label-icon:before{ content: "\e618" }
   &.radio:before{ content: "\e619" }
 
   &.icon-heading-paragraph:before{ content: "\e620" }
   &.heading-paragraph:before{ content: "\e621" }
   &.icon-heading:before{ content: "\e622" }
-  &._:before{ content: "\e623" }
+  &.icon:before{ content: "\e623" }
 
-  &._:before{ content: "\e624" }
+  &.textarea-label:before{ content: "\e624" }
   &.round-image:before{ content: "\e625" }
   &.image:before{ content: "\e626" }
   &.video:before{ content: "\e627" }
 
-  &.text-link:before{ content: "\e628" }
+  &.link:before{ content: "\e628" }
   &.plus:before{ content: "\e629" }
   &.strikethrough:before{ content: "\e630" }
   &.underscore:before{ content: "\e631" }
@@ -136,4 +139,8 @@
   &.phone-device:before{ content: "\e661" }
   &.tablet-device:before{ content: "\e662" }
   &.laptop-device:before{ content: "\e663" }
+
+  // icon miss
+  &.dropdown:before{ content: "Dropdown"; font-size: 12px !important; }
+  &.selector:before{ content: "selector"; font-size: 12px !important; }
 }

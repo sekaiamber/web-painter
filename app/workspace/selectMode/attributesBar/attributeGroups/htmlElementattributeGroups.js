@@ -8,17 +8,25 @@ const basicGroupmap = {
   h4: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   h5: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   h6: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  span: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
+  label: [groups.TypeAttributeGroup, groups.ContentAttributeGroup],
   a: [groups.TypeAttributeGroup, groups.LinkAttributeGroup],
   img: [groups.ImageAttributeGroup],
   blockquote: [groups.TypeAttributeGroup, groups.BlockquoteAttributeGroup, groups.ContentAttributeGroup],
-  video: [groups.AppearanceAttributeGroup, groups.VideoAttributeGroup]
+  video: [groups.AppearanceAttributeGroup, groups.VideoAttributeGroup],
 }
 
 const specialGroupmap = {
   linkList: [groups.LinkListDataAttributeGroup],
   twoColStructure: [groups.TwoColStructureAttributeGroup],
   icon: [groups.IconAttributeGroup],
-  carousel: [groups.CarouselAttributeGroup]
+  carousel: [groups.CarouselAttributeGroup],
+  button: [groups.ButtonAttributeGroup],
+  dropdown: [groups.DropdownAttributeGroup],
+  input: [groups.InputAttributeGroup],
+  selector: [groups.SelectorAttributeGroup],
+  checkbox: [groups.CheckboxAttributeGroup],
+  radio: [groups.RadioAttributeGroup],
 }
 
 export default function (nodeName, specialGroupName) {

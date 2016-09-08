@@ -46,10 +46,21 @@ export default class IconAttributeGroup extends BaseAttributeGroup{
             />
           </div>
         </div>
+        <div className="attribute">
+          <div className="name">Frame</div>
+          <div className="value">
+            <Select size="small" value={this.props.iconFrame} onChange={(v) => this.props.onChange('iconFrame', v)} >
+                <Option value="none" key="1">None</Option>
+                <Option value="round" key="2">Round</Option>
+                <Option value="square" key="3">Square</Option>
+                <Option value="rounded" key="3">Rounded</Option>
+            </Select>
+          </div>
+        </div>
       </div>
     );
   }
 }
 IconAttributeGroup.attributeKeys = [
-  'iconTag', 'iconSize'
+  'iconTag', 'iconSize', 'iconFrame'
 ]

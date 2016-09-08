@@ -46,3 +46,29 @@ blockquote {
 img {
   max-width: 100%;
 }
+.icon-frame-round {
+  margin: 0 auto;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 32px 30px 26px 30px;
+  min-width: 80px;
+  border: solid 1px #000;
+}
+.icon-frame-square {
+  margin: 0 auto;
+  border: 2px solid transparent;
+  padding: 32px 30px 26px 30px;
+  min-width: 80px;
+  border: solid 1px #000;
+}
+.icon-frame-rounded {
+  margin: 0 auto;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 32px 30px 26px 30px;
+  min-width: 80px;
+  border: solid 1px #000;
+}
+textarea {
+  margin-bottom: 5px;
+}
