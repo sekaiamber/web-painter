@@ -13,9 +13,6 @@ window.jQuery = $;
 require('bootstrap');
 require('bootstrap/dist/css/bootstrap.min.css');
 
-// jquery plugin
-require('./../../assets/scripts/carousel')
-
 // Event
 const exEventEmitter = new ExEventEmitter();
 window.exEventEmitter = exEventEmitter;
