@@ -8,6 +8,8 @@ import iconattrs from './attributes/icon'
 import blockquoteattrs from './attributes/blockquote'
 import videoattrs from './attributes/video'
 import carouselattrs from './attributes/carousel'
+import btattrs from './attributes/button'
+import inputattrs from './attributes/input'
 import _ from 'lodash'
 
 let attrs = {};
@@ -21,7 +23,9 @@ _.merge(attrs, tcsattrs);
 _.merge(attrs, iconattrs);
 _.merge(attrs, blockquoteattrs);
 _.merge(attrs, videoattrs);
-_.merge(attrs, carouselattrs)
+_.merge(attrs, carouselattrs);
+_.merge(attrs, btattrs);
+_.merge(attrs, inputattrs);
 
 
 export default attrs;

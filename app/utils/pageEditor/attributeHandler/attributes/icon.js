@@ -18,5 +18,16 @@ export default {
     get($dom) {
       return $dom.css("fontSize")
     }
+  },
+  iconFrame: {
+    set($dom, value) {
+      let old = $dom.attr('wp-icon-frame');
+      $dom.removeClass('icon-frame-' + old);
+      $dom.attr('wp-icon-frame', value);
+      $dom.addClass('icon-frame-' + value);
+    },
+    get($dom) {
+      return $dom.attr('wp-icon-frame') || 'none'
+    }
   }
 }

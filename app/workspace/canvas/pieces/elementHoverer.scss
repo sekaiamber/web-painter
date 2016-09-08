@@ -8,6 +8,7 @@
   .hoverer {
     pointer-events: none;
     position: absolute;
+    z-index: 9999;
   }
 }
 
@@ -27,6 +28,7 @@
     border: #42a5e8 solid 1px;
     background: rgba(66, 165, 232, .2);
     .text {
+      display: none;
       pointer-events: none;
       position: absolute;
       top: 50%;

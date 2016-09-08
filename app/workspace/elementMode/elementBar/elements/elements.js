@@ -14,6 +14,20 @@ import ImageElement from './elements/image'
 import RoundImageElement from './elements/roundImage'
 import VideoElement from './elements/video'
 import CarouselElement from './elements/carousel'
+import IconElement from './elements/icon'
+import IconFramedElement from './elements/iconFramed'
+import ButtonElement from './elements/button'
+import DropdownElement from './elements/dropdown'
+import LinkElement from './elements/link'
+import FormElement from './elements/form'
+import TextFieldElement from './elements/textField'
+import TextFieldLabelElement from './elements/textFieldLabel'
+import TextareaElement from './elements/textarea'
+import TextareaLabelElement from './elements/textareaLabel'
+import SelectorElement from './elements/selector'
+import CheckboxElement from './elements/checkbox'
+import RadioElement from './elements/radio'
+import LabelElement from './elements/label'
 
 export default [
   Head1Element,
@@ -31,5 +45,19 @@ export default [
   ImageElement,
   RoundImageElement,
   VideoElement,
-  CarouselElement
+  CarouselElement,
+  IconElement,
+  IconFramedElement,
+  ButtonElement,
+  DropdownElement,
+  LinkElement,
+  FormElement,
+  TextFieldElement,
+  TextFieldLabelElement,
+  TextareaElement,
+  TextareaLabelElement,
+  SelectorElement,
+  CheckboxElement,
+  RadioElement,
+  LabelElement
 ]

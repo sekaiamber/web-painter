@@ -10,6 +10,12 @@ import IconAttributeGroup from './icon'
 import BlockquoteAttributeGroup from './blockquote'
 import VideoAttributeGroup from './video'
 import CarouselAttributeGroup from './carousel'
+import ButtonAttributeGroup from './button'
+import DropdownAttributeGroup from './dropdown'
+import InputAttributeGroup from './input'
+import SelectorAttributeGroup from './selector'
+import CheckboxAttributeGroup from './checkbox'
+import RadioAttributeGroup from './radio'
 
 export default {
   AppearanceAttributeGroup,
@@ -23,5 +29,11 @@ export default {
   IconAttributeGroup,
   BlockquoteAttributeGroup,
   VideoAttributeGroup,
-  CarouselAttributeGroup
+  CarouselAttributeGroup,
+  ButtonAttributeGroup,
+  DropdownAttributeGroup,
+  InputAttributeGroup,
+  SelectorAttributeGroup,
+  CheckboxAttributeGroup,
+  RadioAttributeGroup
 }
