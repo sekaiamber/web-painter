@@ -13,6 +13,9 @@ export default class PagePattern {
   // init
   initDom(patternReactComponentClass) {
     let $pattern = $(patternReactComponentClass.plainHtmlText).addClass('pe-pattern');
+    if (patternReactComponentClass.domDidAdd) {
+      patternReactComponentClass.domDidAdd($pattern);
+    }
     $pattern.attr('wp-pattern-index', this.index);
     return $pattern;
   }

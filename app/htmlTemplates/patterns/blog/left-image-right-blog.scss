@@ -1,0 +1,17 @@
+.blog-left-image-right-blog {
+  background: #fff;
+  padding: 100px;
+
+  .col {
+    float: left;
+
+    &.left {
+      width: 50%;
+      padding-right: 30px;
+    }
+    &.right {
+      width: 50%;
+      padding-left: 30px;
+    }
+  }
+}
