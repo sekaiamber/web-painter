@@ -16,6 +16,7 @@ import InputAttributeGroup from './input'
 import SelectorAttributeGroup from './selector'
 import CheckboxAttributeGroup from './checkbox'
 import RadioAttributeGroup from './radio'
+import BackgroundAttributeGroup from './background'
 
 export default {
   AppearanceAttributeGroup,
@@ -35,5 +36,6 @@ export default {
   InputAttributeGroup,
   SelectorAttributeGroup,
   CheckboxAttributeGroup,
-  RadioAttributeGroup
+  RadioAttributeGroup,
+  BackgroundAttributeGroup
 }

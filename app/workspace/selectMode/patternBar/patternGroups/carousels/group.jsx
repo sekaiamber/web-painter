@@ -7,3 +7,4 @@ export default class CarouselsPatternGroup extends PatternGroup {
   }
 }
 CarouselsPatternGroup.patterns = patterns;
+

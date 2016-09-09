@@ -32,6 +32,9 @@
       }
     }
   }
+  .col {
+    position: relative;
+  }
   blockquote {
     padding: 0 1em;
     color: #777;
@@ -72,5 +75,65 @@
   }
   textarea {
     margin-bottom: 5px;
+  }
+  // background
+  .wp-bg-texture{
+    background: #676767;
+    &:before {
+      content: "";
+      background-size: 2px 2px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    &.texture-paper:before {
+      background: url(/assets/images/bgtexture/texture-paper.png);
+      background-size: 280px 280px;
+    }
+    &.texture-fabric:before {
+      background: url(/assets/images/bgtexture/texture-fabric.png);
+    }
+    &.texture-geometry-shapes::before {
+      background: url(/assets/images/bgtexture/texture-geometry-shapes.png);
+      background-size: 280px 280px;
+    }
+    &.texture-geometry-shapes-2::before {
+      background: url(/assets/images/bgtexture/texture-geometry-shapes-2.png);
+      background-size: 200px 200px;
+    }
+    &.texture-pixels::before {
+      background: url(/assets/images/bgtexture/texture-pixel.gif);
+      background-size: 2px 2px;
+    }
+    &.texture-dots::before {
+      background: url(/assets/images/bgtexture/texture-dots.gif);
+      background-size: 8px 8px;
+      opacity: 0.2;
+    }
+    &.texture-diagonal-lines::before {
+      background: url(/assets/images/bgtexture/texture-diag-lines.png);
+      background-size: 10px 10px;
+    }
+    &.texture-vertical-lines::before {
+      background: url(/assets/images/bgtexture/texture-v-lines.png);
+      background-size: 4px 4px;
+    }
+    &.texture-square::before {
+      background: url(/assets/images/bgtexture/texture-square.png);
+      background-size: 4px 4px;
+    }
+    &.texture-square-lg::before {
+      background: url(/assets/images/bgtexture/texture-square-lg.png);
+      background-size: 8px 8px;
+    }
+    &.texture-darken::before {
+      background: rgba(0,0,0,0.5);
+    }
+    &.texture-darken-strong::before {
+      background: rgba(0,0,0,0.8);
+    }
   }
 }

@@ -6,7 +6,8 @@ import Pattern from './../../pattern'
 
 import groups from './../../../../attributesBar/attributeGroups/attributeGroups'
 
-let attributeGroups = [ groups.AppearanceAttributeGroup ];
+import { PatternBaseAttributeGroup } from './../../pattern' 
+let attributeGroups = PatternBaseAttributeGroup;
 
 
 export default class TwoPiecesPattern extends Pattern {
