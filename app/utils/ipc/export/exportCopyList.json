@@ -98,5 +98,48 @@
   {
     "from": "assets/fonts/icons/linecons/styles/linecons.min.css",
     "to": "assets/fonts/icons/linecons/styles/linecons.min.css"
+  },
+
+
+
+  {
+    "from": "assets/images/bgtexture/texture-diag-lines.png",
+    "to": "assets/images/bgtexture/texture-diag-lines.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-dots.gif",
+    "to": "assets/images/bgtexture/texture-dots.gif"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-fabric.png",
+    "to": "assets/images/bgtexture/texture-fabric.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-geometry-shapes-2.png",
+    "to": "assets/images/bgtexture/texture-geometry-shapes-2.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-geometry-shapes.png",
+    "to": "assets/images/bgtexture/texture-geometry-shapes.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-paper.png",
+    "to": "assets/images/bgtexture/texture-paper.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-pixel.gif",
+    "to": "assets/images/bgtexture/texture-pixel.gif"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-square-lg.png",
+    "to": "assets/images/bgtexture/texture-square-lg.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-square.png",
+    "to": "assets/images/bgtexture/texture-square.png"
+  },
+  {
+    "from": "assets/images/bgtexture/texture-v-lines.png",
+    "to": "assets/images/bgtexture/texture-v-lines.png"
   }
 ]

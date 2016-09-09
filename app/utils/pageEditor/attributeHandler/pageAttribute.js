@@ -10,6 +10,7 @@ import videoattrs from './attributes/video'
 import carouselattrs from './attributes/carousel'
 import btattrs from './attributes/button'
 import inputattrs from './attributes/input'
+import bgattrs from './attributes/background'
 import _ from 'lodash'
 
 let attrs = {};
@@ -26,6 +27,7 @@ _.merge(attrs, videoattrs);
 _.merge(attrs, carouselattrs);
 _.merge(attrs, btattrs);
 _.merge(attrs, inputattrs);
+_.merge(attrs, bgattrs);
 
 
 export default attrs;

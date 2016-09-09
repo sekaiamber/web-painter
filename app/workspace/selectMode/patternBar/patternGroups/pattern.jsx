@@ -1,5 +1,5 @@
 let React = require('react');
-
+import groups from './../../attributesBar/attributeGroups/attributeGroups'
 require('./pattern.scss');
 
 export default class Pattern extends React.Component{
@@ -41,3 +41,10 @@ export class PatternGroup {
     });
   }
 }
+
+let PatternBaseAttributeGroup = [ 
+  groups.AppearanceAttributeGroup,
+  groups.BackgroundAttributeGroup 
+];
+
+export {PatternBaseAttributeGroup};
