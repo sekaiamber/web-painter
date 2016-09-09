@@ -4,7 +4,8 @@ const cssKeys = [
   // appearance
   'padding', 'margin', 'width', 'height',
   // type setting
-  'fontSize', 'lineHeight', 'textAlign'
+  'fontSize', 'lineHeight', 'textAlign',
+  'top', 'left'
 ]
 
 cssKeys.map((key) => {

@@ -1,0 +1,15 @@
+.wp-device {
+  position: relative;
+  overflow: hidden;
+  .wp-device-image {
+    height: 100%;
+  }
+  .wp-device-content {
+    position: absolute;
+    overflow: hidden;
+    img {
+      height: 100%;
+      max-width: none !important;
+    }
+  }
+}
