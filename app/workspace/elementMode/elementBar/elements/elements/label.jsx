@@ -14,4 +14,4 @@ export default class LabelElement extends Element{
     return htmlTemplate;
   }
 }
-LabelElement.elementTag = 'label';
+LabelElement.elementTag = 'label-icon';

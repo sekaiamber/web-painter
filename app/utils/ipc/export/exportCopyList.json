@@ -141,5 +141,116 @@
   {
     "from": "assets/images/bgtexture/texture-v-lines.png",
     "to": "assets/images/bgtexture/texture-v-lines.png"
+  },
+
+
+
+  {
+    "from": "assets/images/devices/Apple-Macbook-Air.png",
+    "to": "assets/images/devices/Apple-Macbook-Air.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-Macbook-Gold.png",
+    "to": "assets/images/devices/Apple-Macbook-Gold.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-Macbook-Pro.png",
+    "to": "assets/images/devices/Apple-Macbook-Pro.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-Macbook-Space-Grey.png",
+    "to": "assets/images/devices/Apple-Macbook-Space-Grey.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iMac.png",
+    "to": "assets/images/devices/Apple-iMac.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPad-Air-2-Gold.png",
+    "to": "assets/images/devices/Apple-iPad-Air-2-Gold.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPad-Air-2-Silver.png",
+    "to": "assets/images/devices/Apple-iPad-Air-2-Silver.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPad-Air-2-Space-Gray.png",
+    "to": "assets/images/devices/Apple-iPad-Air-2-Space-Gray.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5c-Blue.png",
+    "to": "assets/images/devices/Apple-iPhone-5c-Blue.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5c-Green.png",
+    "to": "assets/images/devices/Apple-iPhone-5c-Green.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5c-Red.png",
+    "to": "assets/images/devices/Apple-iPhone-5c-Red.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5c-White.png",
+    "to": "assets/images/devices/Apple-iPhone-5c-White.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5c-Yellow.png",
+    "to": "assets/images/devices/Apple-iPhone-5c-Yellow.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5s-Gold.png",
+    "to": "assets/images/devices/Apple-iPhone-5s-Gold.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5s-Silver.png",
+    "to": "assets/images/devices/Apple-iPhone-5s-Silver.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5s-Silver.psd",
+    "to": "assets/images/devices/Apple-iPhone-5s-Silver.psd"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-5s-Space-Gray.png",
+    "to": "assets/images/devices/Apple-iPhone-5s-Space-Gray.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-6s-Gold.png",
+    "to": "assets/images/devices/Apple-iPhone-6s-Gold.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-6s-Rose-Gold.png",
+    "to": "assets/images/devices/Apple-iPhone-6s-Rose-Gold.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-6s-Silver.png",
+    "to": "assets/images/devices/Apple-iPhone-6s-Silver.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-iPhone-6s-Space-Gray.png",
+    "to": "assets/images/devices/Apple-iPhone-6s-Space-Gray.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-watch-black.png",
+    "to": "assets/images/devices/Apple-watch-black.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-watch-blue.png",
+    "to": "assets/images/devices/Apple-watch-blue.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-watch-green.png",
+    "to": "assets/images/devices/Apple-watch-green.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-watch-red.png",
+    "to": "assets/images/devices/Apple-watch-red.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-watch-space-grey.png",
+    "to": "assets/images/devices/Apple-watch-space-grey.png"
+  },
+  {
+    "from": "assets/images/devices/Apple-watch-white.png",
+    "to": "assets/images/devices/Apple-watch-white.png"
   }
 ]

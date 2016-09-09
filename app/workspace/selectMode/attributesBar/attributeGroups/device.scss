@@ -1,0 +1,34 @@
+#attributesBar .attribute-group.device {
+  max-height: 400px;
+  .image-container {
+    height: 100px;
+    width: 100%;
+    background: #3e3e3e;
+    border: 1px solid #646464;
+    border-radius: 4px;
+    padding: 5px 8px;
+    text-align: center;
+    background: url('./../../../../../assets/images/image-background.png');
+    line-height: 90px;
+    position: relative;
+    cursor: pointer;
+    img {
+      max-height: 90px;
+      max-width: 100%;
+      vertical-align: middle;
+    }
+    .delete {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      cursor: pointer;
+      font-size: 30px;
+      line-height: 30px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+

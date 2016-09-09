@@ -11,6 +11,7 @@ import carouselattrs from './attributes/carousel'
 import btattrs from './attributes/button'
 import inputattrs from './attributes/input'
 import bgattrs from './attributes/background'
+import deviceattrs from './attributes/device'
 import _ from 'lodash'
 
 let attrs = {};
@@ -28,6 +29,7 @@ _.merge(attrs, carouselattrs);
 _.merge(attrs, btattrs);
 _.merge(attrs, inputattrs);
 _.merge(attrs, bgattrs);
+_.merge(attrs, deviceattrs);
 
 
 export default attrs;
