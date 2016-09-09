@@ -1,0 +1,19 @@
+.features-one-row-four-features {
+  background: #fff;
+  padding: 100px;
+}
+
+.wp-features {
+  &>.row {
+    &>div {
+      text-align: center;
+
+      .wp-icon {
+        font-size: 35px;
+        &:before {
+          width: 35px;
+        }
+      }
+    }
+  }
+}
