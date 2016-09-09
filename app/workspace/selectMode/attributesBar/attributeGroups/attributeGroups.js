@@ -18,6 +18,7 @@ import CheckboxAttributeGroup from './checkbox'
 import RadioAttributeGroup from './radio'
 import BackgroundAttributeGroup from './background'
 import DeviceAttributeGroup from './device'
+import RowAttributeGroup from './row'
 
 export default {
   AppearanceAttributeGroup,
@@ -39,5 +40,6 @@ export default {
   CheckboxAttributeGroup,
   RadioAttributeGroup,
   BackgroundAttributeGroup,
-  DeviceAttributeGroup
+  DeviceAttributeGroup,
+  RowAttributeGroup
 }

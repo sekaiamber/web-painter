@@ -27,7 +27,8 @@ const specialGroupmap = {
   selector: [groups.SelectorAttributeGroup],
   checkbox: [groups.CheckboxAttributeGroup],
   radio: [groups.RadioAttributeGroup],
-  device: [groups.DeviceAttributeGroup]
+  device: [groups.DeviceAttributeGroup],
+  row: [groups.RowAttributeGroup]
 }
 
 export default function (nodeName, specialGroupName) {
