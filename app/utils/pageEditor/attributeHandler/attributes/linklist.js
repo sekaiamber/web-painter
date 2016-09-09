@@ -17,6 +17,18 @@ export default {
       }
     }
   },
+  linkInline: {
+    set($dom, value) {
+      if (value) {
+        $dom.addClass('a-block');
+      } else {
+        $dom.removeClass('a-block');
+      }
+    },
+    get($dom) {
+      return $dom.hasClass('a-block');
+    }
+  },
   linkListData: {
     set($dom, value) {
       $dom.empty();

@@ -248,5 +248,11 @@
   {
     "from": "assets/images/devices/Apple-watch-white.png",
     "to": "assets/images/devices/Apple-watch-white.png"
+  },
+
+
+  {
+    "from": "assets/images/placeholder-user.png",
+    "to": "assets/images/placeholder-user.png"
   }
 ]

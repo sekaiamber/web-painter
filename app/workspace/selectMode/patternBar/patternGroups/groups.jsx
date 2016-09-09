@@ -4,6 +4,9 @@ import HeadersPatternGroup from './headers/group'
 import CarouselsPatternGroup from './carousels/group'
 import BlogPatternGroup from './blog/group'
 import DevicesPatternGroup from './devices/group'
+import FeaturesPatternGroup from './features/group'
+import TeamPatternGroup from './team/group'
+import FooterGroup from './footer/group'
 
 export default {
   StructurePatternGroup,
@@ -11,5 +14,8 @@ export default {
   HeadersPatternGroup,
   CarouselsPatternGroup,
   BlogPatternGroup,
-  DevicesPatternGroup
+  DevicesPatternGroup,
+  FeaturesPatternGroup,
+  TeamPatternGroup,
+  FooterGroup
 }

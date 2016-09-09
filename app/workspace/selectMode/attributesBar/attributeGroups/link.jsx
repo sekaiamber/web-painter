@@ -55,6 +55,12 @@ export default class LinkAttributeGroup extends BaseAttributeGroup{
               <Switch size="small" checked={this.props.link.target == '_blank'}  onChange={(checked) => this.handleChange('target', checked ? '_blank' : '')}/>
             </div>
           </div>
+          <div className="attribute">
+            <div className="name">Inline</div>
+            <div className="value">
+              <Switch size="small" checked={this.props.linkInline}  onChange={(checked) => this.props.onChange('linkInline', checked)}/>
+            </div>
+          </div>
         </div>
       );
     } else {
@@ -67,5 +73,5 @@ export default class LinkAttributeGroup extends BaseAttributeGroup{
   }
 }
 LinkAttributeGroup.attributeKeys = [
-  'link'
+  'link', 'linkInline'
 ]
