@@ -1,8 +1,10 @@
 # web-painter
 
+*Ver. pre-alpha*
+
 This is a WYSIWYG web page editor built by Electron.
 
-这个项目是我用来熟悉Electron的，也许会变成烂尾楼。。
+![web painter](http://assets.cleverious.com/web-painter.gif)
 
 ## 开发及部署
 
