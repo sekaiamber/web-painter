@@ -1,4 +1,5 @@
 let React = require('react');
+const crypto = require('crypto');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/carousels/carousel-heading-paragraph.html');
 require('./../../../../../../htmlTemplates/patterns/carousels/carousel-heading-paragraph.scss');
 import $ from 'jquery'
@@ -24,7 +25,9 @@ export default class CarouselHeadingParagraphPattern extends Pattern {
 }
 CarouselHeadingParagraphPattern.patternTag = 'carousel-heading-paragraph';
 CarouselHeadingParagraphPattern.attributeGroups = attributeGroups;
-CarouselHeadingParagraphPattern.plainHtmlText = htmlTemplate;
+CarouselHeadingParagraphPattern.plainHtmlText = function () {
+  return htmlTemplate.replace(/@id/g, crypto.createHash('md5').update(`${Date.now()}_${Math.random}`).digest("hex"));
+}
 CarouselHeadingParagraphPattern.domDidAdd = function ($dom) {
   $('.wp-carousel', $dom).carousel();
 }
