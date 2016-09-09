@@ -12,7 +12,11 @@ export default class PagePattern {
 
   // init
   initDom(patternReactComponentClass) {
-    let $pattern = $(patternReactComponentClass.plainHtmlText).addClass('pe-pattern');
+    let plainHtmlText = patternReactComponentClass.plainHtmlText;
+    if (typeof plainHtmlText == 'function') {
+      plainHtmlText = plainHtmlText();
+    }
+    let $pattern = $(plainHtmlText).addClass('pe-pattern');
     if (patternReactComponentClass.domDidAdd) {
       patternReactComponentClass.domDidAdd($pattern);
     }
