@@ -29,6 +29,7 @@ import CheckboxElement from './elements/checkbox'
 import RadioElement from './elements/radio'
 import LabelElement from './elements/label'
 import DeviceElement from './elements/device'
+import RowElement from './elements/row'
 
 export default [
   Head1Element,
@@ -61,5 +62,6 @@ export default [
   CheckboxElement,
   RadioElement,
   LabelElement,
-  DeviceElement
+  DeviceElement,
+  RowElement
 ]
