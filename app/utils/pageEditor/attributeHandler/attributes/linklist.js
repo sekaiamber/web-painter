@@ -6,7 +6,7 @@ export default {
       $dom.text(value.text);
       $dom.attr('wp-a-href', value.href);
       $dom.attr('target', value.target);
-      $dom.attr('wp-a-self-page', value.linkself);
+      $dom.attr('wp-a-self-page', value.linkself ? "" : undefined);
     },
     get($dom) {
       return {
