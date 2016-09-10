@@ -6,9 +6,13 @@ import PageEditor from './../utils/pageEditor/pageEditor'
 
 import $ from 'jquery'
 
+
 // jquery
 window.jQuery = $;
 
+// antd
+require('./index.scss');
+require('antd/dist/antd.css');
 // bootstrap
 require('bootstrap');
 require('bootstrap/dist/css/bootstrap.min.css');
@@ -27,8 +31,6 @@ window._zoom_ = 1;
 // Components
 let React = require('react');
 
-require('./index.scss');
-require('antd/dist/antd.css');
 
 $(document).ready(() => {
   render(<Framework />, document.getElementById("container"));
