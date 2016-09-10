@@ -62,6 +62,29 @@ export default class PagePiece {
         }
       }
     })
+    $piece.contextmenu((e) => {
+      if (window._mode_ == 'select') {
+        let $target = $(e.target);
+        if ($target.attr('wp-pattern')) {
+          // select pattern
+          let pagePatternIndex = parseInt($target.attr('wp-pattern-index'));
+          this.selectPattern(pagePatternIndex);
+          this.contextMenuPattern(pagePatternIndex);
+        } else {
+          // select element
+          this.selectElement(e);
+          this.contextMenuElement(e);
+        }
+        if ($target.attr('wp-no-bubble') != undefined) {
+          e.stopPropagation();
+        }
+      }
+      if (window._mode_ == 'element') {
+        // if (e.target == currentElementHoverElement) {
+        //   this.addElement(e.target);
+        // }
+      }
+    })
     
     return $piece;
   }
@@ -211,6 +234,10 @@ export default class PagePiece {
     exEventEmitter.emit('selectSomething', new ElementAttributeHandler(e, this));
   }
 
+  contextMenuElement(e) {
+    exEventEmitter.emit('contextMenuElement', e);
+  }
+
   // pattern control
 
   addPattern(patternReactComponent, index) {
@@ -283,6 +310,10 @@ export default class PagePiece {
     pagePattern.selected = true;
     this.updateRender();
     exEventEmitter.emit('selectSomething', new PatternAttributeHandler(pagePattern, this));
+  }
+
+  contextMenuPattern(index) {
+    exEventEmitter.emit('contextMenuPattern', index);
   }
 
   replacePatterns(patterns) {
