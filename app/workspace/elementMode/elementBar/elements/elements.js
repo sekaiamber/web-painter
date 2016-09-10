@@ -30,6 +30,7 @@ import RadioElement from './elements/radio'
 import LabelElement from './elements/label'
 import DeviceElement from './elements/device'
 import RowElement from './elements/row'
+import DivElement from './elements/div'
 
 export default [
   Head1Element,
@@ -63,5 +64,6 @@ export default [
   RadioElement,
   LabelElement,
   DeviceElement,
-  RowElement
+  RowElement,
+  DivElement
 ]

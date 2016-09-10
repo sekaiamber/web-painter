@@ -254,5 +254,9 @@
   {
     "from": "assets/images/placeholder-user.png",
     "to": "assets/images/placeholder-user.png"
+  },
+  {
+    "from": "assets/images/company.png",
+    "to": "assets/images/company.png"
   }
 ]

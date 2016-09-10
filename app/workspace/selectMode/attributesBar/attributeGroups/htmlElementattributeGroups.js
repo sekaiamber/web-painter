@@ -14,6 +14,7 @@ const basicGroupmap = {
   img: [groups.ImageAttributeGroup],
   blockquote: [groups.TypeAttributeGroup, groups.BlockquoteAttributeGroup, groups.ContentAttributeGroup, groups.AppearanceAttributeGroup],
   video: [groups.AppearanceAttributeGroup, groups.VideoAttributeGroup, groups.AppearanceAttributeGroup],
+  div: [groups.TypeAttributeGroup, groups.AppearanceAttributeGroup]
 }
 
 const specialGroupmap = {

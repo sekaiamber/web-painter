@@ -58,10 +58,19 @@ export default class TypeAttributeGroup extends BaseAttributeGroup{
             </RadioGroup>
           </div>
         </div>
+        <div className="attribute">
+          <div className="name">Color</div>
+          <div className="value">
+            <Input size="small"
+              value={this.props.color}
+              onChange={(e) => this.props.onChange('color', e.target.value)}
+            />
+          </div>
+        </div>
       </div>
     );
   }
 }
 TypeAttributeGroup.attributeKeys = [
-  'fontSize', 'lineHeight', 'textAlign'
+  'fontSize', 'lineHeight', 'textAlign', 'color'
 ]
