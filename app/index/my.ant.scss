@@ -1,5 +1,7 @@
 body#wp {
-
+  .ant-modal-wrap  {
+    z-index: 99999;
+  }
   .ant-input {
     background: #3e3e3e;
     color: #fff;

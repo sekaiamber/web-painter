@@ -5,7 +5,7 @@ const cssKeys = [
   'padding', 'margin', 'width', 'height',
   // type setting
   'fontSize', 'lineHeight', 'textAlign',
-  'top', 'left'
+  'top', 'left', 'color'
 ]
 
 cssKeys.map((key) => {
