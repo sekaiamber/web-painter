@@ -4,7 +4,7 @@
 
 This is a WYSIWYG web page editor built by Electron.
 
-![web painter](http://assets.cleverious.com/web-painter.gif)
+[点击进入项目首页](https://sekaiamber.github.io/web-painter/)
 
 ## 开发及部署
 
