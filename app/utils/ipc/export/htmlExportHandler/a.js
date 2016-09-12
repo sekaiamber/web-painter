@@ -15,7 +15,7 @@ export default {
     } else {
       // link to URL
       let href = $dom.attr('href');
-      if (!href.startsWith('http')) {
+      if (!href.startsWith('http') && !href.startsWith('#')) {
         $dom.attr('href', `http://${$dom.attr('href')}`)
       }
     }
