@@ -40,6 +40,7 @@ export default class AttributesBar extends React.Component{
       kvs = key;
       callback = value;
     }
+    callback = callback || (() => {});
     let data = this.state.data;
     Object.keys(kvs).map((k) => {
       data[k] = kvs[k];
@@ -49,7 +50,9 @@ export default class AttributesBar extends React.Component{
     }, () => {
       this.state.handler.setAttribute(kvs);
       this.state.handler.updateRender();
-    }, callback)
+      this.readAttributeFromTarget();
+      callback();
+    });
   }
   readAttributeFromTarget() {
     if (!this.state.handler) return;
