@@ -34,7 +34,7 @@ export default class RowAttributeGroup extends BaseAttributeGroup{
         </div>
         {this.props.colWidths.map((v, i) => 
         <div className="attribute" key={i}>
-          <div className="name">Width {i}</div>
+          <div className="name">Width {i + 1}</div>
           <div className="value">
             <Slider min={1} max={12} tipFormatter={(v) => `${v}/12`}
               value={v}

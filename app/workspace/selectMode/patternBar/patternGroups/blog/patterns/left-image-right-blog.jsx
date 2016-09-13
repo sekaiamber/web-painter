@@ -1,6 +1,5 @@
 let React = require('react');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/blog/left-image-right-blog.html');
-require('./../../../../../../htmlTemplates/patterns/blog/left-image-right-blog.scss');
 import $ from 'jquery'
 
 import Pattern from './../../pattern'

@@ -1,6 +1,7 @@
 let React = require('react');
 import groups from './../../attributesBar/attributeGroups/attributeGroups'
 require('./pattern.scss');
+require('./../../../../htmlTemplates/patterns/pattern.scss');
 
 export default class Pattern extends React.Component{
   constructor(props) {

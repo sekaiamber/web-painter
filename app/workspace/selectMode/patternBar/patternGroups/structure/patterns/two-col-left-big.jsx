@@ -1,6 +1,5 @@
 let React = require('react');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/structure/two-col-left-big.html');
-require('./../../../../../../htmlTemplates/patterns/structure/two-col-left-big.scss');
 
 import Pattern from './../../pattern'
 
