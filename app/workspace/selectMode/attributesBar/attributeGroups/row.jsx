@@ -1,4 +1,4 @@
-import { Input, Radio, Select, Button, Switch } from 'antd';
+import { Input, Radio, Select, Button, Switch, Slider } from 'antd';
 const Option = Select.Option;
 import BaseAttributeGroup from './baseAttributeGroup'
 const BaseAttributeGroupName = BaseAttributeGroup.BaseAttributeGroupName;
@@ -14,6 +14,11 @@ export default class RowAttributeGroup extends BaseAttributeGroup{
   }
   componentWillUnmount() {
   }
+  handleChangeWidth(index, width) {
+    let widths = this.props.colWidths;
+    widths[index] = width;
+    this.props.onChange('colWidths', widths);
+  }
   render() {
     return (
       <div className={"attribute-group" + (this.state.slide ? " slide" : "")} >
@@ -21,19 +26,30 @@ export default class RowAttributeGroup extends BaseAttributeGroup{
         <div className="attribute">
           <div className="name">Count</div>
           <div className="value">
-            <Select size="small" value={this.props.rowCount} onChange={(v) => this.props.onChange('rowCount', parseInt(v))} >
-              <Option value="1" key="1">1</Option>
-              <Option value="2" key="2">2</Option>
-              <Option value="3" key="3">3</Option>
-              <Option value="4" key="4">4</Option>
-              <Option value="6" key="5">6</Option>
-            </Select>
+            <Button size="small" type="primary" shape="circle" icon="plus"
+              onClick={() => this.props.onChange('rowCount', this.props.rowCount + 1)}/>
+            <Button size="small" type="primary" shape="circle" icon="minus"
+              onClick={() => this.props.onChange('rowCount', this.props.rowCount - 1)}/>
           </div>
         </div>
+        {this.props.colWidths.map((v, i) => 
+        <div className="attribute" key={i}>
+          <div className="name">Width {i}</div>
+          <div className="value">
+            <Slider min={1} max={12} tipFormatter={(v) => `${v}/12`}
+              value={v}
+              onChange={(value) => this.handleChangeWidth(i, parseInt(value))}
+            />
+          </div>
+        </div>
+        )}
       </div>
     );
   }
 }
 RowAttributeGroup.attributeKeys = [
-  'rowCount'
+  'rowCount', 'colWidths'
 ]
+RowAttributeGroup.defaultProps = {
+  colWidths: []
+}
