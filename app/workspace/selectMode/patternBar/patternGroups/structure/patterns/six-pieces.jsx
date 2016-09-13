@@ -1,6 +1,5 @@
 let React = require('react');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/structure/six-pieces.html');
-require('./../../../../../../htmlTemplates/patterns/structure/six-pieces.scss');
 
 import Pattern from './../../pattern'
 

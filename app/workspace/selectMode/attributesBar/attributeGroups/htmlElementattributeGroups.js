@@ -19,7 +19,6 @@ const basicGroupmap = {
 
 const specialGroupmap = {
   linkList: [groups.LinkListDataAttributeGroup],
-  twoColStructure: [groups.TwoColStructureAttributeGroup, groups.AppearanceAttributeGroup],
   icon: [groups.IconAttributeGroup],
   carousel: [groups.CarouselAttributeGroup],
   button: [groups.ButtonAttributeGroup],
