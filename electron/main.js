@@ -14,12 +14,10 @@ function createWindow () {
   let mainWindow = exGlobal.getBrowserWindow('main');
 
   // get URL
-  if (!process.argv[2]) {
-    throw new Error('invalid entry url');
-  }
+  let env = process.argv[2] || 'DEPLOY'
 
   // and load the index.html of the app.
-  mainWindow.loadURL(args[process.argv[2]]);
+  mainWindow.loadURL(env);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
