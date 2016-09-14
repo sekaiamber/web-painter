@@ -14,7 +14,8 @@ function createWindow () {
   let mainWindow = exGlobal.getBrowserWindow('main');
 
   // get URL
-  let env = process.argv[2] || 'DEPLOY'
+  let env = process.argv[2] || 'DEPLOY';
+  env = args[env];
 
   // and load the index.html of the app.
   mainWindow.loadURL(env);
