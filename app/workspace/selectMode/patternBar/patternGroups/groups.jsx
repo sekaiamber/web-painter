@@ -6,7 +6,7 @@ import BlogPatternGroup from './blog/group'
 import DevicesPatternGroup from './devices/group'
 import FeaturesPatternGroup from './features/group'
 import TeamPatternGroup from './team/group'
-import FooterGroup from './footer/group'
+import FooterPatternGroup from './footer/group'
 
 export default {
   StructurePatternGroup,
@@ -17,5 +17,5 @@ export default {
   DevicesPatternGroup,
   FeaturesPatternGroup,
   TeamPatternGroup,
-  FooterGroup
+  FooterPatternGroup
 }
