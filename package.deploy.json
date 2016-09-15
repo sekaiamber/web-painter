@@ -1,0 +1,27 @@
+{
+  "name": "web-painter",
+  "productName": "Web Painter",
+  "version": "0.0.1",
+  "description": "This is a WYSIWYG web page editor built by Electron.",
+  "main": "./start.bundle.js",
+  "scripts": {
+    "start": "electron ./start.bundle.js",
+    "dist:darwin": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ DEBUG=electron-download,extract-zip electron-packager . --platform=darwin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sekaiamber/web-painter.git"
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "author": "sekaiamber",
+  "license": "MIT and GPL (version 2 or later) Licenses",
+  "bugs": {
+    "url": "https://github.com/sekaiamber/web-painter/issues"
+  },
+  "homepage": "https://github.com/sekaiamber/web-painter#readme",
+  "devDependencies": {
+    "electron": "1.3.6"
+  }
+}
