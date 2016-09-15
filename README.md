@@ -53,27 +53,7 @@ $ npm run dev-file
 $ npm run dev-app
 ```
 
-### 部署环境
-
-1. 同理，首先要对js文件进行优化打包。
-
-```bash
-$ npm run deploy-file
-```
-
-2. 然后需要将Electron主线程的程序打包
-
-```bash
-$ npm run deploy-electron
-```
-
-3. 然后就可以启动Electron啦
-
-```bash
-$ npm run deploy-app
-```
-
-### 打包APP
+### 部署环境及打包APP
 
 1. 清理之前的数据
 
@@ -85,7 +65,7 @@ $ rm -rf dist
 
 ```bash
 $ npm run deploy-file
-$ npm run deploy-electron
+$ npm run deploy-app
 ```
 
 3. 进入dist目录，并安装依赖

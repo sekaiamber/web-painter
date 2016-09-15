@@ -8,9 +8,8 @@
     "dev-app": "electron ./electron/start.dev.js",
     "dev-file": "webpack-dev-server --progress --colors --display-error-details --inline --hot --content-base root/build --config webpack/webpack.dev.config.js",
     "dev-assets": "http-server ./ -p 8889",
-    "deploy-app": "electron ./dist/start.bundle.js",
     "deploy-file": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js",
-    "deploy-electron": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.electron.config.js"
+    "deploy-app": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.electron.config.js"
   },
   "repository": {
     "type": "git",

@@ -9,6 +9,8 @@ const bundleCss = require('./../../../htmlTemplates/export/bundle.css.wpexport')
 
 import presetAssets from './../../../workspace/utils/presetAssets'
 
+const config = require('wpconfig')
+
 const cleanAttrs = [
   // global
   'wp-no-select', 'wp-raw', 'wp-element', 'wp-pattern', 'wp-pattern-index',
@@ -56,7 +58,7 @@ export default class ExportProject {
       file['copy'] = true;
       return {
         copy: true,
-        from: file.from,
+        from: config.appPath + '/' + file.from,
         filename: file.to
       };
     }))
@@ -125,7 +127,7 @@ export default class ExportProject {
       }
       switch (type) {
         case 'preset':
-          asset.data = nativeImage.createFromPath(presetAssets[name]).toPNG();
+          asset.data = nativeImage.createFromPath(config.appPath + '/' + presetAssets[name]).toPNG();
           break;
         case 'project':
           asset.data = nativeImage.createFromDataURL(this.project.assets.data[name].data).toPNG();

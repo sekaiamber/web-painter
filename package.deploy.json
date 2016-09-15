@@ -6,7 +6,7 @@
   "main": "./start.bundle.js",
   "scripts": {
     "start": "electron ./start.bundle.js",
-    "dist:darwin": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ DEBUG=electron-download,extract-zip electron-packager . --platform=darwin"
+    "dist:darwin": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ DEBUG=electron-download,extract-zip electron-packager . --platform=darwin --ignore=node_modules"
   },
   "repository": {
     "type": "git",
