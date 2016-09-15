@@ -112,6 +112,8 @@ dist
 └── […other bundled files, like index.html]
 ```
 
+更多详细信息请参照`docs/module_bundle_package.md`文件。
+
 ### 推荐使用cnpm
 
 ## LICENSE
