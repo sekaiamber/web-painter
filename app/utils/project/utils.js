@@ -2,7 +2,6 @@ import PagePattern from './../pageEditor/pagePattern'
 import patternGroups from './../../workspace/selectMode/patternBar/patternGroups/groups'
 
 export function getPatternFrom$dom($pattern, pagePiece, index) {
-  // console.log();
   let wpg = $pattern.attr('wp-pattern').split('/');
   let wp = wpg[1];
   wpg = wpg[0];
