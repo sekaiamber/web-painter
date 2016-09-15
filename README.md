@@ -53,7 +53,7 @@ $ npm run dev-file
 $ npm run dev-app
 ```
 
-### 部署
+### 部署环境
 
 1. 同理，首先要对js文件进行优化打包。
 
@@ -61,14 +61,58 @@ $ npm run dev-app
 $ npm run deploy-file
 ```
 
-2. 然后就可以启动Electron啦
+2. 然后需要将Electron主线程的程序打包
+
+```bash
+$ npm run deploy-electron
+```
+
+3. 然后就可以启动Electron啦
 
 ```bash
 $ npm run deploy-app
 ```
 
+### 打包APP
 
-推荐使用cnpm
+1. 清理之前的数据
+
+```bash
+$ rm -rf dist
+```
+
+2. 执行部署环境
+
+```bash
+$ npm run deploy-file
+$ npm run deploy-electron
+```
+
+3. 进入dist目录，并安装依赖
+
+```bash
+$ cd dist/
+$ npm install
+```
+
+4. 打包APP（选择相应的系统，请看`package.deploy.json`，这个文件将在第2步中被复制到`dist/package.json`）
+
+这里以mac系统为例
+```bash
+$ npm run dist:darwin
+```
+
+5. 在相应的目录下获得最终APP，以Mac为例
+
+```bash
+dist
+├── Web Painter-darwin-x64
+    ├── Web Painter.app           # You can rename it like normal app
+    └── […other files, like LICENSE…]
+└── […other bundled files, like index.html]
+```
+
+### 推荐使用cnpm
 
 ## LICENSE
 

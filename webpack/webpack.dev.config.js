@@ -6,7 +6,7 @@ var routes = require('./routes');
 
 var config = {
   context: path.join(__dirname, '..', '/app'),
-  target: "electron",
+  target: "electron-renderer",
   entry: {},
   output: {
     path: path.join(__dirname, '..', '/build'),
@@ -20,9 +20,6 @@ var config = {
     }),
     new ExtractTextPlugin("[name].css")
   ],
-  // node: {
-  //   fs: "empty"
-  // },
   module: {
     loaders: [
       {

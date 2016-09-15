@@ -5,11 +5,12 @@
   "description": "This is a WYSIWYG web page editor built by Electron.",
   "main": "./electron/main.js",
   "scripts": {
-    "dev-app": "electron ./electron/main.js DEV",
+    "dev-app": "electron ./electron/start.dev.js",
     "dev-file": "webpack-dev-server --progress --colors --display-error-details --inline --hot --content-base root/build --config webpack/webpack.dev.config.js",
     "dev-assets": "http-server ./ -p 8889",
-    "deploy-app": "electron ./electron/main.js DEPLOY",
-    "deploy-file": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js"
+    "deploy-app": "electron ./dist/start.bundle.js",
+    "deploy-file": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.config.js",
+    "deploy-electron": "NODE_ENV=production webpack -p --display-error-details --config webpack/webpack.deploy.electron.config.js"
   },
   "repository": {
     "type": "git",
