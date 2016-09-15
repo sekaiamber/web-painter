@@ -93,7 +93,10 @@ var config = {
   },
   resolve: {
     // 設定後只需要寫 require('file') 而不用寫成 require('file.jsx')
-    extensions: ['', '.js', '.json', '.jsx']
+    extensions: ['', '.js', '.json', '.jsx'],
+    alias: {
+      wpconfig: path.join(__dirname, 'config', 'deploy')
+    }
   }
 };
 

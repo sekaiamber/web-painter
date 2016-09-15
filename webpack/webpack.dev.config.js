@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var routes = require('./routes');
 
 var config = {
@@ -18,7 +19,10 @@ var config = {
       __PRODUCTION__: false,
       __STAGE__: false
     }),
-    new ExtractTextPlugin("[name].css")
+    new ExtractTextPlugin("[name].css"),
+    new CopyWebpackPlugin([
+      { from: '../assets', to: 'assets' },
+    ])
   ],
   module: {
     loaders: [
@@ -61,12 +65,14 @@ var config = {
   },
   resolve: {
     extensions: ['', '.js', '.json', '.jsx'],
-    alias: {}
+    alias: {
+      wpconfig: path.join(__dirname, 'config', 'dev')
+    }
   },
   devtool: 'eval-source-map',
-  // jshint: {
-  //   "esnext": true
-  // },
+  node: {
+    __dirname: false,
+  },
   devServer: {
     host: '0.0.0.0',
     port: 8888,
