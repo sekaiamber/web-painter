@@ -6,6 +6,7 @@ export default {
   handler: function (dom, ep) {
     let $dom = $(dom);
     $dom.attr('href', $dom.attr('wp-a-href'));
+    if (!$dom.attr('href')) return;
     // link to project page
     if ($dom.attr('wp-a-self-page') == "") {
       let page = pageEditor.project.pages.find((p) => p.name == $dom.attr('wp-a-href'));
@@ -14,7 +15,7 @@ export default {
       }
     } else {
       // link to URL
-      let href = $dom.attr('href');
+      let href = $dom.attr('href') || "";
       if (!href.startsWith('http') && !href.startsWith('#')) {
         $dom.attr('href', `http://${$dom.attr('href')}`)
       }
