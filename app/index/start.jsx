@@ -6,7 +6,6 @@ import PageEditor from './../utils/pageEditor/pageEditor'
 
 import $ from 'jquery'
 
-
 // jquery
 window.jQuery = $;
 

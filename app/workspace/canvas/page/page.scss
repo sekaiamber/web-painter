@@ -1,7 +1,15 @@
+#pageIFrameContainer {
+  iframe {
+    width: 100%;
+    transform-origin: top left;
+  }
+}
+
 #page {
   // box-shadow: 0 0 16px #bfbfbf;
   // 十分重要，关系到浮动元素的定位
   position: relative;
+  height: auto;
 
   // 下面都是些标记
   *[wp-no-select] {

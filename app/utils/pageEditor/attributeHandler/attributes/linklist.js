@@ -34,7 +34,7 @@ export default {
       $dom.empty();
       for (var i = 0; i < value.length; i++) {
         var link = value[i];
-        $dom.append(`<a href="#" wp-a-href="${link.href}" ${link.linkself ? 'wp-a-self-page' : ''} target="${link.target}" wp-no-select>${link.text}</a>`);
+        $dom.append(`<a wp-a-href="${link.href}" ${link.linkself ? 'wp-a-self-page' : ''} target="${link.target}" wp-no-select>${link.text}</a>`);
       }
     },
     get($dom) {

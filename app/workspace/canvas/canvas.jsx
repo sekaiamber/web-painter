@@ -10,10 +10,10 @@ export default class Canvas extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      screenWidth: 1440,
-      screenHeight: 900,
-      pageWidth: 1440,
-      pageHeight: 900,
+      screenWidth: pageEditor.pageInfo.screenWidth,
+      screenHeight: pageEditor.pageInfo.screenHeight,
+      pageWidth: pageEditor.pageInfo.pageWidth,
+      pageHeight: pageEditor.pageInfo.pageHeight,
       zoom: 1
     }
 
@@ -22,11 +22,16 @@ export default class Canvas extends React.Component{
     this.handleClickEmptySpace = this.handleClickEmptySpace.bind(this);
   }
   componentDidMount() {
-    exEventEmitter.on('zoomChange', (zoom, init) => {
+    exEventEmitter.on('zoomChange', (zoom) => {
       this.setState({
         zoom: zoom
       })
     });
+    exEventEmitter.on('pageHeightDidChange', (height) => {
+      this.setState({
+        pageHeight: height
+      })
+    })
     exEventEmitter.on('uiready', () => {
       let $canvas = $(this.canvas);
       let $pageContainer = $(this.pageContainer);
@@ -61,15 +66,16 @@ export default class Canvas extends React.Component{
   render() {
     let windowStyle = {
       width: this.state.screenWidth * this.state.zoom,
-      paddingTop: `${Math.round(this.state.pageHeight / 2)}px`,
-      paddingRight: `${Math.round(this.state.pageWidth / 2)}px`,
-      paddingBottom: `${Math.round(this.state.pageHeight / 2)}px`,
-      paddingLeft: `${Math.round(this.state.pageWidth / 2)}px`,
+      height: this.state.pageHeight * this.state.zoom,
+      paddingTop: `${Math.round(this.state.screenHeight / 2)}px`,
+      paddingRight: `${Math.round(this.state.screenWidth / 2)}px`,
+      paddingBottom: `${Math.round(this.state.screenHeight / 2)}px`,
+      paddingLeft: `${Math.round(this.state.screenWidth / 2)}px`,
     }
     return (
       <div id="canvas" ref={(c) => this.canvas = c }>
         <div className="page-container" ref={(c) => this.pageContainer = c } style={windowStyle} onClick={this.handleClickEmptySpace}>
-          <Page width={this.state.pageWidth} zoom={this.state.zoom}/>
+          <Page width={this.state.pageWidth} />
           <Pieces width={this.state.pageWidth} zoom={this.state.zoom} top={windowStyle.paddingTop} left={windowStyle.paddingLeft}/>
         </div>
       </div>

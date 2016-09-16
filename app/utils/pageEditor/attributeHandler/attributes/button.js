@@ -6,7 +6,7 @@ export default {
       let $as = $('a', $dom);
       if ($as.length < value) {
         for (var i = 0; i < value - $as.length; i++) {
-          $dom.append('<a href="#" class="btn btn-default" role="button" wp-no-select><span>Button</span></a>')
+          $dom.append('<a class="btn btn-default" role="button" wp-no-select><span>Button</span></a>')
         }
       }
       if ($as.length > value) {

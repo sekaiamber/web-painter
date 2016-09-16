@@ -2,9 +2,21 @@ import $ from 'jquery'
 import PagePiece from './pagePiece'
 import Project from './../project/project'
 
+var ResizeSensor = require('css-element-queries/src/ResizeSensor');
+
+class PageInfo {
+  constructor() {
+    this.screenWidth = 1440;
+    this.screenHeight = 900;
+    this.pageHeight = this.screenHeight;
+    this.pageWidth = this.screenWidth;
+  }
+}
+
 export default class PageEditor {
   constructor() {
     this.$page = null;
+    this.$iframe = null;
     this.pieces = [];
     this.init();
   }
@@ -13,6 +25,7 @@ export default class PageEditor {
   init() {
     this.initEvent();
     this.initProject();
+    this.initPage();
   }
 
   initEvent() {
@@ -32,15 +45,37 @@ export default class PageEditor {
     this.project = new Project(this);
   }
 
-  updatePageDom(page) {
-    this.$page = $(page);
+  initPage() {
+    this.pageInfo = new PageInfo();
   }
 
-  initPageDom() {
-    for (var i = 0; i < this.pieces.length; i++) {
-      var piece = this.pieces[i];
-      piece.updatePageDom(this.$page);
+  updatePageDom(pageContainer) {
+    // this.$page = $(pageContainer);
+    if (!this.$page) {
+      let $container = $(pageContainer);
+      let $styles = $(document).find('head link[rel=stylesheet], head style').clone();
+      let $iframe = $('<iframe frameborder="0" scrolling="no"></iframe>');
+      $container.append($iframe);
+      $iframe.contents().find("head").append($styles);
+      $iframe.contents().find("html").css('height', 'auto')
+      this.$iframe = $iframe;
+      let $page = $('<div id="page"></div>');
+      $iframe.contents().find("body").append($page);
+      this.$page = $page;
+      exEventEmitter.on('zoomChange', (zoom) => {
+        this.$iframe.css('transform', `scale(${zoom})`);
+      });
+      ResizeSensor(this.$page, () => {
+        let height = this.$page.outerHeight();
+        this.$iframe.css('height', height);
+        this.pageInfo.pageHeight = height;
+        exEventEmitter.emit('pageHeightDidChange', height);
+        for (var i = 0; i < this.pieces.length; i++) {
+          this.pieces[i].updateRender();
+        }
+      })
     }
+
   }
 
   // piece control

@@ -8,18 +8,16 @@ export default class Page extends React.Component{
     this.state = {}
   }
   componentDidMount() {
-    pageEditor.initPageDom();
   }
   componentWillUnmount(){
   }
   render() {
     let style = {
       width: this.props.width,
-      background: this.props.background,
-      zoom: this.props.zoom
+      background: this.props.background
     }
     return (
-      <div id="page" style={style} ref={(c) => pageEditor.updatePageDom(c) }>
+      <div id="pageIFrameContainer" style={style} ref={(c) => pageEditor.updatePageDom(c) }>
       </div>
     );
   }
@@ -27,5 +25,4 @@ export default class Page extends React.Component{
 Page.defaultProps = {
   width: 1440,
   background: 'transparent',
-  zoom: 1
 }
