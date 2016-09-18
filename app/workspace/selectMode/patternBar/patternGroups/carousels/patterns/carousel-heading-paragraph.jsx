@@ -1,7 +1,6 @@
 let React = require('react');
 const crypto = require('crypto');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/carousels/carousel-heading-paragraph.html');
-require('./../../../../../../htmlTemplates/patterns/carousels/carousel-heading-paragraph.scss');
 import $ from 'jquery'
 
 import Pattern from './../../pattern'
@@ -29,5 +28,5 @@ CarouselHeadingParagraphPattern.plainHtmlText = function () {
   return htmlTemplate.replace(/@id/g, crypto.createHash('md5').update(`${Date.now()}_${Math.random}`).digest("hex"));
 }
 CarouselHeadingParagraphPattern.domDidAdd = function ($dom) {
-  $('.wp-carousel', $dom).carousel();
+  $('.carousel', $dom).carousel();
 }

@@ -2,20 +2,52 @@ import $ from 'jquery'
 import imageattrs from './image'
 import attrattrs from './attr'
 
+const colMap = {
+  1: 4,
+  2: 4,
+  3: 4,
+  4: 3,
+  5: 2,
+  6: 2
+}
+
+let carouselWithThumbnails = {
+  set($dom, value) {
+    $('.carousel-thumbnails', $dom).remove();
+    if (value) {
+      let id = $('.carousel', $dom).attr('id');
+      let $tbs = $('<div class="carousel-thumbnails row"></div>');
+      let $imgs = $('.item img', $dom).clone();
+      $tbs.append($imgs);
+      let colWithd = $imgs.length > 6 ? 2 : colMap[$imgs.length];
+
+      $('img', $tbs).wrap("<div class='carousel-thumbnail col-md-" + colWithd + "' wp-no-select data-target='#" + id + "'></div>");
+      $('.carousel-thumbnail', $tbs).each(function(i) {
+        $(this).attr('data-slide-to', i);
+      })
+      $dom.append($tbs);
+    }
+  },
+  get($dom) {
+    let $tbs = $('.carousel-thumbnails', $dom)
+    return $tbs.length > 0;
+  }
+}
+
 export default {
   carouselImages: {
     set($dom, value) {
-      let id = $dom.attr('id')
-      let $inner = $('.carousel-inner', $dom);
-      let $indicators = $('.carousel-indicators', $dom);
-      let $imgs = $('.item img', $dom);
+      let $carousel = $('.carousel', $dom);
+      let id = $carousel.attr('id');
+      let $inner = $('.carousel-inner', $carousel);
+      let $indicators = $('.carousel-indicators', $carousel);
+      let $imgs = $('.item img', $carousel);
       if (value.length > $imgs.length) {
         for (var i = 0; i < value.length - $imgs.length; i++) {
           $inner.append('<div class="item" wp-no-select><img wp-no-select><div class="carousel-caption"><p>一些文字说明</p></div></div>');
           $indicators.append('<li data-target="#' + id + '" data-slide-to="' + ($imgs.length + i) + '" wp-no-select></li>')
         }
-      }
-      if (value.length < $imgs.length) {
+      } else if (value.length < $imgs.length) {
         $('.item:gt(' + (value.length - 1) + ')', $inner).remove();
         $('li:gt(' + (value.length - 1) + ')', $indicators).remove();
       }
@@ -25,7 +57,12 @@ export default {
         imageattrs.imageTarget.set($e, value[i].target);
         attrattrs.src.set($e, value[i].src);
       });
-      $dom.carousel();
+      $('.item', $inner).removeClass('active');
+      $('li', $indicators).removeClass('active');
+      $('.item:eq(0)', $inner).addClass('active');
+      $('li:eq(0)', $indicators).addClass('active');
+      $carousel.carousel();
+      carouselWithThumbnails.set($dom, carouselWithThumbnails.get($dom));
     },
     get($dom) {
       let ret = [];
@@ -40,5 +77,6 @@ export default {
       })
       return ret;
     }
-  }
+  },
+  carouselWithThumbnails: carouselWithThumbnails
 }
