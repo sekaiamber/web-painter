@@ -63,10 +63,18 @@ export default class CarouselAttributeGroup extends BaseAttributeGroup{
     return (
       <div className={"attribute-group carousel" + (this.state.slide ? " slide" : "")}>
         <BaseAttributeGroupName name="Slides" slide={this.state.slide} onTriggerSlide={this.handleTriggerSlide}/>
+        <div className="attribute">
+          <div className="name">Thumbs</div>
+          <div className="value">
+            <Switch size="small" checked={this.props.carouselWithThumbnails}  onChange={(checked) => this.props.onChange('carouselWithThumbnails', checked)}/>
+          </div>
+        </div>
         <div className="image-container">
-        {this.props.carouselImages.map((d, i) => 
+        {this.props.carouselImages.map((d, i, imgs) => 
           <div key={i} className="aimage">
+            {imgs.length > 1 ? 
             <div className="iconfont element delete" onClick={(e) => this.deleteImage(i)}></div>
+            : undefined}
             <img src={d.src} onClick={(e) => this.openModal(i)}/>
           </div>
         )}
@@ -82,7 +90,7 @@ export default class CarouselAttributeGroup extends BaseAttributeGroup{
   }
 }
 CarouselAttributeGroup.attributeKeys = [
-  'carouselImages'
+  'carouselImages', 'carouselWithThumbnails'
 ]
 CarouselAttributeGroup.defaultProps = {
   carouselImages: []

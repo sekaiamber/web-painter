@@ -1,6 +1,7 @@
 let React = require('react');
 
 require('./element.scss');
+require('./../../../../htmlTemplates/elements/elements.scss');
 
 export default class Element extends React.Component{
   constructor(props) {
