@@ -1,6 +1,5 @@
 let React = require('react');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/headers/image-heading-paragraph.html');
-require('./../../../../../../htmlTemplates/patterns/headers/image-heading-paragraph.scss');
 
 import Pattern from './../../pattern'
 
