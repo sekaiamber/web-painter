@@ -1,6 +1,5 @@
 let React = require('react');
 let htmlTemplate = require('./../../../../../../htmlTemplates/patterns/features/one-row-four-features.html');
-require('./../../../../../../htmlTemplates/patterns/features/one-row-four-features.scss');
 import $ from 'jquery'
 
 import Pattern from './../../pattern'

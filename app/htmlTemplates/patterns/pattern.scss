@@ -20,3 +20,18 @@
   }
 
 }
+
+.wp-features {
+  &>.row {
+    &>div {
+      text-align: center;
+
+      .wp-icon {
+        font-size: 35px;
+        &:before {
+          width: 35px;
+        }
+      }
+    }
+  }
+}
