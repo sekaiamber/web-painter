@@ -1,7 +1,22 @@
 .wp-pattern {
   background: #fff;
   padding: 100px;
+  &.wp-pattern-full-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.wp-pattern-full-height {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.wp-pattern-full {
+    padding: 0;
+  }
+
   .wp-pattern-structure-top {
     margin-bottom: 60px;
   }
+
 }
