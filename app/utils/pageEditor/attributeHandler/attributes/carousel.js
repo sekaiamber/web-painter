@@ -21,7 +21,7 @@ let carouselWithThumbnails = {
       $tbs.append($imgs);
       let colWithd = $imgs.length > 6 ? 2 : colMap[$imgs.length];
 
-      $('img', $tbs).wrap("<div class='carousel-thumbnail col-md-" + colWithd + "' wp-no-select data-target='#" + id + "'></div>");
+      $('img', $tbs).wrap("<div class='carousel-thumbnail col-sm-" + colWithd + "' wp-no-select data-target='#" + id + "'></div>");
       $('.carousel-thumbnail', $tbs).each(function(i) {
         $(this).attr('data-slide-to', i);
       })
