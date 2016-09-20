@@ -18,6 +18,7 @@ import RadioAttributeGroup from './radio'
 import BackgroundAttributeGroup from './background'
 import DeviceAttributeGroup from './device'
 import RowAttributeGroup from './row'
+import PanelAttributeGroup from './panel'
 
 export default {
   AppearanceAttributeGroup,
@@ -39,5 +40,6 @@ export default {
   RadioAttributeGroup,
   BackgroundAttributeGroup,
   DeviceAttributeGroup,
-  RowAttributeGroup
+  RowAttributeGroup,
+  PanelAttributeGroup
 }

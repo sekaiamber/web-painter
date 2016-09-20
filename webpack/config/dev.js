@@ -1,3 +1,4 @@
 module.exports = {
-  appPath: '.'
+  appPath: '.',
+  assetsPrefix: 'http://localhost:8888/'
 }

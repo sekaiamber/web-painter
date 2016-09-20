@@ -12,6 +12,7 @@ import inputattrs from './attributes/input'
 import bgattrs from './attributes/background'
 import deviceattrs from './attributes/device'
 import rowattrs from './attributes/row'
+import panelattrs from './attributes/panel'
 import _ from 'lodash'
 
 let attrs = {};
@@ -30,6 +31,7 @@ _.merge(attrs, inputattrs);
 _.merge(attrs, bgattrs);
 _.merge(attrs, deviceattrs);
 _.merge(attrs, rowattrs);
+_.merge(attrs, panelattrs);
 
 
 export default attrs;
