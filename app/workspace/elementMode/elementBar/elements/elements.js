@@ -31,6 +31,7 @@ import LabelElement from './elements/label'
 import DeviceElement from './elements/device'
 import RowElement from './elements/row'
 import DivElement from './elements/div'
+import PanelElement from './elements/panel'
 
 export default [
   Head1Element,
@@ -65,5 +66,6 @@ export default [
   LabelElement,
   DeviceElement,
   RowElement,
-  DivElement
+  DivElement,
+  PanelElement
 ]

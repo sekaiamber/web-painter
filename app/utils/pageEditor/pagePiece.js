@@ -6,10 +6,11 @@ require('./pagePiece.scss');
 
 // public vars
 
-let currentElementHoverElement = null;
-let currentElementHoverType = '';
-let currentElementHoverPosition = '';
-let currentSelectHoverElement = null;
+let elementMode_currentHoverElement = null;
+let elementMode_currentHoverType = '';
+let elementMode_currentHoverPosition = '';
+let selectMode_currentHoverElement = null;
+let selectMode_currentSelectEvent = null;
 
 
 export default class PagePiece {
@@ -57,7 +58,7 @@ export default class PagePiece {
         }
       }
       if (window._mode_ == 'element') {
-        if (e.target == currentElementHoverElement) {
+        if (e.target == elementMode_currentHoverElement) {
           this.addElement(e.target);
         }
       }
@@ -80,7 +81,7 @@ export default class PagePiece {
         }
       }
       if (window._mode_ == 'element') {
-        // if (e.target == currentElementHoverElement) {
+        // if (e.target == elementMode_currentHoverElement) {
         //   this.addElement(e.target);
         // }
       }
@@ -105,8 +106,8 @@ export default class PagePiece {
         window._mode_ == 'select'        // select模式下hover非piece本身也非当前选中元素
         && e.target != e.currentTarget
       ) {
-        if (currentSelectHoverElement == e.target) return;
-        currentSelectHoverElement = e.target;
+        if (selectMode_currentHoverElement == e.target) return;
+        selectMode_currentHoverElement = e.target;
         let p1 = $piece.offset();
         let p2 = $target.offset();
         exEventEmitter.emit('updateSelectModeHoverElement',
@@ -124,8 +125,8 @@ export default class PagePiece {
         let p1 = $piece.offset();
         let p2 = $target.offset();
         if ($target.attr('wp-raw') == "") {
-          if (currentElementHoverElement == e.target) return;
-          currentElementHoverElement = e.target;
+          if (elementMode_currentHoverElement == e.target) return;
+          elementMode_currentHoverElement = e.target;
           // replace
           exEventEmitter.emit('updateElementModeHoverElement',
             'replace',
@@ -139,8 +140,8 @@ export default class PagePiece {
           // insert
           let realHalfHeight = $target.outerHeight() * window._zoom_ / 2;
           let position = realHalfHeight + ($target[0].clientHeight == 0 ? $target[0].offsetTop : 0) > e.offsetY ? "top" : "bottom";
-          if (currentElementHoverElement == e.target && currentElementHoverPosition == position) return;
-          currentElementHoverElement = e.target;
+          if (elementMode_currentHoverElement == e.target && elementMode_currentHoverPosition == position) return;
+          elementMode_currentHoverElement = e.target;
           exEventEmitter.emit('updateElementModeHoverElement',
             'insert',
             this.component.tag,
@@ -165,16 +166,17 @@ export default class PagePiece {
         var pattern = this.patterns[i];
         pattern.selected = false;
       };
+      selectMode_currentSelectEvent = null;
       this.updateRender();
     });
     exEventEmitter.on('cancelHoverElement', () => {
-      currentElementHoverElement = null;
-      currentElementHoverType = '';
-      currentElementHoverPosition = '';
+      elementMode_currentHoverElement = null;
+      elementMode_currentHoverType = '';
+      elementMode_currentHoverPosition = '';
     });
     exEventEmitter.on('updateElementModeHoverElement', (type, tag, left, top, width, height, position) => {
-      currentElementHoverType = type;
-      currentElementHoverPosition = position;
+      elementMode_currentHoverType = type;
+      elementMode_currentHoverPosition = position;
     });
   }
 
@@ -183,15 +185,15 @@ export default class PagePiece {
     let elementComponent = this.pageEditor.currentSelectComponent;
     let $target = $(target);
     let $element = $(elementComponent.getPlainHtmlText());
-    if (currentElementHoverType == 'replace') {
+    if (elementMode_currentHoverType == 'replace') {
       // replace
       $target.after($element);
       $target.detach();
-    } else if (currentElementHoverType == 'insert') {
+    } else if (elementMode_currentHoverType == 'insert') {
       // insert
-      if (currentElementHoverPosition == 'top') {
+      if (elementMode_currentHoverPosition == 'top') {
         $target.before($element);
-      } else if (currentElementHoverPosition == 'bottom') {
+      } else if (elementMode_currentHoverPosition == 'bottom') {
         $target.after($element);
       }
     }
@@ -199,7 +201,7 @@ export default class PagePiece {
     this.updateRender();
     // 历史记录
     if (this.component.tag == 'body') {
-      if (currentElementHoverType == 'replace') {
+      if (elementMode_currentHoverType == 'replace') {
         exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
           $element.first().before($target);
           $element.detach();
@@ -207,13 +209,13 @@ export default class PagePiece {
           $target.after($element);
           $target.detach();
         })
-      } else if (currentElementHoverType == 'insert') {
+      } else if (elementMode_currentHoverType == 'insert') {
         let redo;
-        if (currentElementHoverPosition == 'top') {
+        if (elementMode_currentHoverPosition == 'top') {
           redo = () => {
             $target.before($element);
           }
-        } else if (currentElementHoverPosition == 'bottom') {
+        } else if (elementMode_currentHoverPosition == 'bottom') {
           redo = () => {
             $target.after($element);
           }
@@ -360,6 +362,7 @@ export default class PagePiece {
   updateElement(e) {
     if (e) {
       let $target = $(e.target);
+      selectMode_currentSelectEvent = e;
       let p1 = this.$piece.offset();
       let p2 = $target.offset();
       this.component.updateElementSelectedBorder({
@@ -369,10 +372,10 @@ export default class PagePiece {
         height: parseInt($target.outerHeight() * window._zoom_),
         opacity: 1
       });
-    } else {
+    } else if (!selectMode_currentSelectEvent) {
       this.component.updateElementSelectedBorder({
         opacity: 0
-      }, true);
+      });
     }
   }
 }

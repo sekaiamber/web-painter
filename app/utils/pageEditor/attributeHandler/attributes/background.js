@@ -1,5 +1,7 @@
 import $ from 'jquery'
 
+const config = require('wpconfig')
+
 let textureClass = 'wp-bg-texture texture-paper texture-fabric texture-geometry-shapes texture-geometry-shapes-2 texture-pixels texture-dots texture-diagonal-lines texture-vertical-lines texture-square texture-square-lg texture-darken texture-darken-strong';
 
 export default {
@@ -29,13 +31,16 @@ export default {
   },
   backgroundImage: {
     set($dom, value) {
+      if (value.src && !value.src.startsWith(config.assetsPrefix)) {
+        value.src = config.assetsPrefix + value.src;
+      }
       $dom.attr('wp-bg-img-type', value.type);
       $dom.attr('wp-bg-img-target', value.target);
-      $dom.css('backgroundImage', value.src ? `url(${value.src})` : 'none');
+      $dom.css('backgroundImage', value.src ? `url("${value.src}")` : 'none');
       $dom.attr('wp-bg-img', '');
     },
     get($dom) {
-      let src = $dom.css('backgroundImage');
+      let src = $dom[0].style.backgroundImage;
       if (src && src != 'none') {
         src = src.replace(/["']/g, '');
         src = src.split('(')[1].split(')')[0];
