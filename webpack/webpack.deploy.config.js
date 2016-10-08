@@ -62,12 +62,20 @@ var config = {
         loader: "babel"
       },
       {
-        test: /\.css$/,
+        test: /^((?!\._noprocess_\.).)*\.css$/i,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}')
       },
       {
-        test: /\.scss$/,
+        test: /^((?!\._noprocess_\.).)*\.scss$/i,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass')
+      },
+      {
+        test: /\._noprocess_\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'raw!autoprefixer?{browsers:["last 2 version", "> 1%"]}')
+      },
+      {
+        test: /\._noprocess_\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'raw!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass')
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -97,6 +105,9 @@ var config = {
     alias: {
       wpconfig: path.join(__dirname, 'config', 'deploy')
     }
+  },
+  sassLoader: {
+    data: `$env: __PRODUCTION__;`
   }
 };
 

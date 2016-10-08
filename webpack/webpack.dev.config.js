@@ -5,6 +5,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var routes = require('./routes');
 
+var configVars = require('./config/dev');
+
 var config = {
   context: path.join(__dirname, '..', '/app'),
   target: "electron-renderer",
@@ -32,13 +34,20 @@ var config = {
         loader: "babel"
       },
       {
-        test: /\.css$/,
+        test: /^((?!\._noprocess_\.).)*\.css$/i,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}')
       },
       {
-        test: /\.scss$/,
-        // loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass')
-        loader: 'style-loader!css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass'
+        test: /^((?!\._noprocess_\.).)*\.scss$/i,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass')
+      },
+      {
+        test: /\._noprocess_\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'raw!autoprefixer?{browsers:["last 2 version", "> 1%"]}')
+      },
+      {
+        test: /\._noprocess_\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'raw!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass')
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -94,6 +103,9 @@ var config = {
     //   }
     }
   },
+  sassLoader: {
+    data: `$env: __DEV__;`
+  }
 };
 
 for (var i = 0; i < routes.length; i++) {

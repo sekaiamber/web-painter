@@ -2,7 +2,7 @@ import $ from 'jquery'
 import PagePattern from './pagePattern'
 import { PatternAttributeHandler, ElementAttributeHandler } from './attributeHandler'
 
-require('./pagePiece.scss');
+require('./pagePiece._noprocess_.scss');
 
 // public vars
 
