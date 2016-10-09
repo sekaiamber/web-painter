@@ -4,4 +4,28 @@
   border: #42a5e8 solid 1px;
   transition: all .3s ease;
   z-index: 9999;
+
+  .element-selected-opt-list {
+    position: absolute;
+    left: -1px;
+    bottom: 100%;
+    background: #42a5e8;
+    line-height: 20px;
+    height: 20px;
+    .element-selected-opt {
+      cursor: pointer;
+      pointer-events: auto;
+      line-height: 20px;
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      text-align: center;
+      color: #fff;
+      border: solid #42a5e8 1px;
+
+      &:hover {
+        background: #85ceff;
+      }
+    }
+  }
 }

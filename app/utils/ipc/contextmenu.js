@@ -5,6 +5,6 @@ exEventEmitter.on('contextMenuPattern', () => {
   ipc.send('show-context-menu')
 })
 exEventEmitter.on('contextMenuElement', () => {
-  ipc.send('show-context-menu')
+  ipc.send('show-context-menu-element');
 })
 
