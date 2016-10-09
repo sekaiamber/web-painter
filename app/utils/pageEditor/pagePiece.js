@@ -50,8 +50,10 @@ export default class PagePiece {
           let pagePatternIndex = parseInt($target.attr('wp-pattern-index'));
           this.selectPattern(pagePatternIndex);
         } else {
-          // select element
-          this.selectElement(e);
+          // select element not raw element
+          if ($target.attr('wp-raw') == undefined) {
+            this.selectElement(e);
+          }
         }
         if ($target.attr('wp-no-bubble') != undefined) {
           e.stopPropagation();
@@ -64,6 +66,7 @@ export default class PagePiece {
       }
     })
     $piece.contextmenu((e) => {
+      e.preventDefault();
       if (window._mode_ == 'select') {
         let $target = $(e.target);
         if ($target.attr('wp-pattern')) {
@@ -107,6 +110,7 @@ export default class PagePiece {
         && e.target != e.currentTarget
       ) {
         if (selectMode_currentHoverElement == e.target) return;
+        if ($target.attr('wp-raw') != undefined) return;
         selectMode_currentHoverElement = e.target;
         let p1 = $piece.offset();
         let p2 = $target.offset();
@@ -205,6 +209,7 @@ export default class PagePiece {
         exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
           $element.first().before($target);
           $element.detach();
+          this.cancelSelectHoverAll();
         }, () => {
           $target.after($element);
           $target.detach();
@@ -222,6 +227,7 @@ export default class PagePiece {
         }
         exEventEmitter.emit('addHistory', 'add element', null, $element, () => {
           $element.detach();
+          this.cancelSelectHoverAll();
         }, redo)
       }
     }
@@ -230,10 +236,9 @@ export default class PagePiece {
   }
 
   selectElement(e) {
-    exEventEmitter.emit('cancelSelectd');
+    this.cancelSelectHoverAll();
     exEventEmitter.emit('modeChange', 'select');
     this.updateRender(e);
-    exEventEmitter.emit('selectSomething', new ElementAttributeHandler(e, this));
   }
 
   contextMenuElement(e) {
@@ -243,7 +248,7 @@ export default class PagePiece {
   // pattern control
 
   addPattern(patternReactComponent, index) {
-    exEventEmitter.emit('cancelSelectd');
+    this.cancelSelectHoverAll();
     let pattern = new PagePattern(patternReactComponent.constructor, this, index);
     this._addPattern(pattern, index);
     // 历史记录
@@ -283,7 +288,7 @@ export default class PagePiece {
   }
 
   deletePattern(index) {
-    exEventEmitter.emit('cancelSelectd');
+    this.cancelSelectHoverAll();
     if (index >= this.patterns.length) return;
     let pattern = this._deletePattern(index);
     // 历史记录
@@ -302,11 +307,12 @@ export default class PagePiece {
     patterns.splice(index, 1);
     this.pageEditor.project.setCurrentPagePatterns(this.patterns);
     this.updateRender();
+    this.cancelSelectHoverAll();
     return pattern;
   }
 
   selectPattern(index) {
-    exEventEmitter.emit('cancelSelectd');
+    this.cancelSelectHoverAll();
     exEventEmitter.emit('modeChange', 'select');
     let pagePattern = this.patterns[index];
     pagePattern.selected = true;
@@ -365,17 +371,25 @@ export default class PagePiece {
       selectMode_currentSelectEvent = e;
       let p1 = this.$piece.offset();
       let p2 = $target.offset();
+      let handler = new ElementAttributeHandler(e, this);
+      exEventEmitter.emit('selectSomething', handler);
       this.component.updateElementSelectedBorder({
         left: parseInt((p2.left - p1.left) * window._zoom_),
         top:  parseInt((p2.top - p1.top) * window._zoom_),
         width: parseInt($target.outerWidth() * window._zoom_),
         height: parseInt($target.outerHeight() * window._zoom_),
         opacity: 1
-      });
+      }, handler);
     } else if (!selectMode_currentSelectEvent) {
       this.component.updateElementSelectedBorder({
         opacity: 0
       });
     }
+  }
+
+  ////////
+  cancelSelectHoverAll() {
+    exEventEmitter.emit('cancelSelectd');
+    exEventEmitter.emit('cancelHoverElement', this.component.tag);
   }
 }

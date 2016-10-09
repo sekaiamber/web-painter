@@ -27,11 +27,30 @@ export default class BaseAttributeHandler {
 
   setAttribute(key, value) {
     if (typeof key == 'object') {
+      let prevValue = {};
       Object.keys(key).map((k) => {
+        prevValue[k] = attributeHelper[k].get(this.$dom);
         attributeHelper[k].set(this.$dom, key[k]);
+      });
+      // 历史记录
+      exEventEmitter.emit('addHistory', 'change element attribute', prevValue, key, () => {
+        Object.keys(prevValue).map((k) => {
+          attributeHelper[k].set(this.$dom, prevValue[k]);
+        });
+      }, () => {
+        Object.keys(key).map((k) => {
+          attributeHelper[k].set(this.$dom, key[k]);
+        });
       })
     } else {
+      let prevValue = attributeHelper[key].get(this.$dom);
       attributeHelper[key].set(this.$dom, value);
+      // 历史记录
+      exEventEmitter.emit('addHistory', 'change element attribute', prevValue, value, () => {
+        attributeHelper[key].set(this.$dom, prevValue);
+      }, () => {
+        attributeHelper[key].set(this.$dom, value);
+      })
     }
   }
 
@@ -79,5 +98,43 @@ export class ElementAttributeHandler extends BaseAttributeHandler {
 
   updateRender() {
     this.renderer.updateRender(this.event);
+  }
+
+  delete() {
+    let $dom = this.$dom;
+    this.renderer.cancelSelectHoverAll();
+    // 历史记录
+    let undo = () => {};
+    let redo = () => {
+      $dom.detach();
+      this.renderer.cancelSelectHoverAll();
+    };
+    if ($dom.prev().length > 0) { // 如果有前面元素
+      let $prev = $dom.prev();
+      undo = () => {
+        $prev.after($dom);
+        this.renderer.cancelSelectHoverAll();
+      }
+    } else if ($dom.next().length > 0) { // 如果有后面元素
+      let $next = $dom.next();
+      undo = () => {
+        $next.before($dom);
+        this.renderer.cancelSelectHoverAll();
+      }
+    } else { // 当它是父元素中唯一的子元素时
+      let $parent = $dom.parent();
+      redo = () => {
+        $dom.detach();
+        $parent.append('<div class="pe-element raw" wp-raw></div>');
+        this.renderer.cancelSelectHoverAll();
+      }
+      undo = () => {
+        $parent.empty().append($dom);
+        this.renderer.cancelSelectHoverAll();
+      }
+    }
+    exEventEmitter.emit('addHistory', 'delete element', $dom, null, undo, redo);
+    // 真正删除
+    redo();
   }
 }

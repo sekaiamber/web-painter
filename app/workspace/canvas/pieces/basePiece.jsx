@@ -19,7 +19,8 @@ export default class BasePiece extends React.Component{
         width: 0,
         height: 0,
         opacity: 0,
-      }
+      },
+      elementHandler: null
     }
     // bind
     this.handleChangePatternBarState = this.handleChangePatternBarState.bind(this);
@@ -60,14 +61,16 @@ export default class BasePiece extends React.Component{
       height: height
     })
   }
-  updateElementSelectedBorder(style) {
+  updateElementSelectedBorder(style, handler) {
     style = style || this.state.elementBorderStyle;
+    handler = handler || null;
     let origin = this.state.elementBorderStyle;
     Object.keys(style).map((k) => {
       origin[k] = style[k];
-    })
+    });
     this.setState({
-      elementBorderStyle: origin
+      elementBorderStyle: origin,
+      elementHandler: handler
     })
   }
   render() {
@@ -92,7 +95,7 @@ export default class BasePiece extends React.Component{
           })
         }
         <ElementHoverer tag={this.tag} />
-        <ElementSelectedBorder {...this.state.elementBorderStyle}/>
+        <ElementSelectedBorder {...this.state.elementBorderStyle} handler={this.state.elementHandler}/>
       </div>
     );
   }
