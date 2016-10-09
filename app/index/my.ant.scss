@@ -38,6 +38,9 @@ body#wp {
     color: #fff;
     border-color: #646464;
   }
+  .ant-select-dropdown {
+    z-index: 99999999999;
+  }
   .ant-btn {
     background: #646464;
     color: #fff;
