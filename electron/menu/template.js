@@ -117,6 +117,9 @@ let helpMenu = {
       electron.shell.openExternal('https://github.com/sekaiamber/web-painter/issues/new')
     }
   }, {
+    label: '想要新功能？点击上方<报告Bug>，将原始内容去掉提交Issue吧！',
+    enabled: false
+  }, {
     type: 'separator'
   }, {
     label: '关于Electron',
