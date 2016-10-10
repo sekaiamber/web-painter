@@ -8,7 +8,8 @@ $patternBarHeight: 225px;
   // 防止意料之外的显示
   #attributesBar,
   #patternBar,
-  #elementBar {
+  #elementBar,
+  #paintBar {
     opacity: 0;
   }
 
@@ -16,9 +17,34 @@ $patternBarHeight: 225px;
   #canvas,
   #attributesBar,
   #patternBar,
-  #elementBar {
+  #elementBar,
+  #paintBar {
     position: absolute;
     transition: all .3s ease;
+  }
+
+  // 全部取消
+  #attributesBar {
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+  }
+  #patternBar {
+    height: 0;
+    width: calc(100% - #{$attributesBarWidth});
+    top: 0;
+    left: 0;
+  }
+  #elementBar {
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+  }
+  #paintBar {
+    top: 0;
+    left: 100%;
   }
 
   // 选择模式
@@ -39,18 +65,6 @@ $patternBarHeight: 225px;
       width: $attributesBarWidth;
       top: 0;
       right: 0;
-    }
-    #patternBar {
-      height: 0;
-      width: calc(100% - #{$attributesBarWidth});
-      top: 0;
-      left: 0;
-    }
-    #elementBar {
-      height: 100%;
-      width: 100%;
-      top: 100%;
-      left: 0;
     }
   }
   &.mode-select.exmode-pattern {
@@ -87,19 +101,6 @@ $patternBarHeight: 225px;
       left: 0;
       cursor: crosshair;
     }
-    #attributesBar {
-      height: 100%;
-      width: 0;
-      top: 0;
-      right: 0;
-    }
-    #patternBar {
-      height: 0;
-      width: 100%;
-      top: 0;
-      left: 0;
-    }
-
     #elementBar {
       height: 100%;
       width: 100%;
@@ -110,6 +111,10 @@ $patternBarHeight: 225px;
 
   // 填充模式
   &.mode-paint {
+    #paintBar {
+      opacity: 1;
+    }
+
     #canvas {
       height: 100%;
       width: 100%;
@@ -117,24 +122,9 @@ $patternBarHeight: 225px;
       left: 0;
       cursor: crosshair;
     }
-    #attributesBar {
-      height: 100%;
-      width: 0;
-      top: 0;
-      right: 0;
-    }
-    #patternBar {
-      height: 0;
-      width: 100%;
-      top: 0;
-      left: 0;
-    }
 
-    #elementBar {
-      height: 100%;
-      width: 100%;
-      top: 100%;
-      left: 0;
+    #paintBar {
+      left: calc(100% - 100px);
     }
   }
 }

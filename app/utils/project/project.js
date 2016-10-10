@@ -3,6 +3,8 @@ import $ from 'jquery';
 
 import {getPatternFrom$dom} from './utils'
 import ProjectAssetList from './asset'
+import ColorList from './colors'
+import { defaultColor } from './colors'
 
 export default class Project {
   constructor(pageEditor) {
@@ -20,6 +22,7 @@ export default class Project {
 
     // asset
     this.assets = new ProjectAssetList(this);
+    this.colors = new ColorList(defaultColor);
 
     this.initEvent();
   }

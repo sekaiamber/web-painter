@@ -13,7 +13,8 @@
 }
 
 // 各状态
-#workspace.mode-select .element-hoverer{
+#workspace.mode-select .element-hoverer,
+#workspace.mode-paint .element-hoverer{
   .hoverer {
     border: #c8c8c8 dashed 1px;
     background: rgba(200, 200, 200, .1);

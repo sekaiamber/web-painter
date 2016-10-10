@@ -38,7 +38,14 @@ export default class PageEditor {
     exEventEmitter.on('updateBodyPieceRender', () => {
       let piece = this.getPiece('body');
       piece.updateRender();
-    })
+    });
+    exEventEmitter.on('updatePainter', (painter) => {
+      this.painter = painter;
+    });
+    exEventEmitter.on('handlePaint', (attributeHandler) => {
+      let color = this.painter[this.painter.ground];
+      attributeHandler.setAttribute(this.painter.ground == 'background' ? 'backgroundColor' : 'color', color);
+    });
   }
 
   initProject() {
