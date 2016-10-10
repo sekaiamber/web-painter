@@ -1,6 +1,6 @@
 # web-painter
 
-*Ver. pre-alpha*
+*Version. (pre-alpha)*
 
 This is a WYSIWYG web page editor built by Electron.
 
@@ -95,6 +95,14 @@ dist
 更多详细信息请参照`docs/module_bundle_package.md`文件。
 
 ### 推荐使用cnpm
+
+## BUG和提交新功能
+
+请阅读[Issue提交指南](https://github.com/sekaiamber/web-painter/blob/master/CONTRIBUTING.md)。
+
+## 版本说明及历史
+
+请查看[UPDATES](https://github.com/sekaiamber/web-painter/blob/master/UPDATES.md)。
 
 ## LICENSE
 
