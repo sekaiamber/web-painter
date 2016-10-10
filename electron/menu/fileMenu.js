@@ -63,7 +63,7 @@ function openProject(item, focusedWindow) {
 
 
 module.exports = {
-  label: 'File',
+  label: '文件',
   submenu: [{
     label: 'New...',
     accelerator: 'CmdOrCtrl+N'

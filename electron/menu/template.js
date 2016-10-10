@@ -6,7 +6,7 @@ let fileMenu = require('./fileMenu')
 let editMenu = require('./editMenu')
 
 let viewMenu = {
-  label: 'View',
+  label: '查看',
   submenu: [{
     label: 'Reload',
     accelerator: 'CmdOrCtrl+R',
@@ -73,7 +73,7 @@ let viewMenu = {
 }
 
 let windowMenu = {
-  label: 'Window',
+  label: '窗口',
   role: 'window',
   submenu: [{
     label: 'Minimize',
@@ -97,10 +97,29 @@ let windowMenu = {
 }
 
 let helpMenu = {
-  label: 'Help',
+  label: '帮助',
   role: 'help',
   submenu: [{
-    label: 'Learn More',
+    label: '项目首页',
+    click: function () {
+      electron.shell.openExternal('https://sekaiamber.github.io/web-painter/')
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: '在Github中查看项目',
+    click: function () {
+      electron.shell.openExternal('https://github.com/sekaiamber/web-painter')
+    }
+  }, {
+    label: '报告Bug',
+    click: function () {
+      electron.shell.openExternal('https://github.com/sekaiamber/web-painter/issues/new')
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: '关于Electron',
     click: function () {
       electron.shell.openExternal('http://electron.atom.io')
     }
