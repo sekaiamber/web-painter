@@ -8,16 +8,17 @@ const BrowserWindow = electron.BrowserWindow
 var windowsList = {}
 
 var Globals = {
-  getBrowserWindow: function (name) {
+  getBrowserWindow: function (name, opt) {
     if (windowsList[name]) return windowsList[name];
-    let window = new BrowserWindow({
+    opt = opt || {
       width: 800,
       height: 600,
       // Enables Chromium's experimental features
       webPreferences: {
         experimentalFeatures: true
       }
-    });
+    };
+    let window = new BrowserWindow(opt);
     windowsList[name] = window;
     return window;
   },

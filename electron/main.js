@@ -3,19 +3,26 @@ const electron = require('electron')
 const app = electron.app
 let exGlobal = require('./global');
 
-module.exports = function (url) {
+module.exports = function (opt) {
 
-  console.log(url);
+  console.log(opt.mainWindowUrl);
 
   function createWindow() {
     // Create the browser window.
-    let mainWindow = exGlobal.getBrowserWindow('main');
+    let mainWindow = exGlobal.getBrowserWindow('main', opt.mainWindowOption);
 
     // and load the index.html of the app.
-    mainWindow.loadURL(url);
+    mainWindow.loadURL(opt.mainWindowUrl);
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools()
+    if (opt.openDevTools) {
+      mainWindow.webContents.openDevTools()
+    }
+
+    // maximize window
+    if (opt.maximize) {
+      mainWindow.maximize()
+    }
 
     // clean cache
     mainWindow.webContents.session.clearCache(function () {

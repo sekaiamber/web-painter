@@ -13,6 +13,11 @@ function addUpdateMenuItems (items, position) {
     label: `Version ${version}`,
     enabled: false
   }, {
+    label: `This is a Pre-Alpha Version`,
+    enabled: false
+  }, {
+    type: 'separator'
+  }, {
     label: 'Checking for Update',
     enabled: false,
     key: 'checkingForUpdate'

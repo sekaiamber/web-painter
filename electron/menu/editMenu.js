@@ -16,7 +16,7 @@ function redo(item, focusedWindow) {
 
 
 module.exports = {
-  label: 'Edit',
+  label: '编辑',
   submenu: [{
     label: 'Undo',
     accelerator: 'CmdOrCtrl+Z',
