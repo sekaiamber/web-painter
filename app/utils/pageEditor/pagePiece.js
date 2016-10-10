@@ -64,6 +64,23 @@ export default class PagePiece {
           this.addElement(e.target);
         }
       }
+      if (window._mode_ == 'paint') {
+        e.stopPropagation();
+        let $target = $(e.target);
+        let attributeHandler;
+        if ($target.attr('wp-pattern')) {
+          // select pattern
+          let pagePatternIndex = parseInt($target.attr('wp-pattern-index'));
+          let pagePattern = this.patterns[pagePatternIndex];
+          attributeHandler = new PatternAttributeHandler(pagePattern, this);
+        } else {
+          // select element not raw element
+          if ($target.attr('wp-raw') == undefined) {
+            attributeHandler = new ElementAttributeHandler(e, this);
+          }
+        }
+        attributeHandler && exEventEmitter.emit('handlePaint', attributeHandler);
+      }
     })
     $piece.contextmenu((e) => {
       e.preventDefault();
@@ -106,7 +123,7 @@ export default class PagePiece {
     $piece.mousemove((e) => {
       let $target = $(e.target);
       if (
-        window._mode_ == 'select'        // select模式下hover非piece本身也非当前选中元素
+        (window._mode_ == 'select' || window._mode_ == 'paint')       // select模式或paint模式下hover非piece本身也非当前选中元素
         && e.target != e.currentTarget
       ) {
         if (selectMode_currentHoverElement == e.target) return;

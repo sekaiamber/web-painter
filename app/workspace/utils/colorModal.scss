@@ -1,0 +1,71 @@
+.ant-modal.color-modal {
+  .color-container {
+    padding-right: 250px;
+    position: relative;
+    .picker {
+      position: absolute;
+      top: 0px;
+      right: 0;
+      text-align: right;
+      .chrome-picker {
+        margin-bottom: 10px;
+      }
+      .ant-btn {
+        margin: 5px;
+      }
+    }
+    .shower {
+      min-height: 320px;
+      background: url('./../../../assets/images/image-background.png');
+      overflow: hidden;
+      position: relative;
+      &:before {
+        background: rgba(255,255,255,.15);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        content: "";
+        z-index: 0;
+      }
+      &>div {
+        position: relative;
+        z-index: 1
+      }
+      .current-color {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .circle-picker {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -14px -14px 0;
+        .circle-picker-node {
+          width: 28px;
+          height: 28px;
+          margin: 0px 14px 14px 0px;
+          transform: scale(1);
+          transition: transform 100ms ease;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+          div {
+            background: transparent;
+            height:100%;
+            width:100%;
+            cursor:pointer;
+            border-radius:50%;
+            transition:100ms box-shadow ease;
+
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import AttributesBar from './selectMode/attributesBar/attributesBar'
 import PatternBar from './selectMode/patternBar/patternBar'
 import ElementBar from './elementMode/elementBar/elementBar'
+import PaintBar from './paintMode/paintBar/paintBar'
 import Canvas from './canvas/canvas'
 
 let React = require('react');
@@ -65,6 +66,7 @@ export default class Workspace extends React.Component{
         <AttributesBar />
         <PatternBar piece={this.state.currentPiece} index={this.state.currentPieceIndex}/>
         <ElementBar />
+        <PaintBar />
       </div>
     );
   }

@@ -1,7 +1,5 @@
 import {Modal, Tabs, Input, Button, Icon} from 'antd'
 const TabPane = Tabs.TabPane;
-// import presetAssets from './presetAssets'
-const ipc = require('electron').ipcRenderer;
 
 let React = require('react');
 
