@@ -28,25 +28,15 @@ export default class ColorList {
 }
 
 const defaultColor = [{
-  r: 103,
-  g: 58,
-  b: 183,
-  a: .3
+  r: 51,
+  g: 51,
+  b: 51,
+  a: 1
 }, {
-  r: 103,
-  g: 58,
-  b: 183,
-  a: .5
-}, {
-  r: 103,
-  g: 58,
-  b: 183,
-  a: .7
-}, {
-  r: 103,
-  g: 58,
-  b: 183,
-  a: .9
+  r: 255,
+  g: 255,
+  b: 255,
+  a: 1
 }]
 
 export {
