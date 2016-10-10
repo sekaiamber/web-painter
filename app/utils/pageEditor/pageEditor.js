@@ -45,12 +45,6 @@ export default class PageEditor {
     exEventEmitter.on('handlePaint', (attributeHandler) => {
       let color = this.painter[this.painter.ground];
       attributeHandler.setAttribute(this.painter.ground == 'background' ? 'backgroundColor' : 'color', color);
-      
-      // if (this.painter.ground == 'background') {
-      //   let color = this.p
-      // } else {
-
-      // }
     });
   }
 
