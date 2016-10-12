@@ -13,6 +13,26 @@
       height: 100%;
       max-width: none !important; }
 
+/* /elements/div.scss */
+
+.wp-div {
+  margin: 10px 0; }
+
+/* /elements/elements.scss */
+
+.wp-carousel .carousel-thumbnails {
+  margin-top: 30px; }
+  .wp-carousel .carousel-thumbnails .carousel-thumbnail {
+    margin-bottom: 30px;
+    cursor: pointer; }
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0; }
+  .row.no-gutter .col-lg-1, .row.no-gutter .col-lg-10, .row.no-gutter .col-lg-11, .row.no-gutter .col-lg-12, .row.no-gutter .col-lg-2, .row.no-gutter .col-lg-3, .row.no-gutter .col-lg-4, .row.no-gutter .col-lg-5, .row.no-gutter .col-lg-6, .row.no-gutter .col-lg-7, .row.no-gutter .col-lg-8, .row.no-gutter .col-lg-9, .row.no-gutter .col-md-1, .row.no-gutter .col-md-10, .row.no-gutter .col-md-11, .row.no-gutter .col-md-12, .row.no-gutter .col-md-2, .row.no-gutter .col-md-3, .row.no-gutter .col-md-4, .row.no-gutter .col-md-5, .row.no-gutter .col-md-6, .row.no-gutter .col-md-7, .row.no-gutter .col-md-8, .row.no-gutter .col-md-9, .row.no-gutter .col-sm-1, .row.no-gutter .col-sm-10, .row.no-gutter .col-sm-11, .row.no-gutter .col-sm-12, .row.no-gutter .col-sm-2, .row.no-gutter .col-sm-3, .row.no-gutter .col-sm-4, .row.no-gutter .col-sm-5, .row.no-gutter .col-sm-6, .row.no-gutter .col-sm-7, .row.no-gutter .col-sm-8, .row.no-gutter .col-sm-9, .row.no-gutter .col-xs-1, .row.no-gutter .col-xs-10, .row.no-gutter .col-xs-11, .row.no-gutter .col-xs-12, .row.no-gutter .col-xs-2, .row.no-gutter .col-xs-3, .row.no-gutter .col-xs-4, .row.no-gutter .col-xs-5, .row.no-gutter .col-xs-6, .row.no-gutter .col-xs-7, .row.no-gutter .col-xs-8, .row.no-gutter .col-xs-9 {
+    padding-left: 0;
+    padding-right: 0; }
+
 /* /export/ant.d.normalize.scss */
 
 /*!
@@ -613,53 +633,25 @@ textarea {
   text-align: left;
   display: inline-block; }
 
-/* /patterns/blog/left-image-right-blog.scss */
+/* /patterns/devices/left-info-right-phone.scss */
 
-.blog-left-image-right-blog {
-  background: #fff;
-  padding: 100px; }
-  .blog-left-image-right-blog .col {
-    float: left; }
-    .blog-left-image-right-blog .col.left {
-      width: 50%;
-      padding-right: 30px; }
-    .blog-left-image-right-blog .col.right {
-      width: 50%;
-      padding-left: 30px; }
-
-/* /patterns/carousels/carousel-heading-paragraph.scss */
-
-.carousels-carousel-heading-paragraph {
-  background: #fff;
-  padding: 100px; }
+.devices-left-info-right-phone {
+  color: #fff; }
+  .devices-left-info-right-phone .row {
+    margin: 0 auto;
+    max-width: 1000px; }
 
 /* /patterns/devices/left-phone-right-info.scss */
 
-.wp-device {
+.devices-left-phone-right-info {
   color: #fff; }
-
-/* /patterns/features/one-row-four-features.scss */
-
-.features-one-row-four-features {
-  background: #fff;
-  padding: 100px; }
-
-.wp-features > .row > div {
-  text-align: center; }
-  .wp-features > .row > div .wp-icon {
-    font-size: 35px; }
-    .wp-features > .row > div .wp-icon:before {
-      width: 35px; }
+  .devices-left-phone-right-info .row {
+    margin: 0 auto;
+    max-width: 1000px; }
 
 /* /patterns/footer/footer1.scss */
 
 .footer-footer1 {
-  background: #fff;
-  padding: 100px; }
-
-/* /patterns/headers/image-heading-paragraph.scss */
-
-.headers-image-heading-paragraph {
   background: #fff;
   padding: 100px; }
 
@@ -842,224 +834,28 @@ textarea {
       .navigation-left-text-right-links .nav a:hover {
         color: #000; }
 
-/* /patterns/structure/five-pieces-with-top.scss */
+/* /patterns/pattern.scss */
 
-.structure-five-pieces-with-top {
+.wp-pattern {
   background: #fff;
   padding: 100px; }
-  .structure-five-pieces-with-top .top {
+  .wp-pattern.wp-pattern-full-width {
+    padding-left: 0;
+    padding-right: 0; }
+  .wp-pattern.wp-pattern-full-height {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .wp-pattern.wp-pattern-full {
+    padding: 0; }
+  .wp-pattern .wp-pattern-structure-top {
     margin-bottom: 60px; }
-  .structure-five-pieces-with-top .col {
-    float: left;
-    width: 20%; }
-    .structure-five-pieces-with-top .col.r1 {
-      padding-right: 40px; }
-    .structure-five-pieces-with-top .col.r2 {
-      padding: 0 30px 0 10px; }
-    .structure-five-pieces-with-top .col.r3 {
-      padding: 0 20px 0 20px; }
-    .structure-five-pieces-with-top .col.r4 {
-      padding: 0 10px 0 30px; }
-    .structure-five-pieces-with-top .col.r5 {
-      padding-left: 40px; }
 
-/* /patterns/structure/five-pieces.scss */
-
-.structure-five-pieces {
-  background: #fff;
-  padding: 100px; }
-  .structure-five-pieces .col {
-    float: left;
-    width: 20%; }
-    .structure-five-pieces .col.r1 {
-      padding-right: 40px; }
-    .structure-five-pieces .col.r2 {
-      padding: 0 30px 0 10px; }
-    .structure-five-pieces .col.r3 {
-      padding: 0 20px 0 20px; }
-    .structure-five-pieces .col.r4 {
-      padding: 0 10px 0 30px; }
-    .structure-five-pieces .col.r5 {
-      padding-left: 40px; }
-
-/* /patterns/structure/four-pieces-with-top.scss */
-
-.structure-four-pieces-with-top {
-  background: #fff;
-  padding: 100px; }
-  .structure-four-pieces-with-top .top {
-    margin-bottom: 60px; }
-  .structure-four-pieces-with-top .col {
-    float: left;
-    width: 25%; }
-    .structure-four-pieces-with-top .col.r1 {
-      padding-right: 45px; }
-    .structure-four-pieces-with-top .col.r2 {
-      padding: 0 30px 0 15px; }
-    .structure-four-pieces-with-top .col.r3 {
-      padding: 0 15px 0 30px; }
-    .structure-four-pieces-with-top .col.r4 {
-      padding-left: 45px; }
-
-/* /patterns/structure/four-pieces.scss */
-
-.structure-four-pieces {
-  background: #fff;
-  padding: 100px; }
-  .structure-four-pieces .col {
-    float: left;
-    width: 25%; }
-    .structure-four-pieces .col.r1 {
-      padding-right: 45px; }
-    .structure-four-pieces .col.r2 {
-      padding: 0 30px 0 15px; }
-    .structure-four-pieces .col.r3 {
-      padding: 0 15px 0 30px; }
-    .structure-four-pieces .col.r4 {
-      padding-left: 45px; }
-
-/* /patterns/structure/one-piece.scss */
-
-.structure-one-piece {
-  background: #fff;
-  padding: 100px; }
-
-/* /patterns/structure/six-pieces-with-top.scss */
-
-.structure-six-pieces-with-top {
-  background: #fff;
-  padding: 100px; }
-  .structure-six-pieces-with-top .top {
-    margin-bottom: 60px; }
-  .structure-six-pieces-with-top .col {
-    float: left;
-    width: 16.6%; }
-    .structure-six-pieces-with-top .col.r1 {
-      padding-right: 35px; }
-    .structure-six-pieces-with-top .col.r2 {
-      padding: 0 28px 0 7px; }
-    .structure-six-pieces-with-top .col.r3 {
-      padding: 0 21px 0 14px; }
-    .structure-six-pieces-with-top .col.r4 {
-      padding: 0 14px 0 21px; }
-    .structure-six-pieces-with-top .col.r5 {
-      padding: 0 7px 0 28px; }
-    .structure-six-pieces-with-top .col.r6 {
-      padding-left: 35px; }
-
-/* /patterns/structure/six-pieces.scss */
-
-.structure-six-pieces {
-  background: #fff;
-  padding: 100px; }
-  .structure-six-pieces .col {
-    float: left;
-    width: 16.6%; }
-    .structure-six-pieces .col.r1 {
-      padding-right: 35px; }
-    .structure-six-pieces .col.r2 {
-      padding: 0 28px 0 7px; }
-    .structure-six-pieces .col.r3 {
-      padding: 0 21px 0 14px; }
-    .structure-six-pieces .col.r4 {
-      padding: 0 14px 0 21px; }
-    .structure-six-pieces .col.r5 {
-      padding: 0 7px 0 28px; }
-    .structure-six-pieces .col.r6 {
-      padding-left: 35px; }
-
-/* /patterns/structure/three-pieces-with-top.scss */
-
-.structure-three-pieces-with-top {
-  background: #fff;
-  padding: 100px; }
-  .structure-three-pieces-with-top .top {
-    margin-bottom: 60px; }
-  .structure-three-pieces-with-top .col {
-    float: left;
-    width: 33.3%; }
-    .structure-three-pieces-with-top .col.left {
-      padding-right: 66px; }
-    .structure-three-pieces-with-top .col.mid {
-      padding: 0 33px; }
-    .structure-three-pieces-with-top .col.right {
-      padding-left: 66px; }
-
-/* /patterns/structure/three-pieces.scss */
-
-.structure-three-pieces {
-  background: #fff;
-  padding: 100px; }
-  .structure-three-pieces .col {
-    float: left;
-    width: 33.3%; }
-    .structure-three-pieces .col.left {
-      padding-right: 66px; }
-    .structure-three-pieces .col.mid {
-      padding: 0 33px; }
-    .structure-three-pieces .col.right {
-      padding-left: 66px; }
-
-/* /patterns/structure/two-col-left-big.scss */
-
-.structure-two-col-left-big {
-  background: #fff;
-  padding: 100px; }
-  .structure-two-col-left-big .col.left {
-    width: 65%; }
-  .structure-two-col-left-big .col.right {
-    width: 35%; }
-
-.wp-two-col .col {
-  float: left; }
-  .wp-two-col .col.left {
-    width: 50%;
-    padding-right: 30px; }
-  .wp-two-col .col.right {
-    width: 50%;
-    padding-left: 30px; }
-
-/* /patterns/structure/two-col-right-big.scss */
-
-.structure-two-col-right-big {
-  background: #fff;
-  padding: 100px; }
-  .structure-two-col-right-big .col {
-    float: left; }
-    .structure-two-col-right-big .col.left {
-      width: 35%;
-      padding-right: 30px; }
-    .structure-two-col-right-big .col.right {
-      width: 65%;
-      padding-left: 30px; }
-
-/* /patterns/structure/two-pieces-with-top.scss */
-
-.structure-two-pieces-with-top {
-  background: #fff;
-  padding: 100px; }
-  .structure-two-pieces-with-top .top {
-    margin-bottom: 60px; }
-  .structure-two-pieces-with-top .col {
-    float: left;
-    width: 50%; }
-    .structure-two-pieces-with-top .col.left {
-      padding-right: 30px; }
-    .structure-two-pieces-with-top .col.right {
-      padding-left: 30px; }
-
-/* /patterns/structure/two-pieces.scss */
-
-.structure-two-pieces {
-  background: #fff;
-  padding: 100px; }
-  .structure-two-pieces .col {
-    float: left;
-    width: 50%; }
-    .structure-two-pieces .col.left {
-      padding-right: 50px; }
-    .structure-two-pieces .col.right {
-      padding-left: 50px; }
+.wp-features > .row > div {
+  text-align: center; }
+  .wp-features > .row > div .wp-icon {
+    font-size: 35px; }
+    .wp-features > .row > div .wp-icon:before {
+      width: 35px; }
 
 /* /patterns/team/member-detail.scss */
 
@@ -1069,9 +865,10 @@ textarea {
   .team-member-detail .member-container {
     max-width: 1100px;
     margin: 0 auto; }
-    .team-member-detail .member-container .row {
-      margin-top: 80px; }
-      .team-member-detail .member-container .row .wp-icon {
+    .team-member-detail .member-container > .row {
+      margin-top: 80px;
+      padding: 10px 0; }
+      .team-member-detail .member-container > .row .wp-icon {
         font-size: 18px;
         width: 18px;
         text-align: center; }
