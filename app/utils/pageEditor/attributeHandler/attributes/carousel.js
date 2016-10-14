@@ -2,15 +2,6 @@ import $ from 'jquery'
 import imageattrs from './image'
 import attrattrs from './attr'
 
-const colMap = {
-  1: 4,
-  2: 4,
-  3: 4,
-  4: 3,
-  5: 2,
-  6: 2
-}
-
 let carouselWithThumbnails = {
   set($dom, value) {
     $('.carousel-thumbnails', $dom).remove();

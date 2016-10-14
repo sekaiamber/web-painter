@@ -33,5 +33,30 @@ _.merge(attrs, deviceattrs);
 _.merge(attrs, rowattrs);
 _.merge(attrs, panelattrs);
 
+Object.keys(attrs).map((key) => {
+  let attr = attrs[key];
+  // set
+  let setf = attr.set;
+  attr._set = setf;
+  attr.set = function() {
+    this._set.apply(this, arguments);
+    let $dom  = arguments[0];
+    $dom.data(key, arguments[1]);
+  }
+  // get
+  let getf = attr.get;
+  attr._get = getf;
+  attr.get = function() {
+    if (this.useStorage) {
+      let ret = arguments[0].data(key);
+      if (ret == undefined) {
+        ret = this._get.apply(this, arguments);
+      }
+      return ret;
+    } else {
+      return this._get.apply(this, arguments);
+    }
+  }
+})
 
 export default attrs;
