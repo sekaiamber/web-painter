@@ -17,7 +17,6 @@ This is a WYSIWYG web page editor built by Electron.
 ```bash
 $ cd path/to/repo
 $ npm install
-$ npm start
 ```
 
 ### 一些预处理任务
