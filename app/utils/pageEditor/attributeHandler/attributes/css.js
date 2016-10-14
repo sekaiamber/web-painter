@@ -16,7 +16,8 @@ cssKeys.map((key) => {
     },
     get($dom) {
       return $dom.css(key)
-    }
+    },
+    useStorage: true
   }
 })
 
