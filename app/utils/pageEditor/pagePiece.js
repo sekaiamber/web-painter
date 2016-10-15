@@ -322,7 +322,9 @@ export default class PagePiece {
     let pattern = patterns[index];
     pattern.$pattern.detach();
     patterns.splice(index, 1);
-    this.pageEditor.project.setCurrentPagePatterns(this.patterns);
+    if (this.component.tag == 'body') {
+      this.pageEditor.project.setCurrentPagePatterns(this.patterns);
+    }
     this.updateRender();
     this.cancelSelectHoverAll();
     return pattern;
