@@ -81,18 +81,25 @@ export default class Project {
   }
 
   setCurrentPagePatterns(patterns) {
+    // 若整个Pattern被替换的话，这个函数就必要了，若操作同一个pattern，则这个函数事实上不变
     this.currentPage.patterns = patterns;
   }
 
   // save project
   getMetaInfo() {
     let ret = {};
+
+    // public pieces
     ret.headerPiece = this.headerPiece.$piece[0].innerHTML;
     ret.footerPiece = this.footerPiece.$piece[0].innerHTML;
 
+    // page body pieces
     ret.pages = this.pages.map((p) => {
       return p.getMetaInfo();
     });
+
+    // colors
+    ret.colors = this.colors;
     
     return ret;
   }
@@ -114,6 +121,10 @@ export default class Project {
       page.importFromMetaInfo(p);
       return page;
     });
+    // colors
+    this.colors = new ColorList(info.colors);
+    exEventEmitter.emit('projectColorsDidUpdate');
+
     this.pages = pages;
     this.selectPage(pages[0].name);
   }

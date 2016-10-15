@@ -42,6 +42,11 @@ export default class ColorModal extends React.Component{
 
   }
   componentDidMount() {
+    exEventEmitter.on('projectColorsDidUpdate', () => {
+      this.setState({
+        colors: pageEditor.project.colors
+      });
+    })
   }
   componentWillUnmount() {
   }
