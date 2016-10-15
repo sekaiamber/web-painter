@@ -5,6 +5,7 @@ export default class ColorList {
       this[i] = arr[i]
     }
     this.length = arr.length;
+    arr = [];
     Object.getOwnPropertyNames(arr.__proto__).map((funcName) => {
       if (typeof arr.__proto__[funcName] == 'function') {
         this[funcName] = arr.__proto__[funcName].bind(this);
