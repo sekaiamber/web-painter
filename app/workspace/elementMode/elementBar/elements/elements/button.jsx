@@ -1,5 +1,6 @@
 let React = require('react');
 let htmlTemplate = require('./../../../../../htmlTemplates/elements/button.html');
+require('./../../../../../htmlTemplates/elements/button.scss');
 
 import Element from './../element'
 

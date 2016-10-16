@@ -39,22 +39,10 @@ export default class ButtonAttributeGroup extends BaseAttributeGroup{
             <Switch  size="small" checked={this.props.buttonFill} onChange={(checked) => this.props.onChange('buttonFill', checked)}/>
           </div>
         </div>
-        <div className="attribute">
-          <div className="name">Count</div>
-          <div className="value">
-            <Button size="small" type="primary" shape="circle" icon="plus"
-              onClick={() => this.props.onChange('buttonCount', this.props.buttonCount + 1)}/>
-            <Button size="small" type="primary" shape="circle" icon="minus"
-              onClick={() => this.props.onChange('buttonCount', this.props.buttonCount - 1)}/>
-          </div>
-        </div>
       </div>
     );
   }
 }
 ButtonAttributeGroup.attributeKeys = [
-  'buttonCount', 'buttonSize', 'buttonFill'
+  'buttonSize', 'buttonFill'
 ]
-ButtonAttributeGroup.defaultProps = {
-  buttonCount: 0
-}
