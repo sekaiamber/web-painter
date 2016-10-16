@@ -39,8 +39,13 @@ export default function (nodeName, specialGroupName) {
   } else {
     ret = [];
   }
-  if (specialGroupmap[specialGroupName]) {
-    ret = specialGroupmap[specialGroupName].concat(ret);
+  if (specialGroupName) {
+    specialGroupName = specialGroupName.split(' ');
+    for (var i = 0; i < specialGroupName.length; i++) {
+      if (specialGroupmap[specialGroupName[i]]) {
+        ret = specialGroupmap[specialGroupName[i]].concat(ret);
+      }
+    }
   }
   return ret;
 }

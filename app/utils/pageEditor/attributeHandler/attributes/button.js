@@ -47,22 +47,5 @@ export default {
     get($dom) {
       return $dom.attr('wp-dropdown-size') || 'nm'
     }
-  },
-  dropdownCount: {
-    set($dom, value) {
-      let $ul = $('ul', $dom);
-      let $li = $('li', $ul);
-      if ($li.length < value) {
-        for (var i = 0; i < value - $li.length; i++) {
-          $ul.append('<li wp-no-select><a wp-no-bubble>Dropdown link</a></li>')
-        }
-      }
-      if ($li.length > value) {
-        $('li:gt(' + (value - 1) + ')', $ul).remove();
-      }
-    },
-    get($dom) {
-      return $('.dropdown-menu a', $dom).length;
-    }
   }
 }

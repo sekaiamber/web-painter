@@ -18,7 +18,7 @@
         display: inline-block;
       }
     }
-    a {
+    a:not(.btn) {
       display: inline-block;
       margin: 0 10px;
       color: #666;

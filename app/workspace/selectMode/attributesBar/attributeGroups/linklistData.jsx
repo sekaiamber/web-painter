@@ -8,7 +8,8 @@ let React = require('react');
 require('./linklistData.scss');
 
 const defaultLinkListItem = {
-  text: '',
+  text: 'Link',
+  index: -1,
   href: '',
   target: '',
   linkself: false
@@ -80,7 +81,7 @@ class LinkListModal extends React.Component{
     return (
       <Modal className="link-list-modal" visible={this.state.visible} onOk={this.handleOK} onCancel={this.handleCancel} title={this.props.title}>
         <div className="link-list-item">
-          <div className="text" style={{display: 'inline-block'}}>Text</div>
+          <div className="text" style={{display: 'inline-block'}}>Index</div>
           <div className="linkself" style={{display: 'inline-block'}}>URL/Page</div>
           <div className="href" style={{display: 'inline-block'}}>Target</div>
           <div className="target" style={{display: 'inline-block'}}>New tab</div>
@@ -90,7 +91,7 @@ class LinkListModal extends React.Component{
           return (
             <div className="link-list-item" key={i}>
               <div className="text" style={{display: 'inline-block'}}>
-                <Input size="small" value={d.text} onChange={(e) => this.handleChange(i, 'text', e.target.value)}/>
+                {d.index > -1 ? d.index + 1 : '新增'}
               </div>
               <div className="linkself" style={{display: 'inline-block'}}>
                 <Switch  size="small" checked={d.linkself} onChange={(checked) => this.handleChange(i, 'linkself', checked)}/>
@@ -117,7 +118,7 @@ class LinkListModal extends React.Component{
         })}
         <div className="link-list-item new">
           <div className="text" style={{display: 'inline-block'}}>
-            <Input size="small" value={this.state.add.text} onChange={(e) => this.handleChangeNew('text', e.target.value)}/>
+            新增：
           </div>
           <div className="linkself" style={{display: 'inline-block'}}>
             <Switch  size="small" checked={this.state.add.linkself} onChange={(checked) => this.handleChangeNew('linkself', checked)}/>
@@ -175,10 +176,19 @@ export default class LinkListDataAttributeGroup extends BaseAttributeGroup{
             />
           </div>
         </div>
+        <div className="attribute">
+          <div className="name">Style</div>
+          <div className="value">
+            <Select size="small" value={this.props.linkListStyle} onChange={(v) => this.props.onChange('linkListStyle', v)} >
+                <Option value="none" key="1">None</Option>
+                <Option value="button" key="2">Button</Option>
+            </Select>
+          </div>
+        </div>
       </div>
     );
   }
 }
 LinkListDataAttributeGroup.attributeKeys = [
-  'linkListData'
+  'linkListData', 'linkListStyle'
 ]
