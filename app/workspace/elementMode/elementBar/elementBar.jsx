@@ -4,7 +4,10 @@ require('./elementBar.scss');
 
 import Elements from './elements/elements'
 
-let favElements = [Elements[0], Elements[6]]
+let favElements = [
+  Elements[0], Elements[6], Elements[9], Elements[10],
+  Elements[12], Elements[13], Elements[16], Elements[20]
+]
 
 export default class ElementBar extends React.Component{
   constructor(props) {
