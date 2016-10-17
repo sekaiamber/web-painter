@@ -9,25 +9,19 @@ function exportProject(item, focusedWindow) {
   }, (filename) => {
     if (filename) {
       exGlobal.getBrowserWindow('main').webContents.send('export-project', filename);
-      projectPath = filename;
     }
   });
 }
 
 // save project
-let projectPath = null;
-
 function saveProject(item, focusedWindow) {
-  if (projectPath) {
-    exGlobal.getBrowserWindow('main').webContents.send('save-project', projectPath);
+  if (exGlobal.projectPath) {
+    exGlobal.getBrowserWindow('main').webContents.send('save-project', exGlobal.projectPath);
   } else {
     dialog.showSaveDialog({
       title: 'Save to ...',
     }, (filename) => {
-      if (filename) {
-        exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
-        projectPath = filename;
-      }
+      filename && _saveProject(filename);
     });
   }
 }
@@ -36,11 +30,13 @@ function saveAsProject(item, focusedWindow) {
   dialog.showSaveDialog({
     title: 'Save As to ...',
   }, (filename) => {
-    if (filename) {
-      exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
-      projectPath = filename;
-    }
+    filename && _saveProject(filename);
   });
+}
+
+function _saveProject(filename) {
+  exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
+  exGlobal.projectPath = filename;
 }
 
 // open project
@@ -53,14 +49,14 @@ function openProject(item, focusedWindow) {
       {name: 'WP Project File Type', extensions: ['wp']}
     ]
   }, (filename) => {
-    if (filename) {
-      filename = filename[0];
-      projectPath = filename;
-      exGlobal.getBrowserWindow('main').webContents.send('open-project', filename);
-    }
+    filename && _openProject(filename[0]);
   });
 }
 
+function _openProject(filename) {
+  exGlobal.projectPath = filename;
+  exGlobal.getBrowserWindow('main').webContents.send('open-project', filename);
+}
 
 module.exports = {
   label: '文件',

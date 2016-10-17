@@ -55,4 +55,6 @@ ipc.on('save-project', function (event, filename) {
   zipArchiver.pipe(output);
 
   zipArchiver.finalize();
+
+  ipc.send('update-project-path', filename);
 })

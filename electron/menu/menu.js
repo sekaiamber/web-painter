@@ -125,3 +125,5 @@ app.on('window-all-closed', function () {
   let reopenMenuItem = findReopenMenuItem()
   if (reopenMenuItem) reopenMenuItem.enabled = true
 })
+
+console.log('build menu finish');
