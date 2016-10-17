@@ -2,10 +2,11 @@ const electron = require('electron')
 // Module to control application life.
 const app = electron.app
 let exGlobal = require('./global');
+const ipc = require('electron').ipcMain
 
 module.exports = function (opt) {
 
-  console.log(opt.mainWindowUrl);
+  console.log('loading main window from: ' + opt.mainWindowUrl);
 
   function createWindow() {
     // Create the browser window.
@@ -36,6 +37,11 @@ module.exports = function (opt) {
       mainWindow = null;
       exGlobal.destroyWindow('main');
     })
+
+    console.log('open main window...');
+    if (exGlobal.projectPath) {
+      console.log('find project:' + exGlobal.projectPath);
+    }
   }
 
   // This method will be called when Electron has finished

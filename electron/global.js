@@ -1,6 +1,7 @@
 const electron = require('electron')
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
+const ipc = require('electron').ipcMain
 
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -8,6 +9,7 @@ const BrowserWindow = electron.BrowserWindow
 var windowsList = {}
 
 var Globals = {
+  // window
   getBrowserWindow: function (name, opt) {
     if (windowsList[name]) return windowsList[name];
     opt = opt || {
@@ -29,8 +31,18 @@ var Globals = {
     if (windowsList[name]) {
       delete windowsList[name]
     }
-  }
+  },
+  // project
+  projectPath: null
 }
+
+ipc.on('get-project-path', (event) => {
+  event.returnValue = Globals.projectPath;
+})
+ipc.on('update-project-path', (event, filename) => {
+  Globals.projectPath = filename;
+  event.sender.send('update-project-path', Globals.projectPath);
+})
 
 
 module.exports = Globals;

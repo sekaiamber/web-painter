@@ -6,6 +6,11 @@ import PageEditor from './../utils/pageEditor/pageEditor'
 
 import $ from 'jquery'
 
+const ipc = require('electron').ipcRenderer
+
+// disable pinch zoom in chromium
+require('electron').webFrame.setZoomLevelLimits(1, 1)
+
 // jquery
 window.jQuery = $;
 
@@ -36,8 +41,8 @@ $(document).ready(() => {
   console.log('[web painter]: UI load finish');
   exEventEmitter.emit('uiready');
 
-  // disable pinch zoom in chromium
-  require('electron').webFrame.setZoomLevelLimits(1, 1)
+  // auto open project
+  pageEditor.project.filepath && ipc.emit('open-project', null, pageEditor.project.filepath);
 });
 
 // ipc

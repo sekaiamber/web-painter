@@ -6,11 +6,14 @@ import ProjectAssetList from './asset'
 import ColorList from './colors'
 import { defaultColor } from './colors'
 
+const ipc = require('electron').ipcRenderer
+
 export default class Project {
   constructor(pageEditor) {
     this.pageEditor = pageEditor;
     // 用来保存filepath
     this.filepath = null;
+
     // 页面
     this.pages = [];
     this.currentPage = null;
@@ -25,6 +28,7 @@ export default class Project {
     this.colors = new ColorList(defaultColor);
 
     this.initEvent();
+    ipc.emit('update-project-path', null, ipc.sendSync('get-project-path'));
   }
 
   init() {
@@ -51,7 +55,14 @@ export default class Project {
         fileName: name.toLowerCase()
       }
       this.addNewPage(pageinfo);
-    })
+    });
+    ipc.on('update-project-path', (event, filename) => {
+      this.filepath = filename;
+      if (filename == null) {
+        filename = 'Untitled'
+      }
+      document.title = `${filename} - Web Painter`;
+    });
   }
 
   addNewPage(obj) {

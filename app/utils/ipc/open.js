@@ -22,9 +22,10 @@ function readZipFile(filename) {
   pageEditor.project.importFromMetaInfo(JSON.parse(new Buffer(info.getData()).toString()));
 }
 
-// call when save project
+// call when open project
 
 ipc.on('open-project', function (event, filename) {
   readZipFile(filename);
-  console.log(`[open project]: open project from ${filename}`)
+  ipc.send('update-project-path', filename);
+  console.log(`[open project]: open project from ${filename}`);
 })
