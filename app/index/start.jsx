@@ -35,6 +35,9 @@ $(document).ready(() => {
   render(<Framework />, document.getElementById("container"));
   console.log('[web painter]: UI load finish');
   exEventEmitter.emit('uiready');
+
+  // disable pinch zoom in chromium
+  require('electron').webFrame.setZoomLevelLimits(1, 1)
 });
 
 // ipc
