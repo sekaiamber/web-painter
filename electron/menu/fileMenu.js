@@ -1,5 +1,6 @@
 const {dialog} = require('electron')
 const ipc = require('electron').ipcMain
+const BrowserWindow = require('electron').BrowserWindow
 
 let exGlobal = require('./../global')
 // export project
@@ -58,11 +59,29 @@ function _openProject(filename) {
   exGlobal.getBrowserWindow('main').webContents.send('open-project', filename);
 }
 
+function newProject(item, focusedWindow) {
+  exGlobal.projectPath = null;
+  // reload
+  if (focusedWindow) {
+    // on reload, start fresh and close any old
+    // open secondary windows
+    if (focusedWindow.id === 1) {
+      BrowserWindow.getAllWindows().forEach(function (win) {
+        if (win.id > 1) {
+          win.close()
+        }
+      })
+    }
+    focusedWindow.reload()
+  }
+}
+
 module.exports = {
   label: '文件',
   submenu: [{
     label: 'New...',
-    accelerator: 'CmdOrCtrl+N'
+    accelerator: 'CmdOrCtrl+N',
+    click: newProject 
   }, {
     label: 'Open...',
     accelerator: 'CmdOrCtrl+O',
