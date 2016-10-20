@@ -1,7 +1,7 @@
 {
   "name": "web-painter",
   "productName": "Web Painter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a WYSIWYG web page editor built by Electron.",
   "main": "./start.bundle.js",
   "scripts": {
