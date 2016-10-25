@@ -1,6 +1,8 @@
 import { Select, Input, Button } from 'antd';
 const Option = Select.Option;
 
+import Mask from './../../utils/component/mask/mask'
+
 let React = require('react');
 
 export default class NewPage extends React.Component{
@@ -26,21 +28,19 @@ export default class NewPage extends React.Component{
   }
   render() {
     return (
-      <div className="mask">
-        <div className="page">
-          <h3>Create New Page</h3>
-          <div className="prop">
-            <div className="prop-name">Name</div>
-            <div className="prop-value">
-              <Input size="small" value={this.state.name} onChange={this.handleChange}/>
-            </div>
-          </div>
-          <div className="opt">
-            <Button type="primary" className="cancel" onClick={this.props.onCancel}>Cancel</Button>
-            <Button type="primary" className="ok" disabled={this.state.disabled} onClick={() => this.props.onCreate(this.state.name.trim())}>Create</Button>
+      <Mask>
+        <h3>Create New Page</h3>
+        <div className="prop">
+          <div className="prop-name">Name</div>
+          <div className="prop-value">
+            <Input size="small" value={this.state.name} onChange={this.handleChange}/>
           </div>
         </div>
-      </div>
+        <div className="opt">
+          <Button type="primary" className="left" onClick={this.props.onCancel}>Cancel</Button>
+          <Button type="primary" className="right" disabled={this.state.disabled} onClick={() => this.props.onCreate(this.state.name.trim())}>Create</Button>
+        </div>
+      </Mask>
     );
   }
 }

@@ -18,7 +18,7 @@ function createZipfile(files) {
 
 // call when save project
 
-ipc.on('save-project', function (event, filename) {
+ipc.on('save-project', function (event, filename, callback) {
   if (!filename.endsWith('.wp')) {
     filename += '.wp';
   }
@@ -57,4 +57,15 @@ ipc.on('save-project', function (event, filename) {
   zipArchiver.finalize();
 
   ipc.send('update-project-path', filename);
+  callback && ipc.send(callback);
 })
+
+// call when create new project
+
+ipc.on('new-project', function(event) {
+  exEventEmitter.emit('checkSaveProject', 'reload-window-all');
+});
+
+exEventEmitter.on('saveProject', function(callback) {
+  ipc.send('save-project', callback)
+});

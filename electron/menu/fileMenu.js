@@ -15,14 +15,14 @@ function exportProject(item, focusedWindow) {
 }
 
 // save project
-function saveProject(item, focusedWindow) {
+function saveProject(item, focusedWindow, callback) {
   if (exGlobal.projectPath) {
-    exGlobal.getBrowserWindow('main').webContents.send('save-project', exGlobal.projectPath);
+    _saveProject(exGlobal.projectPath, callback);
   } else {
     dialog.showSaveDialog({
       title: 'Save to ...',
     }, (filename) => {
-      filename && _saveProject(filename);
+      filename && _saveProject(filename, callback);
     });
   }
 }
@@ -35,23 +35,16 @@ function saveAsProject(item, focusedWindow) {
   });
 }
 
-function _saveProject(filename) {
-  exGlobal.getBrowserWindow('main').webContents.send('save-project', filename);
+function _saveProject(filename, callback) {
+  console.log(callback);
+  exGlobal.getBrowserWindow('main').webContents.send('save-project', filename, callback);
   exGlobal.projectPath = filename;
 }
 
 // open project
 
 function openProject(item, focusedWindow) {
-  dialog.showOpenDialog({
-    title: 'Open Project',
-    properties: ['openFile'],
-    filters: [
-      {name: 'WP Project File Type', extensions: ['wp']}
-    ]
-  }, (filename) => {
-    filename && _openProject(filename[0]);
-  });
+  exGlobal.getBrowserWindow('main').webContents.send('open-project-check');
 }
 
 function _openProject(filename) {
@@ -60,20 +53,7 @@ function _openProject(filename) {
 }
 
 function newProject(item, focusedWindow) {
-  exGlobal.projectPath = null;
-  // reload
-  if (focusedWindow) {
-    // on reload, start fresh and close any old
-    // open secondary windows
-    if (focusedWindow.id === 1) {
-      BrowserWindow.getAllWindows().forEach(function (win) {
-        if (win.id > 1) {
-          win.close()
-        }
-      })
-    }
-    focusedWindow.reload()
-  }
+  exGlobal.getBrowserWindow('main').webContents.send('new-project');
 }
 
 module.exports = {
@@ -124,4 +104,20 @@ ipc.on('open-file-dialog-sync', function (event, title, filters) {
       event.returnValue = null;
     }
   })
-})
+});
+
+ipc.on('save-project', function(event, callback) {
+  saveProject(null, exGlobal.getBrowserWindow('main'), callback);
+});
+
+ipc.on('open-project', function(event) {
+  dialog.showOpenDialog({
+    title: 'Open Project',
+    properties: ['openFile'],
+    filters: [
+      {name: 'WP Project File Type', extensions: ['wp']}
+    ]
+  }, (filename) => {
+    filename && _openProject(filename[0]);
+  });
+});
