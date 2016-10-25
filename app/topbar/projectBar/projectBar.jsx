@@ -1,6 +1,7 @@
 import { Select, Input, Button } from 'antd'
 import NewPage from './newpage'
 import PageSetting from './pagesetting'
+import SaveProject from './saveProject'
 
 const Option = Select.Option;
 
@@ -15,7 +16,8 @@ export default class ProjectBar extends React.Component{
       pages: [],
       currentPage: '',
       activeNewPage: false,
-      activePageSetting: false
+      activePageSetting: false,
+      activeSaveProject: false,
     }
     // bind
     this.handleChangePage = this.handleChangePage.bind(this);
@@ -23,6 +25,8 @@ export default class ProjectBar extends React.Component{
     this.handleSettingPage = this.handleSettingPage.bind(this);
     this.handleCancelAll = this.handleCancelAll.bind(this);
     this.handleCreateNewPage = this.handleCreateNewPage.bind(this);
+    this.handleSaveProject = this.handleSaveProject.bind(this);
+    this.handleDtSaveProject = this.handleDtSaveProject.bind(this);
   }
   componentDidMount() {
     exEventEmitter.on('projectPageInfoChange', (project) => {
@@ -35,6 +39,12 @@ export default class ProjectBar extends React.Component{
       this.setState({
         currentPage: name
       });
+    });
+    exEventEmitter.on('checkSaveProject', (callback) => {
+      this.setState({
+        activeSaveProject: true,
+        activeSaveProjectCallback: callback
+      })
     });
   }
   componentWillUnmount(){
@@ -55,6 +65,7 @@ export default class ProjectBar extends React.Component{
     this.setState({
       activeNewPage: false,
       activePageSetting: false,
+      activeSaveProject: false,
     })
   }
   handleCreateNewPage(name) {
@@ -64,6 +75,14 @@ export default class ProjectBar extends React.Component{
   handleChangePage(name) {
     if (name == this.state.currentPage) return;
     exEventEmitter.emit('selectProjectPage', name);
+  }
+  handleSaveProject() {
+    exEventEmitter.emit('saveProject', this.state.activeSaveProjectCallback);
+    this.handleCancelAll();
+  }
+  handleDtSaveProject() {
+    exEventEmitter.emit('ipc', this.state.activeSaveProjectCallback);
+    this.handleCancelAll();
   }
   render() {
     return (
@@ -88,6 +107,7 @@ export default class ProjectBar extends React.Component{
         </div>
         {this.state.activeNewPage ? <NewPage onCancel={this.handleCancelAll} onCreate={this.handleCreateNewPage} /> : undefined}
         {this.state.activePageSetting ? <PageSetting onCancel={this.handleCancelAll} /> : undefined}
+        {this.state.activeSaveProject ? <SaveProject onCancel={this.handleCancelAll} onSave={this.handleSaveProject} onDtSave={this.handleDtSaveProject} /> : undefined}
       </div>
     );
   }

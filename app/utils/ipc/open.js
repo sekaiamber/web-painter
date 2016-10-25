@@ -29,3 +29,7 @@ ipc.on('open-project', function (event, filename) {
   ipc.send('update-project-path', filename);
   console.log(`[open project]: open project from ${filename}`);
 })
+
+ipc.on('open-project-check', function() {
+  exEventEmitter.emit('checkSaveProject', 'open-project');
+})

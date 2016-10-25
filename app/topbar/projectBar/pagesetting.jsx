@@ -1,6 +1,8 @@
 import { Select, Input, Button } from 'antd';
 const Option = Select.Option;
 
+import Mask from './../../utils/component/mask/mask'
+
 let React = require('react');
 
 export default class PageSetting extends React.Component{
@@ -45,45 +47,43 @@ export default class PageSetting extends React.Component{
   }
   render() {
     return (
-      <div className="mask">
-        <div className="page">
-          <h3>Page Setting</h3>
-          <div className="prop">
-            <div className="prop-name">Name</div>
-            <div className="prop-value">
-              <Input size="small" disabled value={this.state.name} onChange={(e) => this.handleChange('name', e.target.value)}/>
-            </div>
-          </div>
-          <div className="prop">
-            <div className="prop-name">File</div>
-            <div className="prop-value">
-              <Input size="small" value={this.state.fileName} onChange={(e) => this.handleChange('fileName', e.target.value)}/>
-            </div>
-          </div>
-          <div className="prop">
-            <div className="prop-name">Title</div>
-            <div className="prop-value">
-              <Input size="small" value={this.state.title} onChange={(e) => this.handleChange('title', e.target.value)}/>
-            </div>
-          </div>
-          <div className="prop">
-            <div className="prop-name">Keywords</div>
-            <div className="prop-value">
-              <Input size="small" value={this.state.keywords} onChange={(e) => this.handleChange('keywords', e.target.value)}/>
-            </div>
-          </div>
-          <div className="prop">
-            <div className="prop-name">Description</div>
-            <div className="prop-value">
-              <Input size="small" value={this.state.description} onChange={(e) => this.handleChange('description', e.target.value)}/>
-            </div>
-          </div>
-          <div className="opt">
-            <Button type="primary" className="cancel" onClick={this.props.onCancel}>Cancel</Button>
-            <Button type="primary" className="ok" onClick={this.handleChangePageInfo}>Done</Button>
+      <Mask>
+        <h3>Page Setting</h3>
+        <div className="prop">
+          <div className="prop-name">Name</div>
+          <div className="prop-value">
+            <Input size="small" disabled value={this.state.name} onChange={(e) => this.handleChange('name', e.target.value)}/>
           </div>
         </div>
-      </div>
+        <div className="prop">
+          <div className="prop-name">File</div>
+          <div className="prop-value">
+            <Input size="small" value={this.state.fileName} onChange={(e) => this.handleChange('fileName', e.target.value)}/>
+          </div>
+        </div>
+        <div className="prop">
+          <div className="prop-name">Title</div>
+          <div className="prop-value">
+            <Input size="small" value={this.state.title} onChange={(e) => this.handleChange('title', e.target.value)}/>
+          </div>
+        </div>
+        <div className="prop">
+          <div className="prop-name">Keywords</div>
+          <div className="prop-value">
+            <Input size="small" value={this.state.keywords} onChange={(e) => this.handleChange('keywords', e.target.value)}/>
+          </div>
+        </div>
+        <div className="prop">
+          <div className="prop-name">Description</div>
+          <div className="prop-value">
+            <Input size="small" value={this.state.description} onChange={(e) => this.handleChange('description', e.target.value)}/>
+          </div>
+        </div>
+        <div className="opt">
+          <Button type="primary" className="left" onClick={this.props.onCancel}>Cancel</Button>
+          <Button type="primary" className="right" onClick={this.handleChangePageInfo}>Done</Button>
+        </div>
+      </Mask>
     );
   }
 }

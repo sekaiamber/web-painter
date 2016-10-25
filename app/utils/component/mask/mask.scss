@@ -1,0 +1,17 @@
+.wp-mask {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .2);
+
+  .page {
+    width: 320px;
+    margin: 0 auto;
+    background: #1d2021;
+    border: #646464 solid 1px;
+    padding: 15px;
+    color: #e5e5e5;
+  }
+}

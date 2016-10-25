@@ -10,55 +10,41 @@
     padding-top: 5px;
     vertical-align: bottom;
   }
-  .mask {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .2);
+  .wp-mask .page {
+    h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
-    .page {
-      width: 320px;
-      margin: 0 auto;
-      background: #1d2021;
-      border: #646464 solid 1px;
-      padding: 15px;
-      color: #e5e5e5;
-
-      h3 {
-        text-align: center;
-        margin-bottom: 15px;
-      }
-
-      .prop {
+    .prop {
+      height: 25px;
+      line-height: 25px;
+      .prop-name, 
+      .prop-value {
+        display: inline-block;
         height: 25px;
-        line-height: 25px;
-        .prop-name, 
-        .prop-value {
-          display: inline-block;
-          height: 25px;
-          vertical-align: bottom;
-        }
-
-        .prop-name {
-          width: 25%;
-          font-size: 12px;
-        }
-        .prop-value {
-          width: 75%;
-        }
+        vertical-align: bottom;
       }
 
-      .opt {
-        margin-top: 15px;
-        height: 35px;
-        .cancel {
-          float: left;
-        }
-        .ok {
-          float: right;
-        }
+      .prop-name {
+        width: 25%;
+        font-size: 12px;
+      }
+      .prop-value {
+        width: 75%;
+      }
+    }
+
+    .opt {
+      margin-top: 15px;
+      height: 35px;
+      .left {
+        float: left;
+        margin-right: 10px;
+      }
+      .right {
+        float: right;
+        margin-left: 10px;
       }
     }
   }
